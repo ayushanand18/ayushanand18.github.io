@@ -1,8 +1,7 @@
-﻿<!DOCTYPE html>
+*<!DOCTYPE html>
 <title>Dashboard | Welcome to Thimbo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
 @media (max-width:992px){
 .sidebar.w3-collapse{display:none}
 }
@@ -17,13 +16,22 @@ border-radius:.60rem;
 }
 .sidebar{
 height:100%;
-width:0;
+left:-250px;
+width:250px;
 background-color:#fff;
 position:fixed !important;
 z-index:1;
 overflow:auto;
-transition:all 0.6s ease;
+transition:0.3s;
 border-right:1px solid grey;
+}
+.clsnav{
+position:absolute;
+cursor:pointer;
+font-width:100% !important;
+font-weightt:800 !important;
+font-size:200%;
+padding-left:4% !important;
 }
 .opnnav{
 position:absolute;
@@ -63,19 +71,13 @@ postion:fixed !important;
 color:grey;
 text-decoration:none !important;
 }
-.empty{
-vertical-align:bottom !important;
-bottom:19px !important;
-position:absolute;
-padding-left:12% !important;
-}
 </style>
 <script src="jquery.min.js"></script>
 <link rel="stylesheet" href="bootstrap.min.css">
 <body>
 <!-- Sidebar -->
 <div  class="sidebar" id="mySidebar">
-  <span onclick="w3_close()" class="opnnav" >&times;</span>
+  <span onclick="w3_close()" class="clsnav" >×</span>
   <div class="pnldiv">
   </div><br/>
   <a href="#"  class="sdlnk hmlnk">Dashboard</a>
@@ -85,9 +87,7 @@ padding-left:12% !important;
   <a href="#"  class="sdlnk prlnk">Profile</a>
   <a href="#"  class="sdlnk colnk">Contact Me</a>
   <a href="#"  class="sdlnk stlnk">Settings</a>
-  <div class="empty">
-  <a href="index.html"  class="sdlnk lgout">Logout</a>
-  </div>
+  <a href="sgnin.html"  class="sdlnk lgout">Logout</a>
 </div>
 
 <!-- Page Content -->
@@ -132,13 +132,13 @@ this about my company.
 
 <script>
 function w3_open() {
-    document.getElementById("mySidebar").style.width = "280px";
+    document.getElementById("mySidebar").style.left = "0px";
 }
 function w3_close() {
-    document.getElementById("mySidebar").style.width = "0px";
+    document.getElementById("mySidebar").style.left = "-250px";
 }
 document.getElementsByClassName("sdlnk").onclick=function (){
-document.getElementById("mySidebar").style.width = "0px";
+document.getElementById("mySidebar").style.left = "-250px";
 }
 </script>
 <script>
@@ -206,7 +206,6 @@ $(".chat").hide();
 $(".settings").hide();
 $(".profile").show();
 });
-
 });     
 </script>
 </body>
