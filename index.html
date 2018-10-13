@@ -68,19 +68,27 @@ padding-left:4% !important;
 </style>
 <title>Login | To The All New Thimbo</title>
 <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery.min.js"></script>
 </head>
 <body>
 <div class="tpdiv">
 </div>
 <div class="frmdiv">
-<form method="post" action="dshbrd.html">
+<form>
 <label for="emladdrs" >Email Address<br/>
 <input type="email" class="txtfld" placeholder="name@address.com"><br/>
 <label for="paswrd" > Password	<span class="rghtspn othrtxt" >Forgot password?	</span><br/>
 <input type="password" class="txtfld" placeholder="Enter your password"><br/>
-<input type="submit" value="Sign in" class="btn-signup" ><br/>
+<input type="button" value="Sign in" class="btn-signup" ><br/>
 <span class="othrtxt" style="overflow:hidden !important; float:left !important;padding-left:16%;">Dont have an account?</span><a href="rgstr.html" style="padding-left:1.8% !important;color:black;font-weight:600 !important;text-decoration:none !important; overflow:hidden !important;">Signup	</a>
 </form>
 </div>
+  <script>
+    $(document).ready(function(){
+      $(".btn-signup").click(function(){
+        window.location.href="dshbrd.html"
+      });
+    });
+  </script>
 </body>
 </html>
