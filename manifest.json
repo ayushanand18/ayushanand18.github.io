@@ -1,20 +1,21 @@
-﻿{
-"short_name":"Thimbo",
-"name":"Thimbo| By Ayush",
-"icons":[
 {
-"src":"https://thedebonairayush.files.wordpress.com/2017/09/cropped-app_image.jpg",
-"type":"image/jpg",
-"sizes":"192*192",
-},
-{
-"src":"/icn-b.jpg",
-"type":"image/jpg",
-"sizes":"512*512",
-}
-],
-"start_url":"/index.html",
-"background-color":"#3367D6",
-"display":"standalone",
-"theme-color":"#3367D6"
+  "short_name": "Thimbo",
+  "name": "Thimbo | By Ayush",
+  "icons": [
+    {
+      "src": "https://thedebonairayush.files.wordpress.com/2017/09/cropped-app_image.jpg",
+      "type": "image/jpg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://thedebonairayush.files.wordpress.com/2017/09/cropped-app_image.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6"
 }
