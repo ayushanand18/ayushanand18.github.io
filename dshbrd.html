@@ -37,7 +37,7 @@ padding-left:4% !important;
 position:absolute;
 cursor:pointer;
 font-width:100% !important;
-font-weightt:800 !important;
+font-weight:800 !important;
 font-size:180%;
 padding-left:4px !important;
 }
@@ -208,5 +208,10 @@ $(".profile").show();
 });
 });     
 </script>
+    <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+  </script>
 </body>
 </html> 
