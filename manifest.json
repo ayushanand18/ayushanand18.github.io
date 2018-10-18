@@ -3,7 +3,7 @@
   "name": "Thimbo | By Ayush",
   "icons": [
     {
-      "src": "/icon-a.png",
+      "src": "icon-a.png",
       "type": "image/png",
       "sizes": "192x192"
     },
@@ -14,9 +14,9 @@
     },
     
     {
-      "src": "icon-b.png",
+      "src": "icon-c.png",
       "type": "image/jpeg",
-      "sizes": "144*144"
+      "sizes": "144x144"
     }
   ],
   "start_url": "/index.html",
