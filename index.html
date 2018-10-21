@@ -61,6 +61,16 @@ width:100% !important;
 color:grey !important;
 overflow:hidden !important;
 }
+     .tpbr{
+        font-size:160%;
+        color:black;
+        padding-bottom:4px;
+        border-bottom:2px solid black;
+        font-weight:600px;
+     }
+     .img{
+        width:60%;
+     }
 .frmdiv{
 padding-top:4% !important;
 float:left !important;
@@ -73,7 +83,11 @@ padding-left:4% !important;
   <script src="jquery.min.js"></script>
 </head>
 <body>
-<div class="tpdiv">
+<div class="tpbr">
+   <span class="bck"> &larr; </span> &nbsp; %nbsp; Sign in
+</div>
+<div class="tpdiv"><center>
+   <img src="cvr-img.png" class="img"><br/></center>
 </div>
 <div class="frmdiv">
 <form>
@@ -89,6 +103,9 @@ padding-left:4% !important;
     $(document).ready(function(){
       $(".btn-signup").click(function(){
         window.location.href="dshbrd.html"
+      });
+       $(".bck").click(function(){
+        window.location.href="index.html"
       });
     });
   </script>
