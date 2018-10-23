@@ -84,16 +84,16 @@ padding-left:4% !important;
 <body>
 <div class="tpbr">
    <span class="bck"> &larr; </span> &nbsp; &nbsp; Sign in
-</div><br/><br/>
-<div class="tpdiv"><center><br/>
-   <img src="logo-a.png" class="img"><br/></center>
+</div>
+<div class="tpdiv"><center>
+   <img src="logo-a.png" class="img"></center>
 </div>
 <div class="frmdiv">
 <form>
 <label for="emladdrs" >Email Address<br/>
-<input type="email" class="txtfld" placeholder="name@address.com"><br/>
+<input type="email" class="txtfld" id="eml" placeholder="name@address.com" required><br/>
 <label for="paswrd" > Password	<span class="rghtspn othrtxt" >Forgot password?	</span><br/>
-<input type="password" class="txtfld" placeholder="Enter your password"><br/>
+<input type="password" class="txtfld" id="pswrd" placeholder="Enter your password" required><br/>
 <input type="button" value="Sign in" class="btn-signup" ><br/>
 <span class="othrtxt" style="overflow:hidden !important; float:left !important;padding-left:16%;">Dont have an account?</span><a href="rgstr.html" style="padding-left:1.8% !important;color:black;font-weight:600 !important;text-decoration:none !important; overflow:hidden !important;">Signup	</a>
 </form>
@@ -117,7 +117,7 @@ $(document).ready(function(){
 $(".btn-signup").click(function(){
 
 if( $.trim($("#eml").val()) == '' || $.trim($("#pswrd").val()) == '' ||  $.trim($("#eml").val()) == '' && $.trim($("#pswrd").val()) == '' ){
-	alert('Please fillout Correct Email Address and Password');
+	alert('Please Fillout Email Address and Password');
 	}
 else{
 	window.location.href="dshbrd.html";
