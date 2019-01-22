@@ -117,6 +117,7 @@ input[type=text], .entr-cst{
 	position:absolute;
 	width:80%;
 	bottom:20%;
+	background-color:white;
 	left:6%;
 	border:1px solid black;
 	padding:1em;
