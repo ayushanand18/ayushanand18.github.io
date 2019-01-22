@@ -1,0 +1,296 @@
+<!doctype HTML>
+<html>
+<head>
+			<meta charset="utf-8" name="viewport" content="width=device-width;user-scalable=no;">
+		<title> InTru | Innovation... that's TRUE. </title>
+		<script src="script/jquery.min.js"></script>
+		<link rel="stylesheet" href="style/bootstrap.min.css">
+		<link rel="manifest" href="manifest.json">
+	<script>
+	$("body").hide();
+	</script>
+	<script>
+
+		function checkCookie() {
+		    if (document.cookie.indexOf('lgn_auth_page') === 0 ) {
+		       window.location="dshbrd.html";
+		    } 
+		};
+	</script>
+	
+		<style>
+	body, html{
+	background-image:linear-gradient( to bottom , white) !important;
+	background-repeat:no-repeat !important;
+	bacground-position:center !important;
+	bacground-size:cover !important;
+	height:100% !important;
+	}
+	.crtacnt{
+	float:left;
+	margin-left:20px;
+	}
+	.mdl-img{
+	width:100%;
+	opacity:0.7;
+	margin:none !important;
+	padding:none !important;
+	}	
+	.icn-txt{
+	float:left;
+	margin-left:10px;
+	}
+	.all-div{
+	display:inline;
+	text-align:center;
+	}
+	.frm{
+	margin-left:0.85rem;
+	background:white;
+	width:90%;
+	color:black;
+	margin-top:150px;
+	max-width:400px;
+	}
+
+	.logo{
+	width:100px;
+	max-width:120pt;
+	}
+
+	
+	/* Floating label */
+	
+	.inpt-usrnm:focus ~ .fltng-lbl-usrnm,
+	.inpt-nm:focus ~ .fltng-lbl-nm,
+	.inpt-eml:focus ~ .fltng-lbl-eml,
+	.inpt-nw-pswrd:focus ~ .fltng-lbl-nw-pswrd,
+	.inpt-pswrd:focus ~ .fltng-lbl-pswrd,
+	.inpt-cnf-nw-pswrd:focus ~ .fltng-lbl-cnf-nw-pswrd,
+	.inpt-usrnm:not(:focus):valid ~ .fltng-lbl-usrnm , .inpt-pswrd:not(:focus):valid ~ .fltng-lbl-pswrd, .inpt-nm:not(:focus):valid ~ .fltng-lbl-nm , .inpt-nw-pswrd:not(:focus):valid ~ .fltng-lbl-nw-pswrd, .inpt-eml:not(:focus):valid ~ .fltng-lbl-eml , .inpt-cnf-nw-pswrd:not(:focus):valid ~ .fltng-lbl-cnf-nw-pswrd{
+	font-size: 12px;
+	top: -50px;
+	opacity: 1;
+	}
+	.inpt-usrnm, .inpt-pswrd, .inpt-cnf-nw-pswrd, .inpt-nw-pswrd, .inpt-nm, .inpt-eml{
+	font-size: 14px;
+	width: 80%;
+	background:transparent;
+	height: 35px;
+	border:none;
+	border-bottom:2px solid black !important;
+	}
+	.fltng-lbl-usrnm, .fltng-lbl-pswrd, .fltng-lbl-nw-pswrd,.fltng-lbl-cnf-nw-pswrd, .fltng-lbl-eml , .fltng-lbl-nm{
+	position:relative;
+	top:-30px;
+	padding-left:10%;
+	float:left;
+	pointer-events: none;
+	transition: 0.5s ease all;
+	}
+	.pnl-btn{
+	float:right !important;
+	position:absolute;
+	z-index:0;
+	color:white;
+	font-size:30pt;
+	left:0.5rem;
+	}
+
+	//@media screen and  (max-width:1024px){
+	//.logo-a{
+	//display:none !important;
+	//}
+	//} 
+	.btn-sgnin, .btn-sgnup,  .btn-sgnin-nxt{
+	cursor:pointer;
+	padding:2.5rem/2.5rem !important;
+	padding:0.5rem !important;
+	border:2px solid;
+	border-color: white !important;
+	font-size:16px;
+	left:2%;
+	color:rgb(255,50,90);
+	background-color:white;
+	max-width:280pt;
+	margin:0.5rem;
+	width:90%;
+	overflow:hidden;
+	position:absolute;
+	bottom:1.5rem;
+	font-weight:600;
+	transition:all 0.2s ease;
+	}
+	.cvr-div{
+	padding:5%;
+	width:80%;
+	margin-left:10%;
+	margin-top:40px;
+	color:white;
+	height:60%;
+	background:transparent;
+	}
+	.btn-sgnin:hover, .btn-sgnup:hover, .btn-cntinu:hover, .btn-sgnin-nxt:hover{
+	box-shadow:0 0 3px 3px #888;
+	-moz-shadow:0 0 3px 3px #888;
+	-ms-shadow:0 0 3px 3px #888;
+	-webkit-shadow:0 0 3px 3px #888;
+	}
+	.mdl-div{
+	position:absolute;
+	left:15%;
+	transition:all 0.5s ease;
+	width:70%;
+	background:white;
+	color:black;
+	font-weight:500;
+	padding:5%;
+	opacity:1;
+	border-radius:2%;
+	box-shadow:0 0 5px 5px #888;
+	-moz-shadow:0 0 2px 5px #888;
+	-ms-shadow:0 0 2px 2px #888;
+	}
+	</style>
+</head>
+
+<body onload="checkCookie()">
+
+<div class="all-div">
+
+	
+<div class="ldng" >
+<img src="images\app-logo-box.png">
+<br/><br/>
+<div style="margin-left:10%;height:8px;width:80% !important; background-color:rgb(255,52,102);"></div>
+<br/>
+<br/>
+
+<center><font size="4px"> Loading... &nbsp;&nbsp;&nbsp;Please Wait.</font></center>
+</div>
+
+
+	<div class="lgn-div">
+		<div class="mdl-img">
+			
+		</div>
+		<div class="frm"><br/>
+			<span class="icn-txt" ><img src="images\app-logo-box.png" width=40px>InTru</span><br/><br/>
+			<h3>
+			 Sign in
+			</h3>
+			Sign to countinue to Get Started.<br/><br/><br/>
+			<form>
+				<input type="text"  class="inpt-usrnm" required/><br/>
+				<span class="fltng-lbl-usrnm">Enter Username</span><br/>
+				<span class="pswrd-spn">
+				<input type="password" class="inpt-pswrd" required/><br/>
+				<span class="fltng-lbl-pswrd">Enter Password</span><br/></span>
+				<input type="button" class="btn-sgnin" id="btn-sgn" value="Let's Start"><br/>
+				<center><span class="btn crtacnt" >Not Registered? Create Account</span> </center>
+				<br/><br/>
+			</form>
+		</div>
+	</div>
+
+	<div class="sgnup-div">
+		<div class="mdl-img">
+		</div>
+		<div class="frm"><br/>
+			<span class="icn-txt" ><img src="images\app-logo-box.png" width=40px>InTru</span><br/><br/>
+			<h3>
+			 Create Account
+			</h3>
+			Input your few details here<br/><br/>
+			<form>
+				<input type="text"  class="inpt-nm" required/><br/>
+				<span class="fltng-lbl-nm">Enter your name</span><br/>
+				<input type="text"  class="inpt-eml" required/><br/>
+				<span class="fltng-lbl-eml">Enter Email</span><br/>
+				<input type="password" class="inpt-nw-pswrd" required/><br/>
+				<span class="fltng-lbl-nw-pswrd">Enter Password</span><br/>
+				<input type="password" class="inpt-cnf-nw-pswrd" required/><br/>
+				<span class="fltng-lbl-cnf-nw-pswrd">Confirm Password</span><br/>
+				<input type="button" class="btn-sgnup"  value="Create"><br/><br/><br/>
+			</form>
+		</div>
+	</div>
+
+	<div class="mdl-div">
+		<strong>
+			<center><p style="color:black; font-size:20px;">Success</p></center><br/>
+		</strong>
+		<strong>
+			Congrats! {{ng-name}}, your account has been created.
+			 Now login to proceed to your all new personalised dashboard.
+		</strong>
+	</div>
+</div>
+
+	
+<script>
+$(document).ready(function (){
+$(".lgn-div").hide();
+$(".ldng").show().delay(1500).fadeOut(500);
+$(".pswrd-spn").hide();
+$(".sgnup-div").hide();
+$(".lgn-div").delay(500).hide().delay(2000).fadeIn( function(){
+$("body").css("background-color","rgb(255,51,102)");
+});
+
+
+
+$(".btn-cntinu").click(function(){
+$(".cvr-div").fadeOut(0.7, function(){
+$(".lgn-div").fadeIn();
+});
+});
+ 
+
+$(".mdl-div").css("top","-1000px");
+
+$(".mdl-div").click(function(){
+window.location.href="index.html";
+});
+
+$(".btn-sgnup").click(function(){
+$(".mdl-div").css("top","100px");
+$(".cls-btn").css("top","10px");
+$(".all-div").find("*").not(".mdl-div").prop("disabled",true);
+$(".all-div").find("*").not(".mdl-div").css("opacity","0.6");
+});
+
+$(".crtacnt").click(function(){
+$(".frm").css("margin-top","40px");
+$(".lgn-div").fadeOut(0.7, function(){
+$(".sgnup-div").fadeIn();
+});
+});
+
+$(".btn-sgnin").click(function(){
+if( $.trim($(".inpt-usrnm").val()) == '' ){
+	alert('Please Fillout Complete Email Address to Check');
+	}
+else{
+$(".pswrd-spn").show();
+$(".btn-sgnin").attr("value","Login");
+$(".btn-sgnin").addClass("btn-sgnin-nxt");
+$(".btn-sgnin").removeClass("btn-sgnin");
+$(".btn-sgnin-nxt").click(function(){
+if( $.trim($(".inpt-usrnm").val()) == '' || $.trim($(".inpt-pswrd").val()) == ''   ){
+	alert('Please Fillout Your Correct Password');
+	}
+else{
+window.location.href="dshbrd.html";
+document.cookie="lgn_auth_page=yes;expires=Wed, 18 Dec 2023 12:00:00 GMT;path=/"
+	};
+});
+};
+});
+
+
+});
+</script>
+
+</body>
+</html>

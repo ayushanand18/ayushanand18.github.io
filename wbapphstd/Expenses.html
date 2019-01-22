@@ -1,0 +1,53 @@
+<!doctype HTML>
+<head>
+<title>Expense Sheet</title>
+<link rel="stylesheet" href="expense-style.css">
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCcrYfOrTxfnZzgTq17RNiTE95wMjMn8hY",
+    authDomain: "pwa-intru.firebaseapp.com",
+    databaseURL: "https://pwa-intru.firebaseio.com",
+    projectId: "pwa-intru",
+    storageBucket: "pwa-intru.appspot.com",
+    messagingSenderId: "696864317345"
+  };
+firebase.initializeApp(config);
+const db = firebase.firestore();
+	/* db.settings({
+	* timestampsInSnapshots: true
+	* });
+	* const settings = { timestampsInSnapshots: true};
+ 
+	* db.settings(settings);
+	*/
+</script>
+<script src="script/jquery.min.js"></script>
+<script src="expense.min.js"></script>
+</head>
+<body>
+<div class="tp-mnu">
+<span class="opnnav" >&equiv;</span>
+<span class="txt">Expense</span>
+</div>
+
+<div class="content">
+
+<ul id="expense-list">
+</ul>
+<button class="pls-icn">+</button>
+
+<div class="frm-cntnr">
+<form class="add-expns">
+<input type="text" name="entr-nm" class="entr-nm" id="entr-nm" placeholder="Name of Expense"><br/>
+<input type="text" name="entr-cst" class="entr-cst" id="entr-cst" placeholder="Cost"><br/>
+<input type="button" name="sbmt-btn" id="sbmt-btn" class="sbmt-btn" value="Add Expense" onclick="addExpns()"><br>
+</form>
+</div>
+
+</div>
+</body>
+</html>
