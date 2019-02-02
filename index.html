@@ -1,104 +1,160 @@
 <!doctype HTML>
+<html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<title>Welcome | Ayush Anand</title>
+			<meta charset="utf-8" name="viewport" content="width=device-width;user-scalable=no;">
+		<title> Ayush Anand | Empowering Innovation. </title>
+		<script src="wbapphstd/Script/jquery.min.js"></script>
+		<link rel="Stylesheet" href="wbapphstd/Style/bootstrap.min.css">
+		<link rel="wbapphstd/manifest" href="manifest.json">
 	
-	<style>
-	body , html{
-	margin:0;
-	background-color:rgb(230,230,230);
-	height:100% !important;
-	padding:none;
+		<style>
+	body, html{
+	background-color:rgb(255, 51, 102);
+	background-repeat:no-repeat !important;
+	bacground-position:center !important;
+	bacground-size:cover !important;
+	height:99% !important;
+	color:black;
 	}
-	@-ms-viewport{
-		width: device-width;
-		}
-	.tp-div{
-	background-color:rgb(255,51,102);
-	color:white;
-	font-size:24pt;
-	text-align:center;
-	font-weight:900 !important;
-	font-family:ink free, times new roman, comic sans ms;
-	text-decoration:underline;
-	padding-top:50px;
-	width:100%;
-	padding:none;
-	margin:0 !important;
-	height:100px;
-	}
-	.wp-lnk{
-	position:relative;
-	top:20px;
-	font-size:14pt;
-	height:50px;
-	background-color:white;
-	width:80%;
-	padding:0.5em;
-	padding-left:40px !important;
-	border:1px solid black;
-	text-decoration:none !important;
-	color:black !important;
-	line-height:2.5em;
-	}
-	.lnk-wb-app{
-	position:relative;
-	top:-20px;
-	font-size:14pt;
-	height:50px;
-	background-color:white;
-	width:85%;
-	padding:0.5em;
-	padding-left:4px !important;
-	border:1px solid black;
-	text-decoration:none !important;
-	color:black !important;
-	line-height:2.5em;
-	}
-	.footer{
-	font-family:Arial;
-	position:absolute;
-	background-color:rgb(15,35,100);
-	color:white;
-	bottom:0em;
-	border-top:1px solid black;
-	padding:0.95em !important;
-	padding-left:0em !important;
-	padding-right:0em !important;
-	width:100%;
-	}
-	a{
+	.icn-txt{
 	float:left;
-	text-decoration:none;
-	color:black !important;
+	margin-left:10px;
+	}
+	.all-div{
+	display:inline;
+	text-align:center;
+	}
+	.frm{
+	margin-left:0.85rem;
+	background:white;
+	width:90%;
+	color:black;
+	margin-top:50px;
+	max-width:400px;
+	}
+	.navigatetoblog{
+	height:80px;
+	margin:10px;
+	margin-left:30px;
+	margin-right:30px;
+	padding:1rem;
+	border:1px solid black;
+	}
+	.mdl-div{
+	position:absolute;
+	transition:all 0.5s ease;
+	width:70%;
+	left:1%;
+	background:white;
+	color:black;
+	font-weight:500;
+	padding:5%;
+	opacity:1;
+	border-radius:2%;
+	max-width:400px;
+	box-shadow:0 0 5px 5px #888;
+	-moz-shadow:0 0 2px 5px #888;
+	-ms-shadow:0 0 2px 2px #888;
+	}
+	
+@media screen and (min-width:380px){
+	.lgn-div{
+	margin-left:5px;
+	}
+	}
+@media screen and (min-width:480px){
+	.lgn-div{
+	margin-left:30px;
+	}
+	}
+@media screen and (min-width:580px){
+	.lgn-div{
+	margin-left:60px;
+	}
+	}
+@media screen and (min-width:680px){
+	.lgn-div{
+	margin-left:120px;
+	}
+	}
+@media screen and (min-width:880px){
+	.lgn-div{
+	margin-left:180px;
+	}
+	}
+@media screen and (min-width:1024px){
+	.lgn-div{
+	margin-left:320px;
+	}
+	}
+@media screen and (min-width:1280px){
+	.lgn-div{
+	margin-left:520px;
+	}
+	}
+
+	.btn-sgnin, .btn-sgnup,  .btn-sgnin-nxt{
+	cursor:pointer;
+	padding:2.5rem/2.5rem !important;
+	padding:0.5rem !important;
+	border:2px solid;
+	border-color: white !important;
+	font-size:16px;
+	color:rgb(255,50,90);
+	background-color:white;
+	max-width:400px;
+	margin:0.5rem;
+	margin-left:0.85rem;
+	width:90%;
+	float:left;
+	overflow:hidden;
+	font-weight:600;
+	transition:all 0.2s ease;
+	}
+	.btn-sgnin:hover, .btn-sgnup:hover, .btn-cntinu:hover, .btn-sgnin-nxt:hover{
+	box-shadow:0 0 3px 3px #888;
+	-moz-shadow:0 0 3px 3px #888;
+	-ms-shadow:0 0 3px 3px #888;
+	-webkit-shadow:0 0 3px 3px #888;
 	}
 	</style>
 </head>
-<body>
-	<div class="tp-div">
-	Ayush Anand
-	</div>
-<center>
-	<div class="lnk-wb-app">
-		<img src="wbapphstd\Images\app-logo-box.png" align=left width=50px style="padding-right:7px;"><a href="wbapphstd\index.html">Go to Web App</a><span style="float:right;"> ></span>
-	</div>
-</center>
-	<hr width="40%" color=red align=left style="margin-left:5%;overflow:hidden !important; float:left;"> 
-	<font color=black face="comic sans ms">	&nbsp; or &nbsp; </font>
-	<hr width="40%" color=red align=right style="margin-right:5%;overflow:hidden !important; float:right;">
-	
+
+<body >
+
+<div class="all-div">
+
+	<div class="lgn-div">
+		<div class="frm"><br/>
+			<span class="icn-txt" ><img src="wbapphstd/Images\app-logo-box.png" width=40px>InTru</span><br/><br/>
+			<h3>
+			 Ayush Anand
+			</h3>
+			Welcome to the InTru World.<br/><br/><br/>
+				<div class="navigatetoblog">
+				Catch up the latest on the Development Release Notes.<br/>
+				</div>
+				<br/>
+				<span style="text-decoration:underline;">Click below to navigate straight to the web app</span>
+				<br/><br/>
+		</div>
 	<br/>
-<center>	
-	<div class="wp-lnk">
-	<a href="https://thedebonairayush.wordpress.com/blog">Read the Beta Experience</a><span style="float:right;"> ></span><br/>
+		<input type="button" class="navigatetowebapp btn-sgnin" id="btn-sgn" value="Take Me To The Innovative Web App">
 	</div>
 
+</div>
 
-	<div class="footer">
-	&copy;	2018-2019 Ayush Anand, InTru.<br/>
-        Please note that the Developer is 10th Standard Student, who is facing his board Examinations now.<br/>
-        He will surely update this site from March 29th onwards.<br/>
-	</div>
-</center>
+	
+<script>
+$(document).ready(function(){
+$(".navigatetowebapp").click(function(){
+window.location.href="wbapphstd/index.html"
+});
+$(".navigatetoblog").click(function(){
+window.location.href="https://thedebonairayush.wordpress.com/blogs"
+});
+});
+</script>
+
 </body>
 </html>
