@@ -1,10 +1,11 @@
-﻿<!doctype HTML>
+
+<!doctype HTML>
 <html>
 <head>
 			<meta charset="utf-8" name="viewport" content="width=device-width;user-scalable=no;">
 		<title> InTru | Innovation... that's TRUE. </title>
-		<script src="Script/jquery.min.js"></script>
-		<link rel="stylesheet" href="Style/bootstrap.min.css">
+		<script src="script/jquery.min.js"></script>
+		<link rel="stylesheet" href="style/bootstrap.min.css">
 		<link rel="manifest" href="manifest.json">
 	<script>
 
@@ -17,7 +18,7 @@
 	
 		<style>
 	body, html{
-	background-image:linear-gradient( to bottom , rgb(255,51,102), rgb(255,50,87) ) !important;
+	//background-image:linear-gradient( to bottom , rgb(255,51,102), rgb(255,50,87) ) !important;
 	background-repeat:no-repeat !important;
 	bacground-position:center !important;
 	bacground-size:cover !important;
@@ -27,24 +28,16 @@
 	font-size:25pt;
 	color:white;
 	overflow:hidden;
-	margin-top:30px;
+	padding-top:30px;
 	margin-left:20px !important;
 	}
 
-	//@media screen and  (max-width:1024px){
-	//.logo-a{
-	//display:none !important;
-	//}
-	//} 
-
 	.btn-cntinu{
 	cursor:pointer;
-	padding:2.5rem/2.5rem !important;
 	padding:0.5rem !important;
 	border:2px solid;
 	border-color: white !important;
 	font-size:16px;
-	left:2%;
 	color:rgb(255,50,90);
 	background-color:white;
 	max-width:280pt;
@@ -55,8 +48,44 @@
 	bottom:1.5rem;
 	font-weight:600;
 	transition:all 0.2s ease;
-
 	}
+
+	.all-div{
+	margin:none !important;
+	top:0px !important;
+	width:100%;
+	background-image:linear-gradient( to bottom , rgb(255,51,102), rgb(255,50,87) ) !important;
+	background-repeat:no-repeat !important;
+	bacground-position:center !important;
+	bacground-size:cover !important;
+	height:100% !important;
+	float:left;
+	overflow:hidden;
+	}
+
+@media screen and  (min-width:960px){ 
+	.all-div{
+	width:480px;
+	}
+	.dsktp-div{
+	padding-left:490px;
+	}
+	.dsktp-div h2{
+	padding:40px !important;
+	text-align:center;
+	}
+
+}
+
+
+@media screen and (max-width:960px){
+	.dsktp-div{
+	display:none !important;
+	position:absolute;
+	top:-10000px;
+	}
+	
+}
 	.btn-cntinu:hover{
 	color:white;
 	border-color:white !important;
@@ -83,6 +112,37 @@
 	</div>
 
 </div>
+<div class="dsktp-div">
+
+	
+
+	<center>
+	<br/><br/>
+	
+	<span class="spn-one"><img width="40" src="Images\app-logo-box.png"> INTRU ENTERPRISE </span>
+	<h2> YOUR UNIFIED, SCALABLE <br/>
+	WORKFLOW - ALL IN ONE PLACE </h2>
+	
+	
+	<span  style="text-decoration:underline;"style="padding-top:10%;">
+	<h5>Experience smarter design. Expore what's most innovative.<br/>
+	Glamouring designs that speak more than words **</h5>
+	</span>
+	
+	
+	
+	<br/><br/>
+	<span class="spn-fourth" style="padding-top:20%;font-style:italic;">
+	**Note: This Web Application is in Development mode. And that the <br/>
+	Developer is a 10th Standard Student. Data may be insecure and not wholly <br/> 
+	encrypted while in this phase. You are requested not to enter any sesitive data.<br/>
+	&copy; 2018-19 Ayush Anand, Developer<img width="40" src="Images\app-logo-box.png"> InTru.
+	</span>
+	
+	</center>
+<br/>
+</div>
+
 	<script>
 	$(document).ready(function (){
 	$(".btn-cntinu").click(function(){
