@@ -1,212 +1,205 @@
-﻿<!DOCTYPE html>
-<title>Dashboard | Welcome to Thimbo</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="Script/jquery.min.js"></script>
-<link rel="manifest" href="/manifest.json"/>
-<script>
+<!doctype HTML>
+<html>
+<head>
 
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title> InTru | Innovation... that's TRUE. </title>
+		<script src="Script/jquery.min.js"></script>
+		<link rel="stylesheet" href="Style/bootstrap.min.css">
+		<link rel="manifest" href="manifest.json">
+<!-- need to be updated --->
+		<link rel="icon" type="image/png" href="Images/app-logo-box.png"/>
+		<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+   	 apiKey: "AIzaSyCcrYfOrTxfnZzgTq17RNiTE95wMjMn8hY",
+	    authDomain: "pwa-intru.firebaseapp.com",
+	    databaseURL: "https://pwa-intru.firebaseio.com",
+	    projectId: "pwa-intru",
+	    storageBucket: "pwa-intru.appspot.com",
+	    messagingSenderId: "696864317345"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script>
+		function checkCookie() {
+		firebase.auth().onAuthStateChanged(function(user) {
+  		if (user) {
+		    // User is signed in.
+		  } else {	
+			window.location.href="login.html";
+		  }
+		});
+		};
+	</script>
+		<link rel="apple-touch-icon-precomposed" href="Images/app-logo-box.png"/>
+		<link rel="icon" href="Images/app-logo-box.png"/>
+		<meta name="msapplication-TileImage" content="Images/app-logo-box.png" content="icon-uri=wbapphstd/Images/app-logo-box.png" />
+	<script>
+	$("body").hide();
+	</script>
 
-
-
-function checkCookie() {
-
-    if (document.cookie.indexOf('lgn_auth_page') === -1 ) {
-       window.location="login.html";
-    } 
-}
-
-</script>
-<style>
-.tp-mnu{
-display:inline-block;
-text-align:center;
-right:0;
-padding:none !important;
-margin:none !important;
-background:white;
-top:0;
-z-index:0;
-position:absolute;
-left:0;
-}
-.tp-mnu img{
-padding:none;
-width:40px;
-}
-.opnnav, .cls-btn{
-float:left;
-z-index:2;
-font-size:38px;
-padding-left:12px;
-}
-body{
-background-color:lightgrey;
-}
-.hm-btn, .stng-btn{
-display:inline-block;
-vertical-align:middle;
-float:right;
-padding-right:12px;
-}
-.hm-btn img{
-vertical-align:middle;
-padding-top:8px;
-width:26px;
-}
-.stng-btn img{
-padding-top:6px;
-vertical-align:middle;
-width:35px;
-}
-.cntnt-div{
-position:relative;
-top:10px;
-float:left;
-width:99.5%;
-left:2px;
-riht:2px;
-background-color:white;
-overflow:hidden;
-}
-.chat-div{
-width:60%;
-top:10px;
-position:relative;
-left:2px;
-background-color:white;
-height:100px;
-overflow:hidden;
-float:left;
-}
-.lgout-div{
-width:35%;
-top:10px;
-position:relative;
-right:2px;
-background-color:white;
-height:100px;
-float:right;
-}
-.mySidebar img{
-background:white;
-padding:20%;
-opacity:1;
-width:50px;
-margin:10%;
-height:auto;
-border-radius:40%;
-}
-.mySidebar span{
-background:white;
-color:black;
-border-radius:50%;
-}
-.icn-fat{
-width:70px;
-overflow:hidden;
-color:white;
-left:0px;
-top:-10020px;
-height:100%;
-position:fixed !important;
-z-index:1;
-transition:0.3s all ease;
-}
-.mySidebar{
-width:70px;
-overflow:hidden;
-color:white;
-left:0px;
-top:-10020px;
-height:100%;
-position:fixed !important;
-z-index:1;
-transition:0.3s all ease;
-}
-</style>
-<link rel="stylesheet" href="Style/bootstrap.min.css">
+	
+		<style>
+	body, html{
+	background-image:linear-gradient( to bottom , white) !important;
+	background-repeat:no-repeat !important;
+	bacground-position:center !important;
+	bacground-size:cover !important;
+	height:100% !important;
+	}
+	.crtacnt{
+	float:left;
+	margin-left:20px;
+	}
+@media screen and (min-width:380px){
+	.twin-div{
+	margin-left:5px;
+	}
+	}
+@media screen and (min-width:480px){
+	.twin-div{
+	margin-left:30px;
+	}
+	}
+@media screen and (min-width:580px){
+	.twin-div{
+	margin-left:60px;
+	}
+	}
+@media screen and (min-width:680px){
+	.twin-div{
+	margin-left:120px;
+	}
+	}
+@media screen and (min-width:880px){
+	.twin-div{
+	margin-left:180px;
+	}
+	}
+@media screen and (min-width:1024px){
+	.twin-div{
+	margin-left:320px;
+	}
+	}
+@media screen and (min-width:1280px){
+	.twin-div{
+	margin-left:520px;
+	}
+	}
+	.icn-txt{
+	float:left;
+	margin-left:10px;
+	}
+	.all-div{
+	display:inline;
+	text-align:center;
+	}
+	.frm{
+	margin-left:0.85rem;
+	background:white;
+	width:90%;
+	color:black;
+	margin-top:50px;
+	max-width:400px;
+	}
+	.logo{
+	width:100px;
+	max-width:120pt;
+	}
+	
+	/* Floating label */
+	//@media screen and  (max-width:1024px){
+	//.logo-a{
+	//display:none !important;
+	//}
+	//} 
+	.btn-sgnin, .btn-sgnup{
+	cursor:pointer;
+	padding:2.5rem/2.5rem !important;
+	padding:0.5rem !important;
+	border:2px solid;
+	border-color: white !important;
+	font-size:16px;
+	color:rgb(255,50,90);
+	background-color:white;
+	max-width:400px;
+	margin:0.5rem;
+	margin-left:0.85rem;
+	width:90%;
+	float:left;
+	overflow:hidden;
+	font-weight:600;
+	transition:all 0.2s ease;
+	}
+	.btn-sgnin:hover, .btn-sgnup:hover, .btn-cntinu:hover, .btn-sgnin-nxt:hover{
+	box-shadow:0 0 3px 3px #888;
+	-moz-shadow:0 0 3px 3px #888;
+	-ms-shadow:0 0 3px 3px #888;
+	-webkit-shadow:0 0 3px 3px #888;
+	}
+	</style>
+</head>
 
 <body onload="checkCookie()">
-<!-- top fixed menu-->
-<div class="tp-mnu">
-<span class="opnnav" >&equiv;</span> 
-<img src="Images/app-logo-box.png">
-<span class='hm-btn'><img src="Icons/hm-btn.png"></span>
-<span class="stng-btn"><img src="Icons/stng-btn.png"></span>
+
+<div class="all-div">
+
+	
+<div class="ldng" >
+<br/><br/>
+<img src="Images\app-logo-box.png">
+<br/><br/>
+<center>
+<div style="text-align:center;height:8px;width:80% !important; max-width:400px;background-color:rgb(255,52,102);"></div>
+</center>
+<br/>
+<br/>
+<center><font size="4px"> Loading... &nbsp;&nbsp;&nbsp;Please Wait.</font></center>
 </div>
 
 
+	<div class="lgn-div twin-div">
+		<div class="frm"><br/>
+			<span class="icn-txt" ><img src="Images\app-logo-box.png" width=40px>InTru</span><br/><br/>
+			<h3>
+			 Hello, User!
+			</h3>
+			This is the dashboard page.<br/><br/><br/>
+				<br/><br/><br/><br/>
+	
+		</div>
+	<br/>	<input type="button" class="btn-sgnin" id="btn-sgn" value="Logout"><br/>
+	</div>
 
-<!-- Sidebar -->
-<div class="mySidebar" id="mySidebar" >
-<span class="cls-btn ">&times;</span>
-<br/><br/><br/>
-<img class ="chat-btn" src="Icons/chat-btn.png">
-<img class ="prfl-btn " src="Icons/prfl-btn.png">
-<img class ="abtus-btn " src="Icons/abtus-btn.png">
-<img onclick="clearSession()" class =" lgout-btn" src="Icons/lgout-btn.png">
-
+	
 </div>
 
-
-<br/><br/><br/>
-<div class="cntnt-div">
-<center>Welcome to InTru !</center><br/>
-InTru is where Innovation is the only Truth- create, share and innovate.
-You have joined many others just like yours who are pushing up the fresh minds behind it.
-Feel free to kick the tires and get acquinted with no limits and no obligation during the use os this software.<br/>
-Help us improve Intru by telling us a little more about what can be done. &rarr;
-
-</div>
-<div class="chat-div">
-Chat
-</div>
-<div class="lgout-div">
-Logout
-</div>
-
-
-
-
+	
 <script>
-function clearSession(){
-document.cookie="lgn_auth_page=yes;expires=Sun, 18 Nov 2018 12:00:00 GMT;path=/"
-window.location="login.html";
-}
+$(document).ready(function (){
+$(".lgn-div").hide();
+$(".ldng").show().delay(1500).fadeOut(500);
+$(".pswrd-spn").hide();
+$(".sgnup-div").hide();
+$(".lgn-div").delay(500).hide().delay(2000).fadeIn( function(){
+$("body").css("background-color","rgb(255,51,102)");
+});
 
+$(".btn-sgnin").click(function(){
+firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+window.location.href="index.html";
+}).catch(function(error) {
+  alert(error);
+});
+});
+
+});
 </script>
 
-<script>
-$(document).ready( function(){
-
-$(".opnnav").show();
-$(".cls-btn").hide();
-
-
-
-$(".opnnav").click(function(){
-$(".mySidebar").css("top","0px");
-$(".opnnav").fadeOut(0.3 , function(){
-$(".cls-btn").fadeIn();
-});
-$("body").find("*").not(".mySidebar").prop("disabled",true);
-$("body").find("*").not(".mySidebar").css("opacity","0.9");
-$(".mySidebar").find("img").css("opacity","1");
-$("tp-mnu").css("opacity","1");
-
-});
-
-
-$(".cls-btn").click(function(){
-$("body").find("*").not(".mySidebar").prop("disabled",false);
-$("body").find("*").not(".mySidebar").css("opacity","1");
-$(".mySidebar").css("top","-2020px");
-$(".cls-btn").fadeOut(0.3 , function(){
-$(".opnnav").fadeIn();
-});
-});
-
-});     
-</script>
 </body>
-</html> 
+</html>
