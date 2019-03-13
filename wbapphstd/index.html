@@ -1,24 +1,30 @@
-
 <!doctype HTML>
 <html>
 <head>
-			<meta charset='utf-8' name='viewport' content='width=device-width,user-scalable=no,'>
+			<meta charset="utf-8" name="viewport" content="width=device-width;user-scalable=no;">
 		<title> InTru | Innovation... that's TRUE. </title>
 		<script src="Script/jquery.min.js"></script>
 		<link rel="stylesheet" href="Style/bootstrap.min.css">
-		<link rel="icon" type="image/png" href="Images/app-logo-box.png"/>
 		<link rel="manifest" href="manifest.json">
+		<link rel="icon" type="image/png" href="Images/app-logo-box.png"/>
+		<link rel="apple-touch-icon-precomposed" href="Images/app-logo-box.png"/>
+		<link rel="icon" href="Images/app-logo-box.png" sizes="32x32" />
+		<meta name="msapplication-TileImage" content="Images/app-logo-box.png" content="icon-uri=wbapphstd/Images/app-logo-box.png" />
 	<script>
 
 		function checkCookie() {
-		    if (document.cookie.indexOf('lgn_auth_page') === 0 ) {
-		       window.location="dshbrd.html";
-		    } 
+		if( !navigator.cookieEnabled){	
+			window.location.href="expenses.html"   
+		}
+			else{
+			if (document.cookie.indexOf('lgn_auth_page') === 0 ) {
+		       	window.location="dshbrd.html";
+			    }
+			}
 		};
 	</script>
-	
 		<style>
-	body, html{
+ 	body, html{
 	//background-image:linear-gradient( to bottom , rgb(255,51,102), rgb(255,50,87) ) !important;
 	background-repeat:no-repeat !important;
 	bacground-position:center !important;
@@ -36,6 +42,8 @@
 	.btn-cntinu{
 	cursor:pointer;
 	padding:0.5rem !important;
+	padding-top:0.75rem !important;
+	padding-bottom:0.75rem !important;
 	border:2px solid;
 	border-color: white !important;
 	font-size:16px;
@@ -43,11 +51,11 @@
 	background-color:white;
 	max-width:280pt;
 	margin:0.5rem;
+	margin-left:0;
 	width:90%;
 	overflow:hidden;
 	position:absolute;
-	bottom:1.5rem;
-	margin-left:0 !important;
+	bottom:0.8rem;
 	font-weight:600;
 	transition:all 0.2s ease;
 	}
@@ -107,10 +115,10 @@
 		to the journey <br/>
 		aboard. <br/><br/>
 		<strong>
-		You are at InTru.<br/>
-		</span>
+		You are at <span style="margin-top:-14px;background-color:white;color:rgb(255,51,102);">InTru</span>.<br/>
 		</strong>
-		<input type="button" class="btn-cntinu " value="Get Accesss">
+		</span>
+		<input type="button" class="btn-cntinu " value="Get Access">
 	</div>
 
 </div>
@@ -120,13 +128,14 @@
 
 	<center>
 	<br/><br/>
-	
+
+    
 	<span class="spn-one"><img width="40" src="Images\app-logo-box.png"> INTRU ENTERPRISE </span>
 	<h2> YOUR UNIFIED, SCALABLE <br/>
 	WORKFLOW - ALL IN ONE PLACE </h2>
 	
 	
-	<span  style="text-decoration:underline;"style="padding-top:10%;">
+	<span  style="text-decoration:underline;" style="padding-top:10%;">
 	<h5>Experience smarter design. Expore what's most innovative.<br/>
 	Glamouring designs that speak more than words **</h5>
 	</span>
@@ -138,12 +147,13 @@
 	**Note: This Web Application is in Development mode. And that the <br/>
 	Developer is a 10th Standard Student. Data may be insecure and not wholly <br/> 
 	encrypted while in this phase. You are requested not to enter any sesitive data.<br/>
-	&copy; 2018-19 Ayush Anand, Developer<img width="40" src="Images\app-logo-box.png"> InTru.
+	&copy; 2018-19 Ayush Anand, Developer<img height="45" src="Images\app-logo-full.png">.
 	</span>
 	
 	</center>
 <br/>
 </div>
+<br/><br/>
 
 	<script>
 	$(document).ready(function (){
