@@ -1,10 +1,15 @@
 <!doctype HTML>
 <head>
-<title>Expense Sheet</title>
-<link rel="stylesheet" href="expense-style.css">
-<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+	<title>Expense Sheet</title>
+		<link rel="stylesheet" href="expense-style.css">
+		<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+		<link rel="icon" type="image/png" href="Images/app-logo-box.png"/>
+		<link rel="apple-touch-icon-precomposed" href="Images/app-logo-box.png"/>
+		<link rel="icon" href="Images/app-logo-box.png" />
+		<meta name="msapplication-TileImage" content="Images/app-logo-box.png" content="icon-uri=wbapphstd/Images/app-logo-box.png" />
 <script>
   // Initialize Firebase
   var config = {
@@ -22,10 +27,12 @@ const db = firebase.firestore();
  });
 
 </script>
-<script src="Script/jquery.min.js"></script>
-<script src="expense.min.js"></script>
+<script src="script/jquery.min.js"></script>
+
 </head>
-<body>
+<body onload="checkCookie()">
+<input type="hidden" value="hd" class="usrsfld" id="usrsfld">
+
 <div class="tp-mnu">
 <span class="opnnav" >&equiv;</span>
 <span class="txt">Expense</span>
@@ -46,5 +53,33 @@ const db = firebase.firestore();
 </div>
 
 </div>
+<script>
+function getUserDetails(user){
+		var name, email, photoUrl, uid, emailVerified;
+		name = user.displayName;
+		email = user.email;
+		photoUrl = user.photoURL;
+		emailVerified = user.emailVerified;
+		uid = user.uid;
+		$(document).ready(function(){
+			$(".usrsfld").val(uid);
+		})
+var userId=$(".usrsfld").val();
+allCommands();
+}
+function checkCookie() {
+		firebase.auth().onAuthStateChanged(function(user) {
+  		if (user) {
+		    // User is signed in.
+			getUserDetails(user);
+
+		  } else {	
+		    // No user is signed in.
+			window.location.href="login.html";
+		  }
+		});
+}
+</script>
+<script src="expense.min.js"></script>
 </body>
 </html>
