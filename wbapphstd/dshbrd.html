@@ -1,5 +1,4 @@
 <!doctype HTML>
-<html>
 <head>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -11,35 +10,14 @@
 		<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-auth.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
-	<script>
-	  // Initialize Firebase
-	  var config = {
-   	 apiKey: "AIzaSyCcrYfOrTxfnZzgTq17RNiTE95wMjMn8hY",
-	    authDomain: "pwa-intru.firebaseapp.com",
-	    databaseURL: "https://pwa-intru.firebaseio.com",
-	    projectId: "pwa-intru",
-	    storageBucket: "pwa-intru.appspot.com",
-	    messagingSenderId: "696864317345"
-	  };
-	  firebase.initializeApp(config);
-	</script>
-	<script>
-		function checkCookie() {
-		firebase.auth().onAuthStateChanged(function(user) {
-  		if (user) {
-		    // User is signed in.
-		  } else {	
-			window.location.href="login.html";
-		  }
-		});
-		};
-	</script>
+		<script src="dshbrd.js"></script>
 		<link rel="apple-touch-icon-precomposed" href="Images/app-logo-box.png"/>
 		<link rel="icon" href="Images/app-logo-box.png"/>
 		<meta name="msapplication-TileImage" content="Images/app-logo-box.png" content="icon-uri=wbapphstd/Images/app-logo-box.png" />
 	<script>
 	$("body").hide();
 	</script>
+
 
 	
 		<style>
@@ -144,9 +122,11 @@
 </head>
 
 <body onload="checkCookie()">
+<div class="panelDiv">
+
+</div>
 
 <div class="all-div">
-
 	
 <div class="ldng" >
 <br/><br/>
@@ -163,13 +143,14 @@
 
 	<div class="lgn-div twin-div">
 		<div class="frm"><br/>
-			<span class="icn-txt" ><img src="Images\app-logo-box.png" width=40px>InTru</span><br/><br/>
+			<span class="icn-txt" ><img src="Images\app-logo-full.png" height=40px></span><br/><br/>
 			<h3>
 			 Hello, User!
 			</h3>
 			This is the dashboard page.<br/><br/>
 			Since, this is a beta project it will undergo changes very soon! Click once again after March 31<sup>st</sup>, 2019.<br/>
-				<br/><br/><br/><br/>
+			<br/><br/>
+			<span class="emlfld"></span><br/><br/>
 	
 		</div>
 	<br/>	<input type="button" class="btn-sgnin" id="btn-sgn" value="Logout"><br/>
@@ -177,29 +158,6 @@
 
 	
 </div>
-
-	
-<script>
-$(document).ready(function (){
-$(".lgn-div").hide();
-$(".ldng").show().delay(1500).fadeOut(500);
-$(".pswrd-spn").hide();
-$(".sgnup-div").hide();
-$(".lgn-div").delay(500).hide().delay(2000).fadeIn( function(){
-$("body").css("background-color","rgb(255,51,102)");
-});
-
-$(".btn-sgnin").click(function(){
-firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-window.location.href="index.html";
-}).catch(function(error) {
-  alert(error);
-});
-});
-
-});
-</script>
 
 </body>
 </html>
