@@ -22,16 +22,14 @@
 	
 		<style>
 	body, html{
-	background-image:linear-gradient( to bottom , white) !important;
+//	background-image:linear-gradient( to bottom , white) !important;
 	background-repeat:no-repeat !important;
 	bacground-position:center !important;
 	bacground-size:cover !important;
 	height:100% !important;
+	width:100%;
 	}
-	.crtacnt{
-	float:left;
-	margin-left:20px;
-	}
+
 @media screen and (min-width:380px){
 	.twin-div{
 	margin-left:5px;
@@ -94,12 +92,12 @@
 	//display:none !important;
 	//}
 	//} 
-	.btn-sgnin, .btn-sgnup{
+	.btn-sgnout ,  .delete-usr-btn{
 	cursor:pointer;
 	padding:2.5rem/2.5rem !important;
 	padding:0.5rem !important;
 	border:2px solid;
-	border-color: white !important;
+	border-color: rgb(255,51,102) !important;
 	font-size:16px;
 	color:rgb(255,50,90);
 	background-color:white;
@@ -112,52 +110,190 @@
 	font-weight:600;
 	transition:all 0.2s ease;
 	}
-	.btn-sgnin:hover, .btn-sgnup:hover, .btn-cntinu:hover, .btn-sgnin-nxt:hover{
+	.btn-sgnout:hover , .delete-usr-btn:hover{
 	box-shadow:0 0 3px 3px #888;
 	-moz-shadow:0 0 3px 3px #888;
 	-ms-shadow:0 0 3px 3px #888;
 	-webkit-shadow:0 0 3px 3px #888;
 	}
+	.panelDiv{
+	position:absolute;
+	left:-2500px;
+	background-color:white;
+	height:100%;
+	width:85%;
+	border-right:1px grey solid;
+	max-width:400px;
+	transition: all 0.3s ease;
+	}
+	.topdiv{
+	background-image: url( "Images/app-background-div-style.png ");
+	color:white;
+	background-repeat:no-repeat;
+	width:100% !important;
+	padding-left:5px;
+	overflow:hidden;
+	height:auto !important;
+	font-size:15px;
+	background-size:cover;
+	}
+	.coverProfilePhoto{
+	height:140px;
+	border-bottom:1px solid black;
+	}
+	.profilePhoto{
+	position:relative;
+	top:-80px;
+	left:120px;
+	width:60px;
+	height:60px;
+	border-radius:50%;
+	border:1px solid black;
+	}
+	.heading{
+	font-size:28pt;
+	}
+	.pnl-btn{
+	font-size:22pt;
+	padding-top:0 !important;
+	margin-top:0 !important;
+	}
+	.emlfld{
+	right:5px;
+	top:15px;
+	position:fixed;
+	}
 	</style>
 </head>
 
-<body onload="checkCookie()">
-<div class="panelDiv">
-
-</div>
-
-<div class="all-div">
+<body onload='checkCookie()'>
+	<input type='hidden' value=' ' class='X67avB2'>
 	
-<div class="ldng" >
-<br/><br/>
-<img src="Images\app-logo-box.png">
-<br/><br/>
-<center>
-<div style="text-align:center;height:8px;width:80% !important; max-width:400px;background-color:rgb(255,52,102);"></div>
-</center>
-<br/>
-<br/>
-<center><font size="4px"> Loading... &nbsp;&nbsp;&nbsp;Please Wait.</font></center>
-</div>
+	<div class="panelDiv">
 
+		<span class="pnl-cls-btn"> &times; </span> <br/>
+	
+		<div class='coverProfilePhoto'>
+		</div>
+
+		<img class='profilePhoto' src='#'>
+		
+		<ul class='menuLinks'>
+			<li class='toIntruMoney'> InTru Money </li> <br/>
+			<li class='toIntruChat'> InTru Chat </li> <br/>
+			
+		</ul>
+
+	</div>
+
+<center>
+
+	<div class="ldng" > <br/><br/>
+	
+		<img src="Images\app-logo-box.png"> <br/><br/>
+		<div style="text-align:center;height:8px;width:80% !important; max-width:400px;background-color:rgb(255,52,102);"></div> <br/><br/>
+		<font size="4px"> Loading... &nbsp;&nbsp;&nbsp;Please Wait.</font>
+
+	</div>
+
+</center>
+
+	<div class="topdiv">
+		<span class="pnl-btn"> &equiv; </span> <br/>
+			<span class='heading'> Dashboard </span> <br/>
+			<span class="emlfld"></span> 
+			<span class='extraSpace'></span>
+	</div>
 
 	<div class="lgn-div twin-div">
 		<div class="frm"><br/>
-			<span class="icn-txt" ><img src="Images\app-logo-full.png" height=40px></span><br/><br/>
+			
 			<h3>
-			 Hello, User!
+			 Hello, <span class='namefld'></span>!
 			</h3>
 			This is the dashboard page.<br/><br/>
-			Since, this is a beta project it will undergo changes very soon! Click once again after March 31<sup>st</sup>, 2019.<br/>
+			Since, this is a beta project it will undergo changes very soon! Click once again after March 31, 2019.<br/>
 			<br/><br/>
-			<span class="emlfld"></span><br/><br/>
+			<br/><br/>
 	
 		</div>
-	<br/>	<input type="button" class="btn-sgnin" id="btn-sgn" value="Logout"><br/>
+	<br/>	<input type="button" class="btn-sgnout" id="btn-sgn" value="Logout"> <br/><br/>
+		<input type="button" class="delete-usr-btn" value="Delete Account"> <br/><br/>
 	</div>
 
 	
-</div>
+	<script>
+		$(document).ready(function (){
+			
+			$('.pnl-btn').click( function() {
+				$('.panelDiv').css('left','0px');
+			})
+			$('.pnl-cls-btn').click( function() {
+				$('.panelDiv').css('left','-2500px');
+			})
+			
+			if($(window).width() < 470){
+ 			 	$('.extraSpace').html("<br/><br/><br/><br/><br/>");
+			}else{
+				$('.extraSpace').html('<br/><br/><br/><br/>');
+				$('.topdiv').css('background','rgb(255,51,102)');
+				$('.topdiv').css('background-image','none');
+			}
+			$('.topdiv').hide();
+			$(".lgn-div").hide();
+			$(".ldng").show().delay(1500).fadeOut(500);
+			$(".topdiv").delay(2000).fadeIn();
+			$(".lgn-div").delay(2000).fadeIn();
+			$(".btn-sgnout").click(function(){
+				firebase.auth().signOut().then(function() {
+				  // Sign-out successful.
+				window.location.href="index.html";
+				}).catch(function(error) {
+					  alert(error);
+				})
+			})			
+		});
 
+	</script>
+	
+	<script>
+		function getUserDetails(user){
+			var name, email, photoUrl, uid, emailVerified;
+			name = user.displayName;
+			email = user.email;
+			photoUrl = user.photoURL;
+			emailVerified = user.emailVerified;
+			uid = user.uid;
+			$(document).ready(function(){
+			$(".X67avB2").val(uid);
+			 $(".emlfld").html(email);
+			$(".namefld").html(name);
+			
+			//Create doc for the user if the doc does not exists
+			var userRef = db.collection('cities').doc(uid);
+			userRef.get().then(doc => {
+			        if (!doc.exists) {
+			            citiesRef.set({
+				name: 'User',
+				email: email,
+				})
+			        }
+			    })
+			    .catch(err => {
+			        console.log('Error getting document', err);
+			    });
+
+
+			$('.delete-usr-btn').click( function() {
+				user.delete().then(function() {
+					alert("Successfully Deleted User");  // User deleted.
+				}).catch(function(error) {
+					alert(error)  // An error happened.
+				})
+			})
+		})
+		}
+
+	</script>
 </body>
 </html>
