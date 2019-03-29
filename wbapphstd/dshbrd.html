@@ -29,7 +29,7 @@
 	height:100% !important;
 	width:100%;
 	}
-
+/*
 @media screen and (min-width:380px){
 	.twin-div{
 	margin-left:5px;
@@ -65,6 +65,14 @@
 	margin-left:520px;
 	}
 	}
+*/
+	.pnl-cls-btn{
+	right:5px;
+	position:absolute;
+	font-size:50px;
+	margin-top:15px !important;
+	line-height:10px !important;
+	}
 	.icn-txt{
 	float:left;
 	margin-left:10px;
@@ -79,7 +87,7 @@
 	width:90%;
 	color:black;
 	margin-top:50px;
-	max-width:400px;
+	max-width:600px;
 	}
 	.logo{
 	width:100px;
@@ -94,7 +102,7 @@
 	//} 
 	.btn-sgnout ,  .delete-usr-btn{
 	cursor:pointer;
-	padding:2.5rem/2.5rem !important;
+	margin-left:20px !important;
 	padding:0.5rem !important;
 	border:2px solid;
 	border-color: rgb(255,51,102) !important;
@@ -102,10 +110,11 @@
 	color:rgb(255,50,90);
 	background-color:white;
 	max-width:400px;
-	margin:0.5rem;
-	margin-left:0.85rem;
+	margin:0px !important;
 	width:90%;
 	float:left;
+	margin-left:20px !important;
+	text-align:center;
 	overflow:hidden;
 	font-weight:600;
 	transition:all 0.2s ease;
@@ -118,15 +127,17 @@
 	}
 	.panelDiv{
 	position:absolute;
-	left:-2500px;
+	top:-2500px;
 	background-color:white;
-	height:100%;
-	width:85%;
+	height:100% !important;
+	margin-top:0px !important;
+	width:100%;
+	z-index:1;
 	border-right:1px grey solid;
-	max-width:400px;
 	transition: all 0.3s ease;
 	}
 	.topdiv{
+	margin: 0px !important;
 	background-image: url( "Images/app-background-div-style.png ");
 	color:white;
 	background-repeat:no-repeat;
@@ -137,16 +148,11 @@
 	font-size:15px;
 	background-size:cover;
 	}
-	.coverProfilePhoto{
-	height:140px;
-	border-bottom:1px solid black;
-	}
 	.profilePhoto{
-	position:relative;
-	top:-80px;
-	left:120px;
-	width:60px;
-	height:60px;
+	left:10px;
+	width:40px;
+	height:40px;
+	margin-top:10px !important; 
 	border-radius:50%;
 	border:1px solid black;
 	}
@@ -161,31 +167,32 @@
 	.emlfld{
 	right:5px;
 	top:15px;
-	position:fixed;
+	position:absolute;
+	z-index:0;
+	}
+	.toWhatstru-ai, .toInTruMoney{
+	cursor:pointer;	
+	}
+	.menuLinks{
+	text-decoration:underline;
+	padding-left:20px;
+	font-size:20px;
+	}
+	.finish-img{
+	position:absolute;
+	top:100px !important;
+	height:auto !important;
+	float:left;
+	overflow:hidden;
+	max-height:90px !important;
+	z-index:-1;
 	}
 	</style>
+
+
 </head>
 
 <body onload='checkCookie()'>
-	<input type='hidden' value=' ' class='X67avB2'>
-	
-	<div class="panelDiv">
-
-		<span class="pnl-cls-btn"> &times; </span> <br/>
-	
-		<div class='coverProfilePhoto'>
-		</div>
-
-		<img class='profilePhoto' src='#'>
-		
-		<ul class='menuLinks'>
-			<li class='toIntruMoney'> InTru Money </li> <br/>
-			<li class='toIntruChat'> InTru Chat </li> <br/>
-			
-		</ul>
-
-	</div>
-
 <center>
 
 	<div class="ldng" > <br/><br/>
@@ -198,16 +205,40 @@
 
 </center>
 
+
+<div class="rest-div">
+
+	<input type='hidden' value=' ' class='X67avB2'>
+	<img class='finish-img' src= "Images/app-background-div-style.png " width = 100%>	
+	<div class="panelDiv">
+
+		<span class="pnl-cls-btn"> &times; </span> 
+
+		<img class='profilePhoto' src='#'>
+		
+		<div class='menuLinks'>
+			<span class='toIntruMoney' onclick="javscript:window.location.href='money.html'"> Money </span> <br/>
+			<span class='toWhatstru-ai' onclick="javscript:window.location.href='whatstru-ai/index.html'">  WhatsTru.AI </span> <br/>	
+		</div>
+	<br/>	<input type="button" class="btn-sgnout" id="btn-sgn" value="Logout"> <br/><br/>
+		<input type="button" class="delete-usr-btn" value="Delete Account"> <br/><br/>
+
+	</div>
+
+
+
 	<div class="topdiv">
 		<span class="pnl-btn"> &equiv; </span> <br/>
-			<span class='heading'> Dashboard </span> <br/>
-			<span class="emlfld"></span> 
+			<span class='heading'> Dashboard </span><br/>
+			<span class="emlfld"></span>
 			<span class='extraSpace'></span>
 	</div>
 
+<br/><br/><br/>
+<center>
 	<div class="lgn-div twin-div">
+		
 		<div class="frm"><br/>
-			
 			<h3>
 			 Hello, <span class='namefld'></span>!
 			</h3>
@@ -217,33 +248,33 @@
 			<br/><br/>
 	
 		</div>
-	<br/>	<input type="button" class="btn-sgnout" id="btn-sgn" value="Logout"> <br/><br/>
-		<input type="button" class="delete-usr-btn" value="Delete Account"> <br/><br/>
 	</div>
-
-	
+</center>
+</div>
 	<script>
 		$(document).ready(function (){
+			$(".rest-div").hide();
 			
 			$('.pnl-btn').click( function() {
-				$('.panelDiv').css('left','0px');
+				$('.panelDiv').css('top','0px');
 			})
 			$('.pnl-cls-btn').click( function() {
-				$('.panelDiv').css('left','-2500px');
+				$('.panelDiv').css('top','-2500px');
 			})
-			
+
 			if($(window).width() < 470){
- 			 	$('.extraSpace').html("<br/><br/><br/><br/><br/>");
+ 			 	$('.extraSpace').html("<br/>");
+				$('.topdiv').css('background','rgb(255,51,102)');
+				$('.topdiv').css('background-image','none');
 			}else{
-				$('.extraSpace').html('<br/><br/><br/><br/>');
+				$('.extraSpace').html('<br/>');
 				$('.topdiv').css('background','rgb(255,51,102)');
 				$('.topdiv').css('background-image','none');
 			}
-			$('.topdiv').hide();
-			$(".lgn-div").hide();
+
 			$(".ldng").show().delay(1500).fadeOut(500);
-			$(".topdiv").delay(2000).fadeIn();
-			$(".lgn-div").delay(2000).fadeIn();
+			
+			$(".rest-div").delay(2000).fadeIn();
 			$(".btn-sgnout").click(function(){
 				firebase.auth().signOut().then(function() {
 				  // Sign-out successful.
