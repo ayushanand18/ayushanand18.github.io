@@ -1,12 +1,15 @@
-<!doctype HTML>
+	<!doctype HTML>
 <html>
 <head>
-			<meta charset="utf-8" name="viewport" content="width=device-width;user-scalable=no;">
+		<meta charset="utf-8" name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,">
 		<title> Ayush Anand | Empowering Innovation. </title>
 		<script src="wbapphstd/Script/jquery.min.js"></script>
 		<link rel="Stylesheet" href="wbapphstd/Style/bootstrap.min.css">
-		<link rel="wbapphstd/manifest" href="manifest.json">
-	
+		<link rel="manifest" href="wbapphstd/manifest.json">
+		<link rel="icon" type="image/png" href="wbapphstd/Images/app-logo-box.png"/>
+		<link rel="apple-touch-icon-precomposed" href="wbapphstd/Images/app-logo-box.png"/>
+		<link rel="icon" href="wbapphstd/Images/app-logo-box.png" />
+		<meta name="msapplication-TileImage" content="wbapphstd/Images/app-logo-box.png" content="icon-uri=wbapphstd/Images/app-logo-box.png" />
 		<style>
 	body, html{
 	background-color:rgb(255, 51, 102);
@@ -93,10 +96,9 @@
 	}
 	}
 
-	.btn-sgnin, .btn-sgnup,  .btn-sgnin-nxt{
+	.btn-sgnin{
 	cursor:pointer;
-	padding:2.5rem/2.5rem !important;
-	padding:0.5rem !important;
+	padding:12px !important;
 	border:2px solid;
 	border-color: white !important;
 	font-size:16px;
@@ -110,6 +112,36 @@
 	overflow:hidden;
 	font-weight:600;
 	transition:all 0.2s ease;
+	}
+	.footer{
+	position:fixed;
+	bottom:18px;
+	left:4px !important;
+	padding:5px;
+	color:black;
+	text-align:right;
+	background: white;
+	border:1px solid black;
+	}
+	.shw-ftr{
+	position:fixed;
+	bottom:5px;
+	left:0px !important;
+	padding:8px;
+	padding-top:0px !important;
+//	color:black;
+	color:white;
+	font-size:20px;
+	text-align:left;
+//	background: white;
+	background:transparent;
+	margin-top:0px;
+//	border:1px solid black;
+	line-height:8px !important;
+	}
+	.footer a{
+	text-decoration:underline;
+	color:black;
 	}
 	.btn-sgnin:hover, .btn-sgnup:hover, .btn-cntinu:hover, .btn-sgnin-nxt:hover{
 	box-shadow:0 0 3px 3px #888;
@@ -141,15 +173,23 @@
 	<br/>
 		<input type="button" class="navigatetowebapp btn-sgnin" id="btn-sgn" value="Take Me To The Innovative Web App">
 	</div>
-
 </div>
-
+	<span class="shw-ftr">&mldr;</span>
+<div class="footer">
+	&copy; 2018-2019, Ayush Anand, InTru Innovation &nbsp; &nbsp; <a href="wbapphstd/prvcy.html">Privacy Notice</a>
+</div>
+<br/><br/>
 	
 <script>
 $(document).ready(function(){
 $(".navigatetowebapp").click(function(){
 window.location.href="wbapphstd/index.html"
 });
+	$(".footer").hide();
+
+	$(".shw-ftr").click(function(){
+		$(".footer").toggle();
+	});
 $(".navigatetoblog").click(function(){
 window.location.href="https://thedebonairayush.wordpress.com/blogs"
 });
