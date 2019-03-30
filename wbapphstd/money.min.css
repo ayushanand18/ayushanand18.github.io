@@ -1,0 +1,119 @@
+.opnnav{
+	float:left;
+	z-index:2;
+	font-size:38px;
+	padding-left:12px;
+}
+.tp-mnu{
+	background-color:rgb(255,51,102) !important;
+	padding:0 !important;
+	padding-top:2px !important;
+	padding-bottom:10px !important;
+	color:white;
+	width:100%;
+	font-weight:500;
+}
+.tp-mnu .txt{
+	position:relative;
+	top:2px;
+	font-size:21px;
+	line-height:40px;
+	height:25px;
+	padding-left:30px;
+}
+body{
+	margin:0!important;
+}
+ul{
+	margin:0 !important;
+	display:inline;
+	overflow:hidden;
+	color:black;
+	margin:0 !important;
+	width:100%;
+	padding:0px !important;
+	padding-left:10px;
+	font-size:16pt;
+}
+li{
+	overflow:hidden;
+	margin:0 !important;
+	width:100%;
+	padding:0px !important;
+	border:1px solid black;
+	background-color: white !important;
+}
+.name_class{
+	color:black;	
+	font-weight:500
+	padding:5px;
+	position:relative;
+}
+.dates_class::before {
+	  content: "\A";
+	  white-space: pre;.
+}
+.cross_class{
+	position:relative;
+	top:-50px  !important;
+	left:95%;
+	background-color:rgba(184,184,184,1);
+}
+.dates_class{
+	font-size:15px;
+}
+.money_class{
+	text-align:right !important;
+	display:inline;
+	padding-left:40% !important;
+}
+.money_class::before{
+	content:"Rs.";
+}
+.frm-inpt-hldr{
+	border:1px solid black;
+	margin:0px;
+	margin-left:-12px;
+	width:102%;
+	margin-right:-12px;
+	background-color:white;
+}
+.entr-nm, .entr-cst{
+	font-size: 14px;
+	width:40%;
+	background:transparent;
+	border:none;
+	margin:0.5rem;
+	padding:0.25rem !important;
+}
+.sbmt-btn{
+	cursor:pointer;
+	padding:2.5rem/2.5rem !important;
+	padding:0.5rem !important;
+	border:2px solid;
+	border-radius:20px/20px;
+	border-color: rgb(255,50,90) !important;
+	font-size:16px;
+	color:rgb(255,50,90);
+	background-color:white;
+	width:80pt;
+	margin:0.5rem;
+	overflow:hidden;
+	bottom:1.5rem;
+	font-weight:600;
+	transition:all 0.6s ease;
+}
+.sbmt-btn:hover{
+	color:white;
+	background-color:rgb(255,50,90);
+}
+.content{
+	margin:10px !important;
+	border: 1px solid black;
+	font-size:20px !important;
+}
+.txtexp{
+	padding:10px;
+	padding-top:20px !important;
+	margin-top:10px !important;
+}
