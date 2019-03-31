@@ -46,7 +46,8 @@ li{
 .name_class{
 	color:black;	
 	font-weight:500
-	padding:5px;
+	padding-left:15px !important;
+	margin-left: 10px!important;
 	position:relative;
 }
 .dates_class::before {
@@ -61,6 +62,8 @@ li{
 }
 .dates_class{
 	font-size:15px;
+	margin-left: 10px !important;
+	padding-left: 10px !important;
 }
 .money_class{
 	text-align:right !important;
