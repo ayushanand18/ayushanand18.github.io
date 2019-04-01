@@ -315,5 +315,17 @@
 			    });
 
 
-			$('.delete-usr-btn').click( function() {
+		$('.delete-usr-btn').click( function() {
+				user.delete().then(function() {
+					alert("Successfully Deleted User");  // User deleted.
+				}).catch(function(error) {
+					alert(error)  // An error happened.
+				})
+			})
+		})
+		}
+
+	</script>
+</body>
+</html>
 		
