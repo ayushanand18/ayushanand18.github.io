@@ -304,12 +304,12 @@
 			var userRef = db.collection('Accounts').doc(uid);
 			userRef.get().then(doc => {
 			        if (!doc.exists) {
-			            citiesRef.set({
+			            userRef.set({
 				name: ' ',
 				email: email,
 				})
 				db.collection("Accounts")
-				.doc($(".usrsfld").val().toString())
+				.doc(uid)
 				.collection('intru-money')
 				.doc()
 				.set({
@@ -321,7 +321,7 @@
 			    })
 			    .catch(err => {
 			        console.log('Error getting document', err);
-			    });
+			    })
 
 
 		$('.delete-usr-btn').click( function() {
