@@ -301,12 +301,21 @@
 			$(".namefld").html(name);
 			
 			//Create doc for the user if the doc does not exists
-			var userRef = db.collection('cities').doc(uid);
+			var userRef = db.collection('Accounts').doc(uid);
 			userRef.get().then(doc => {
 			        if (!doc.exists) {
 			            citiesRef.set({
-				name: 'User',
+				name: ' ',
 				email: email,
+				})
+				db.collection("Accounts")
+				.doc($(".usrsfld").val().toString())
+				.collection('intru-money')
+				.doc()
+				.set({
+    			name: "opening",
+    			cost:0,
+				date:new Date()
 				})
 			        }
 			    })
