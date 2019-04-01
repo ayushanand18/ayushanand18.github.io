@@ -327,6 +327,13 @@
 		$('.delete-usr-btn').click( function() {
 				user.delete().then(function() {
 					alert("Successfully Deleted User");  // User deleted.
+					db.collection("users").doc(uid).update({
+    					"name": "deleted user"
+					})
+					.then(function() {
+    					console.log("Document successfully updated!");
+					})
+
 				}).catch(function(error) {
 					alert(error)  // An error happened.
 				})
