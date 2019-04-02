@@ -46,14 +46,24 @@ li{
 .name_class{
 	color:black;	
 	font-weight:500
-	padding-left:15px !important;
+	padding-left:15px!important;
 	margin-left: 10px!important;
 	position:relative;
 }
 .dates_class::before {
 	  content: "\A";
-	  white-space: pre;.
+	  white-space: pre;
 }
+.tp-img	{
+	top:0px;
+	height:auto !important;
+	float:left;
+	overflow:hidden;
+	width:100% !important;
+	max-height:140px !important;
+	position:absolute;
+	z-index:-1;
+	}
 .cross_class{
 	position:relative;
 	top:-50px  !important;
