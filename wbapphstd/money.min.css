@@ -4,8 +4,15 @@
 	font-size:38px;
 	padding-left:12px;
 }
+.pnl-div a{
+	text-decoration:none;
+	color:black;
+	padding-left:10px;
+	font-size:22px;
+}
 .pnl-div{
-	position:absolute;
+	position:fixed;
+	z-index:2;
 	top:-2000px;
 	transition:all 0.6s ease;
 	height:100%;
@@ -33,7 +40,7 @@
 	position:absolute;
 	right:5px;
 	top:5px;
-	
+	font-size:28px !important;
 }
 body{
 	margin:0!important;
@@ -82,7 +89,6 @@ li{
 	position:relative;
 	top:-50px  !important;
 	left:95%;
-	background-color:rgba(184,184,184,1);
 }
 .dates_class{
 	font-size:15px;
