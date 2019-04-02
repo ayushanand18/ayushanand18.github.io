@@ -67,6 +67,7 @@ function checkCookie() {
 </div>
 
 <div class="pnl-div">
+	<span class='clsnav'> &times; </span>
 </div>
 
 <br/> <br/> <br/> <br/> <br/> <br/> 
@@ -91,6 +92,14 @@ Expense
 </div>
 
 <script src="money.min.js"></script>
+<script>
+	$(".opnnav").click( function(){
+		$(".pnl-div").css("top","0px")
+	})
+	$(".clsnav").click( function(){
+		$(".pnl-div").css("top","-2000px")
+	})
+</script>
 
 </body>
 </html>
