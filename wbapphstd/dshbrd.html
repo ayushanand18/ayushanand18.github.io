@@ -326,6 +326,17 @@
 
 		$('.delete-usr-btn').click( function() {
 				user.delete().then(function() {
+					var userRef = db.collection('Accounts').doc($(".X67avB2").val());
+					return userRef.update({
+					 name: "delete"
+					})
+					.then(function() {
+    					console.log("Document successfully updated!");
+					})
+					.catch(function(error) {
+    				// The document probably doesn't exist.
+    					console.error("Error updating document: ", error);
+					});
 					alert("Successfully Deleted User");  // User deleted.
 				}).catch(function(error) {
 					alert(error)  // An error happened.
