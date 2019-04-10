@@ -19,8 +19,11 @@
 	width:100%;
 	background-color:white;
 }
+.sum_exp {
+	padding-left:10px !important;
+	color:white !important;
+}
 .tp-mnu{
-	background-color:rgb(255,51,102) !important;
 	padding:0 !important;
 	padding-top:2px !important;
 	padding-bottom:10px !important;
