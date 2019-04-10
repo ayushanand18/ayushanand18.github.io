@@ -63,16 +63,17 @@ ul{
 li{
 	overflow:hidden;
 	margin:0 !important;
-	font-size:14px;
+	font-size:16px;
 	width:100%;
 	padding:0px !important;
 	background-color: white !important;
 }
 .name_class{
 	color:black;	
-	font-weight:500
+	font-weight:600 !important;
 	padding-left: 15px!important;
 	margin-left: 10px!important;
+	left:0px;
 	position:relative;
 }
 .dates_class::before {
@@ -91,21 +92,24 @@ li{
 	}
 .cross_class{
 	position:relative;
-	top:-50px  !important;
-	left:95%;
+	top:-25px  !important;
+	left:0px;
 }
 .dates_class{
 	font-size:15px;
+	left:22px !important;
+	position:relative !important;
 	margin: 10px !important;
 	padding: 10px !important;
 }
 .money_class{
 	text-align:right !important;
 	display:inline;
-	padding-left:40% !important;
+	font-weight:600 !important;
+	padding-left:80px !important;
 }
 .money_class::before{
-	content:"INR";
+	content:"INR  ";
 }
 .frm-inpt-hldr{
 	border:1px solid black;
