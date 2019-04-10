@@ -92,8 +92,8 @@ li{
 }
 .dates_class{
 	font-size:15px;
-	margin-left: 10px !important;
-	padding-left: 10px !important;
+	// margin-left: 10px !important;
+	// padding-left: 10px !important;
 }
 .money_class{
 	text-align:right !important;
