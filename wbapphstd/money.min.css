@@ -104,9 +104,10 @@ li{
 }
 .money_class{
 	text-align:right !important;
+	float:right !important;
 	display:inline;
 	font-weight:600 !important;
-	padding-left:80px !important;
+	padding-left:110px !important;
 }
 .money_class::before{
 	content:"INR  ";
@@ -151,6 +152,7 @@ li{
 .content{
 	margin:10px !important;
 	border: 1px solid black;
+	max-width:500px;
 	font-size:20px !important;
 }
 .txtexp{

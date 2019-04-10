@@ -308,6 +308,13 @@
 				name: ' ',
 				email: email,
 				})
+				var d = new Date();
+				var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+				let gotMonth = months[d.getMonth()];
+				let gotYear = d.getFullYear();
+				let gotHours = d.getHours();
+				let gotMinutes = d.getMinutes();
+				let gotDay= d.getDate();
 				db.collection("Accounts")
 				.doc(uid)
 				.collection('intru-money')
@@ -315,7 +322,12 @@
 				.set({
     			name: "opening",
     			cost:0,
-				date:new Date()
+				date:new Date(),
+				day:gotDay,
+				month:gotMonth,
+				year:gotYear,
+				hour:gotHours,
+				minute:gotMinutes
 				})
 			        }
 			    })
