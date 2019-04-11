@@ -92,8 +92,8 @@ li{
 	}
 .cross_class{
 	position:relative;
-	top:-25px  !important;
-	left:0px;
+	top:-30px  !important;
+	left:1px;
 }
 .dates_class{
 	font-size:15px;
@@ -106,6 +106,7 @@ li{
 	text-align:right !important;
 	float:right !important;
 	display:inline;
+	padding-right: 5px !important;
 	font-weight:600 !important;
 	padding-left:110px !important;
 }
