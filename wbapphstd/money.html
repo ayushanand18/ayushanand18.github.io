@@ -31,9 +31,7 @@ const db = firebase.firestore();
 </script>
 <script src="Script/jquery.min.js"></script>
 <script>
-	$(".rest-div").hide();
-	$(".content").hide();
-	$(".tp-img").hide();
+	$("body").hide();
 </script>
 <script>
 function getUserDetails(user){
@@ -84,16 +82,23 @@ function checkCookie() {
 <img src="Images/app-background-div-style.png" class="tp-img" style="display:none !important;">
 
 <div class="tp-mnu">
-<span class="opnnav" >&equiv;</span>
-<span class="txt">Expense</span>
+<span class="opnnav" >&equiv;</span> <br/> <br/>
+<span class="txt heading">Expense</span>
 </div>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 <span class="sum_exp"> 0.00 </span> 
- <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<select name="mnth_slct" class="mnth_slct" id="mnth_slct">
+
+<br/><br/><br/>
+	
+<div class="pnl-div">
+	<span class='clsnav'> &times; </span>
+	<br/> <br/>
+	<a href="dshbrd.html"> Go to Dashboard</a> <br/> <br/>
+<center>
+	
+	<select name="mnth_slct" class="mnth_slct" id="mnth_slct">
 	<option value="January"> January </option>
 	<option value="February"> February </option>
 	<option value="March" > March </option>
@@ -107,22 +112,18 @@ function checkCookie() {
 	<option value="November"> November </option>
 	<option value="December"> December </option>
 </select>
-&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
 <select name="yr_slct" class='yr_slct' id='yr_slct'>
 	<option value='2019' selected> 2019 </option>
 </select>
-&nbsp;
+<br/><br/>
 <button class='mnth'> Show </button>
+</center>
 
-<br/><br/><br/>
-<div class="pnl-div">
-	<span class='clsnav'> &times; </span>
-	<br/> <br/>
-	<a href="dshbrd.html"> Go to Dashboard</a>
 </div>
 
 
-
+	
 <div class="content">
 <span class="txtexp">
 Expense
@@ -141,6 +142,7 @@ Expense
 </ul>
 
 </div>
+
 </div>
 
 <script src="money.min.js"></script>
