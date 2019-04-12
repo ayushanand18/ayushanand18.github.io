@@ -30,12 +30,14 @@ const db = firebase.firestore();
 
 </script>
 <script src="Script/jquery.min.js"></script>
-<script type="text/javascript">
+<script>
 	$(".rest-div").hide();
+	$(".content").hide();
 	$(".tp-img").hide();
 </script>
 <script>
 function getUserDetails(user){
+		$(".rest-div").hide();
 		var name, email, photoUrl, uid, emailVerified;
 		name = user.displayName;
 		email = user.email;
@@ -45,6 +47,7 @@ function getUserDetails(user){
 		$(document).ready(function(){
 			$(".usrsfld").val(uid);
 		})
+
 	allCommands();
 }
 function checkCookie() {
@@ -84,8 +87,10 @@ function checkCookie() {
 <span class="opnnav" >&equiv;</span>
 <span class="txt">Expense</span>
 </div>
-<br/> <br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span class="sum_exp"> 0.00 </span> 
+ <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <select name="mnth_slct" class="mnth_slct" id="mnth_slct">
@@ -102,11 +107,11 @@ function checkCookie() {
 	<option value="November"> November </option>
 	<option value="December"> December </option>
 </select>
-
+&nbsp;
 <select name="yr_slct" class='yr_slct' id='yr_slct'>
 	<option value='2019' selected> 2019 </option>
 </select>
-
+&nbsp;
 <button class='mnth'> Show </button>
 
 <br/><br/><br/>
@@ -116,7 +121,7 @@ function checkCookie() {
 	<a href="dshbrd.html"> Go to Dashboard</a>
 </div>
 
-<br/> <br/> <br/> <br/> <br/> <br/> 
+
 
 <div class="content">
 <span class="txtexp">
@@ -147,6 +152,8 @@ $("document").ready( function(){
 	})
 	$(".ldng").show().delay(1500).fadeOut(500);
 	$(".rest-div").delay(2000).fadeIn();
+	$(".content").delay(2000).fadeIn();
+	
 	$(".tp-img").delay(2000).fadeIn();
 	$(".clsnav").click( function(){
 		$(".pnl-div").css("top","-2000px")
