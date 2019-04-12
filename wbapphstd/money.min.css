@@ -90,6 +90,21 @@ li{
 	position:absolute;
 	z-index:-1;
 	}
+.mnth{
+	background-color:rgb(255,51,102);
+	color:white;
+	border-radius:2px;
+	padding-left:5px;
+	padding-right: 5px;
+	border:1px solid white;
+}
+.mnth_slct, .yr_slct{
+	color: white;
+	background-color:rgb(255,51,102);
+	border:none !important;
+	border-bottom-color: white !important;
+	border-bottom: 1px solid white !important;
+}
 .cross_class{
 	position:relative;
 	top:-30px  !important;

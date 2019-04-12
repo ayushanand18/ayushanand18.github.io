@@ -11,6 +11,7 @@
 		<link rel="apple-touch-icon-precomposed" href="Images/app-logo-box.png"/>
 		<link rel="icon" href="Images/app-logo-box.png" />
 		<meta name="msapplication-TileImage" content="Images/app-logo-box.png" content="icon-uri=wbapphstd/Images/app-logo-box.png" />
+
 <script>
   // Initialize Firebase
   var config = {
@@ -29,6 +30,10 @@ const db = firebase.firestore();
 
 </script>
 <script src="Script/jquery.min.js"></script>
+<script type="text/javascript">
+	$(".rest-div").hide();
+	$(".tp-img").hide();
+</script>
 <script>
 function getUserDetails(user){
 		var name, email, photoUrl, uid, emailVerified;
@@ -40,7 +45,7 @@ function getUserDetails(user){
 		$(document).ready(function(){
 			$(".usrsfld").val(uid);
 		})
-allCommands();
+	allCommands();
 }
 function checkCookie() {
 		firebase.auth().onAuthStateChanged(function(user) {
@@ -59,15 +64,52 @@ function checkCookie() {
 </head>
 <body onload="checkCookie()">
 <input type="hidden" value="hd" class="usrsfld" id="usrsfld">
-<img src="Images/app-background-div-style.png" class="tp-img">
+<center>
+
+	<div class="ldng" > <br/><br/>
+	
+		<img src="Images\app-logo-box.png"> <br/><br/>
+		<div style="text-align:center;height:8px;width:80% !important; max-width:400px;background-color:rgb(255,52,102);"></div> <br/><br/>
+		<font size="4px"> Loading... &nbsp;&nbsp;&nbsp;Please Wait.</font>
+
+	</div>
+
+</center>
+
+<div class="rest-div">
+	
+<img src="Images/app-background-div-style.png" class="tp-img" style="display:none !important;">
 
 <div class="tp-mnu">
 <span class="opnnav" >&equiv;</span>
 <span class="txt">Expense</span>
 </div>
 <br/> <br/>
-<span class="sum_exp"> 0.00 </span>
+<span class="sum_exp"> 0.00 </span> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+<select name="mnth_slct" class="mnth_slct" id="mnth_slct">
+	<option value="January"> January </option>
+	<option value="February"> February </option>
+	<option value="March" > March </option>
+	<option value="April" selected>April</option>
+	<option value="May"> May </option>
+	<option value="June"> June </option>
+	<option value="July"> July </option>
+	<option value="August"> August </option>
+	<option value="September"> September </option>
+	<option value="October"> October </option>
+	<option value="November"> November </option>
+	<option value="December"> December </option>
+</select>
+
+<select name="yr_slct" class='yr_slct' id='yr_slct'>
+	<option value='2019' selected> 2019 </option>
+</select>
+
+<button class='mnth'> Show </button>
+
+<br/><br/><br/>
 <div class="pnl-div">
 	<span class='clsnav'> &times; </span>
 	<br/> <br/>
@@ -94,16 +136,23 @@ Expense
 </ul>
 
 </div>
+</div>
 
 <script src="money.min.js"></script>
 <script>
+$("document").ready( function(){
+	
 	$(".opnnav").click( function(){
 		$(".pnl-div").css("top","0px")
 	})
+	$(".ldng").show().delay(1500).fadeOut(500);
+	$(".rest-div").delay(2000).fadeIn();
+	$(".tp-img").delay(2000).fadeIn();
 	$(".clsnav").click( function(){
 		$(".pnl-div").css("top","-2000px")
 	})
 
+});
 </script>
 
 </body>
