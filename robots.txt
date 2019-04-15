@@ -1,0 +1,21 @@
+# Hey welcome to the intru project
+# You can also surf https://thedebonairayush.wordpress.com/
+
+Sitemap: https://ayushanand18.github.io/sitemap.xml
+
+User-agent: *
+Disallow: /wbapphstd/Images
+Disallow: /wbapphstd/Scripts
+Disallow: /wbapphstd/Images
+Disallow: /wbapphstd/Icons
+Allow: /
+Allow: /wbaphstd/index.html
+Allow: /wbapphstd/login.html
+Allow: /wbapphstd/money.html
+Allow: /wbapphstd/whatstru-ai/index.html
+Disallow: /wbapphstd/whatstru-ai/fake-news-data.csv
+Allow: /wp-admin/admin-ajax.php
+Disallow: /README.md
+Disallow: /google9ef1d6c7d25de0d1.html
+
+# This file was generated on Mon, 15 Apr 2019 11:06:07 +0000
