@@ -56,12 +56,12 @@
 		<meta name="msapplication-TileImage" content="wbapphstd/Images/app-logo-box.png" content="icon-uri=wbapphstd/Images/app-logo-box.png" />
 		<style>
 	body, html{
-		font-family: 'Roboto', sans-serif !important;
-	background-color:rgb(255, 51, 102);
+	font-family: 'Roboto', sans-serif !important;
+	// background-color:rgb(255, 51, 102);
 	background-repeat:no-repeat !important;
 	bacground-position:center !important;
 	bacground-size:cover !important;
-	height:99% !important;
+	height:100% !important;
 	color:black;
 	}
 	.icn-txt{
@@ -140,7 +140,6 @@
 	margin-left:520px;
 	}
 	}
-
 	.btn-sgnin{
 	cursor:pointer;
 	padding:15px !important;
@@ -194,47 +193,174 @@
 	-ms-shadow:0 0 3px 3px #888;
 	-webkit-shadow:0 0 3px 3px #888;
 	}
+	.top-div{
+		position:fixed;
+		top:0px;
+		width:100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-right: 10px;
+		left:0px;
+		background-color: white;
+		overflow:hidden;
+		z-index: 1;
+		float:left;
+	}
+	.top-div input[type=button]{
+		float:right;
+		overflow:hidden;
+		color:rgb(255,51,102);
+		background-color:white;
+		border: 1px solid rgb(255,51,102);
+		padding-left:15px;
+		margin-top: 6px;
+		padding-right: 15px;
+		border-radius: 20px/20px;
+	}
+	.phn-img{
+		position:relative;
+		top: -280px;
+		width: 28%;
+		min-width:100px;
+		left:2%;
+		max-width: 200px;
+	}
+	.top-div a{
+		padding:5px;
+		text-decoration: none;
+		font-color: rgb(255,51,102);
+		overflow:hidden;
+		float:right;
+	}
+	.first-cvr{
+		margin-top:50px;
+		background-color: rgb(255,51,102);
+		color: white;
+		width: 100%;
+		padding: 25px;		
+	}
+	.first-cvr h2 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-left: 30%;
+	}
+	.first-cvr .msg {
+		margin-left: 30%;
+	}
+	.first-cvr input[type=button] {
+		background-color: white;
+		color: rgb(255,51,102);
+		padding:15px;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-left:30%;
+		margin-top: 10px;
+		line-height: 10px;
+		border-radius: 25px/25px;
+		border: 1px solid white;
+	}
+	.lptp-img{
+		width: 50%;
+		min-width:100px;
+		max-width:550px;
+		float: right;
+		overflow: hidden;
+		position: relative;
+	}
+	.pnl-div{
+		float: right;
+		overflow: hidden;
+		padding: 20px;
+		border-right:1px solid black;
+		position:fixed;
+		z-index:2;
+		background-color:white;
+		width: 80%;
+		height: 100%;
+		right:-1500px;
+		top:0px;
+		font-size: 16pt;
+		transition: all 0.5s ease;
+	}
+	.pnl-div a{
+		text-decoration: none;
+		font-color: rgb(255,51,102);
+		overflow:hidden;
+	}
+	.pnl-div input[type=button] {
+		background-color: white;
+		color: rgb(255,51,102);
+		padding:15px;
+		padding-right: 20px;
+		margin-top: 10px;
+		line-height: 10px;
+		border-radius: 25px/25px;
+		border: 1px solid rgb(255,51,102);
+	}
+	.cls-btn{
+		float:right;
+		overflow: hidden;
+		font-size: 22pt;
+	}
 	</style>
 </head>
 
 <body>
 
-<div class="all-div">
-
-	<div class="lgn-div">
-		<div class="frm"><br/>
-			<span class="icn-txt" ><img src="wbapphstd/Images/app-logo-box.png" width=40px>InTru</span><br/><br/>
-			<h3>
-			 Ayush Anand
-			</h3>
-			Welcome to the InTru World.<br/><br/><br/>
-				<div class="navigatetoblog">
-				Click here to catch up the latest on the Development Release Notes.<br/>
-				</div>
-				&copy; 2018-2019, Ayush Anand, InTru Innovation <br/> <a href="prvcy.html">Privacy Notice</a>
-				<br/> <br/>
-				<span style="text-decoration:underline;">Click below to navigate straight to the web app</span>
-				<br/><br/>
-		</div>
-	<br/>
-		<input type="button" class="navigatetowebapp btn-sgnin" id="btn-sgn" value="Take Me To The Innovative Web App">
-	</div>
+<div class ='top-div'>
+	<img src="wbapphstd/Images/app-logo-box.png" width=40px> <img src="wbapphstd/Images/app-intru-expnd.png" height="25px" alt="intru.io">
+	<span class="btn-grp">
+		<input type="button" value ="SIGN UP" />
+		<a href="https://github.com/ayushanand18" > <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github" width="30px"> </a>
+		<a href="https://thedebonairayush.wordpress.com" > Blog</a>
+		<a href="prvcy.html" > Privacy </a>
+		<a href="about.html" > About </a>
+		<a href="index.html" class="active"> Home </a>
+	</span>
+		<input type="button" value="MENU" class="menu-btn">
 </div>
-<br/> <br/> 
 
-<br/><br/>
-	
+<div class="pnl-div">
+	<span class="cls-btn"> &times; </span> <br/>
+	<a href="index.html" class="active"> Home </a> <br/>
+	<a href="about.html" > About </a> <br/>
+	<a href="prvcy.html" > Privacy </a>	<br/>
+	<a href="https://thedebonairayush.wordpress.com" > Blog</a> <br/>
+	<a href="https://github.com/ayushanand18" > <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github" width="30px"> </a> <br/>
+	<input type="button" value ="SIGN UP" />
+</div>
+
+<div class="first-cvr">
+	<h2> Start your amazing <br/>
+		stuff through InTru.io
+	</h2>
+	<div class="msg"> 
+	This is the All New InTru Web App. Delivering new Innovations to your doorstep just a click away! 
+	</div>
+	<br/>
+	<input type="button" value="GET STARTED" onclick="window.location.href='wbapphstd/index.html'">
+	<br/> <br/>
+</div>
+<img src="wbapphstd/Images/dummy-phone.png"  class="phn-img">
+<div class="second-cvr"	>
+	<img src="wbapphstd/Images/dummy-laptop-scrn.png" class='lptp-img'>
+</div>
+
+<script type="text/javascript" src="wbapphstd/Script/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-$(".navigatetowebapp").click(function(){
-window.location.href="wbapphstd/index.html"
-});
-
-
-$(".navigatetoblog").click(function(){
-window.location.href="https://thedebonairayush.wordpress.com/blog"
-});
-});
+	$(document).ready( function() {
+		$(".menu-btn").hide();
+		if($(window).width() <= 600){
+			$(".menu-btn").show();
+			$(".btn-grp").hide();
+		}
+		$(".menu-btn").click ( function(){
+			$(".pnl-div").css("right","0px");
+		})
+		$(".cls-btn").click ( function(){
+			$(".pnl-div").css("right","-1500px");
+		})
+	})
 </script>
 
 </body>
