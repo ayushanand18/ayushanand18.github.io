@@ -126,14 +126,10 @@
 	transition:all 0.2s ease;
 	}
 	.footer{
-	position:fixed;
-	bottom:18px;
-	left:4px !important;
 	padding:5px;
-	color:black;
-	text-align:right;
-	background: white;
-	border:1px solid black;
+	color: white;
+	background: rgb(255,51,102);
+	width: 100%;
 	}
 	.shw-ftr{
 	position:fixed;
@@ -186,13 +182,9 @@
 		border-radius: 20px/20px;
 	}
 	.phn-img{
-		position:relative;
-		top: -280px;
-		width: 28%;
+		width: 17%;
 		min-width:100px;
-		overflow-y: hidden;
-		float:left;
-		left:2%;
+		float: left;
 		max-width: 200px;
 	}
 	.top-div a{
@@ -212,10 +204,10 @@
 	.first-cvr h2 {
 		padding-top: 20px;
 		padding-bottom: 20px;
-		margin-left: 30%;
+		margin-left: 20%;
 	}
 	.first-cvr .msg {
-		margin-left: 30%;
+		margin-left: 20%;
 	}
 	.first-cvr input[type=button] {
 		background-color: white;
@@ -223,14 +215,14 @@
 		padding:15px;
 		padding-left: 20px;
 		padding-right: 20px;
-		margin-left:30%;
+		margin-left:20%;
 		margin-top: 10px;
 		line-height: 10px;
 		border-radius: 25px/25px;
 		border: 1px solid white;
 	}
 	.lptp-img{
-		width: 50%;
+		width: 68%;
 		min-width:100px;
 		max-width:550px;
 		float: right;
@@ -276,10 +268,40 @@
 		margin-left:10px !important;
 		padding-left: 10px !important;
 	}
+	.third-cvr p{
+		padding:10px;
+	}
+	.third-cvr{
+		padding: 10px;
+	}
 	.second-cvr h2{
 		margin-left: 10px !important;
 		padding-left: 10px !important;
 		margin-top:20%;
+	}
+	.second-cvr h5{
+		overflow:hidden !important;
+		float:left !important;
+	}
+	.second-cvr h2{
+		margin-top: 0px;
+		position: relative;
+		left: -60px !important;
+	}
+	.toAlec{
+		background-color: white;
+		color:black;
+		padding:10px;
+		padding-left:40px;
+		padding-right: 40px;
+		border:1px solid black;
+	}
+	.toAlec:hover {
+		border-color: white;
+		background-color: black;
+		color: white;
+		cursor: pointer;
+		transition : all 0.3s ease;
 	}
 	</style>
 </head>
@@ -294,7 +316,7 @@
 		<a href="https://github.com/ayushanand18" > <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github" width="30px"> </a>
 		<a href="https://thedebonairayush.wordpress.com" > Blog</a>
 		<a href="prvcy.html" > Privacy </a>
-		<a href="about.html" > About </a>
+		<a href="#l" > About </a>
 		<a href="index.html" class="active"> Home </a>
 	</span>
 		<input type="button" value="MENU" class="menu-btn">
@@ -322,16 +344,58 @@
 	<input type="button" value="GET STARTED" onclick="window.location.href='wbapphstd/index.html'">
 	<br/> <br/>
 </div>
-<img src="wbapphstd/Images/dummy-phone.png"  class="phn-img">
+
 
 
 <div class="second-cvr"	>
 <br/> <br/>
-	<h2>
-		INNOVATION THAT MAKES <br/>
-		YOUR LIFE A BETTER LIVING
-	</h2>
+	<h5> Meet the </h5><br/> <h2> ALEC AI BOT </h2>
+	<p>
+		An AI Powered Virtual Assistant to help Combat Fake News. <br/><br/>
+		Alec AI Bot is a Machine Learning Chatbot that helps you fight against Fake News.Alec AI Bot is an initiative by InTru Innovations all curated in the fight against cyber threats and make a safe digital space by its developer Ayush Anand. <br/> <br/>
+
+		Note: Alec AI Bot is still in Beta. Read the Privacy Notice <a href="prvcy.html"> Here</a>.
+	</p>
+	<input type="button" class="toAlec" onclick="window.location.href='wbapphstd/whatstru-ai/index.html'" value="GET ALEC FOR WEB" /> &nbsp; &nbsp; &nbsp;
+	<input type="button" class="toAlec" value="TRY IT ON ASSISTANT" onclick="window.location.href=' https://assistant.google.com/services/a/uid/00000042d67a9722?hl%3Den%26source%3Dweb&hl=en-IN&jsmode=o&source=web' " />
+	<p> Now Available on <b> Google Assistant </b> &nbsp; &nbsp;
+	
+	</p>
+</div>
+
+<br/><br/>
+
+<div class="third-cvr">
+	<center>
+	<h3> Responsive by Design ~	Intelligent By Style
+	</h3>
+	</center>
+	<div style="overflow:visible !important;float:left;padding:20px;">
+	<img src="wbapphstd/Images/dummy-phone.png"  class="phn-img">
 	<img src="wbapphstd/Images/dummy-laptop-scrn.png" class='lptp-img'>
+	</div> <br/><br/>
+	<p >
+		Try the all new intru webapp prject straight on your mobile phone seeminglessly.
+	</p>
+
+	<p>
+		Try the all new InTru WebApp Projct on your desktop or laptop too along with other devices like Tablet and Android TV
+	</p>
+</div>
+
+<div class="footer">
+	<br/> <br/>
+	INTRU.IO by Ayush Anand
+	&copy; 2019
+	<br/><br/>
+	<a href="https://github.com/ayushanand18" style="color:white;text-decoration:none;"> Github </a>
+	<br/>
+	<a href="prvcy.html" style="color:white;text-decoration:none;"> Privacy Notice </a>
+	<br/> <br/>
+	<p>
+		Note: Images subjected to here are properties of their various sources. We so not claim their authenticity. This project is in Beta, therefore 100% gaurantee of its security is not granted. For more information or to contact please visit https://thedebonairayush.wordpress.com .
+	</p> 
+	<br/><br/>
 </div>
 
 <script type="text/javascript" src="wbapphstd/Script/jquery.min.js"></script>
