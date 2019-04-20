@@ -14,7 +14,8 @@ Allow: /wbapphstd/login.html
 Allow: /wbapphstd/money.html
 Allow: /wbapphstd/whatstru-ai/index.html
 Disallow: /wbapphstd/whatstru-ai/fake-news-data.csv
-Allow: /wp-admin/admin-ajax.php
+Allow: /about.html
+Allow: /prvcy.html
 Disallow: /README.md
 Disallow: /google9ef1d6c7d25de0d1.html
 
