@@ -108,7 +108,8 @@
 	margin-left:5px;
 	}
 	}
-	.btn-sgnin{
+
+.btn-sgnin{
 	cursor:pointer;
 	padding:15px !important;
 	border:2px solid;
@@ -181,12 +182,36 @@
 		padding-right: 15px;
 		border-radius: 20px/20px;
 	}
-	.phn-img{
-		width: 17%;
-		min-width:100px;
-		float: left;
-		overflow:hidden !important;
-		max-width: 180px;
+	.lptp-img{
+		width: 60%;
+	}
+
+	@media screen and (min-width:750px){
+		.cntnt-div{
+			width:80%;
+			padding-left:20%;
+		}
+
+	}
+	@media screen and (min-width:1020px){
+		.cntnt-div{
+			width:80%;
+			padding-left: 20%;
+		}
+		.footer{
+			padding-left: 20%;
+			padding-right: 20%;
+		}
+	}
+	@media screen and (min-width:1430px){
+		.cntnt-div{
+			width:80%;
+			padding-left:20%;
+		}
+		.footer{
+			padding-left: 20%;
+			padding-right: 20%;
+		}
 	}
 	.top-div a{
 		padding:5px;
@@ -240,15 +265,7 @@
 		border-color:white;
 		transition: all 0.3s ease;
 	}
-	.lptp-img{
-		width: 68%;
-		min-width:100px;
-		max-width:600px;
-		float: right;
-		padding-right:0px;
-		overflow: hidden !important;
-		position: relative;
-	}
+
 	.pnl-div{
 		float: right;
 		overflow: hidden;
@@ -354,19 +371,22 @@
 	<input type="button" onclick="window.location.href='wbapphstd/login.html'"  value ="SIGN UP" />
 </div>
 
+
+	
 <div class="first-cvr">
+	<br/>
 	<h2> Start your amazing <br/>
 		stuff through InTru.io
 	</h2>
 	<div class="msg"> 
 	This is the All New InTru Web App. Delivering new Innovations to your doorstep just a click away! 
 	</div>
-	<br/>
-	<input type="button" value="GET STARTED" onclick="window.location.href='wbapphstd/index.html'">
 	<br/> <br/>
+	<input type="button" value="GET STARTED" onclick="window.location.href='wbapphstd/index.html'">
+	<br/> <br/> <br/>
 </div>
 
-
+<div class="cntnt-div">
 
 <div class="second-cvr"	>
 <br/> <br/>
@@ -392,8 +412,9 @@
 	</h3>
 	</center>
 	<div style="overflow:visible !important;width:100% !important;float:left;padding:8px;padding-right:5px !important;">
-	<img src="wbapphstd/Images/dummy-phone.png"  class="phn-img">
-	<img src="wbapphstd/Images/dummy-laptop-scrn.png" class='lptp-img'>
+	<center>
+		<img src="wbapphstd/Images/dummy-laptop-scrn.png" class='lptp-img'>
+	</center>
 	</div> <br/><br/>
 	<p >
 		Try the all new intru webapp project straight on your mobile phone seeminglessly.
@@ -403,7 +424,7 @@
 		Try the all new InTru WebApp Project on your desktop or laptop too along with other devices like Tablet and Android TV
 	</p>
 </div>
-
+</div>
 <div class="footer">
 	<br/> 
 	<h6>
