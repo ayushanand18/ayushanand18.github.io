@@ -356,6 +356,23 @@
 		cursor: pointer;
 		transition : all 0.3s ease;
 	}
+	.form .btn{
+		overflow:hidden;
+		color:rgb(255,51,102);
+		padding: 10px;
+		background-color:white;
+		border: 1px solid rgb(255,51,102);
+		padding-left:35px;
+		margin-top: 6px;
+		width: 70%;
+		padding-right: 35px;
+	}
+	.form .inpt{
+		padding: 14px;
+		border: none;
+		border-bottom : 2px solid black;
+		width: 70%;
+	}
 	</style>
 </head>
 
@@ -428,11 +445,13 @@
 	<div style="overflow:visible !important; width:100% !important;float:left;padding:8px;padding-right:5px !important;">
         <h6> To Contact me, fill up the form and I will reply to you shortly! (<i> You can also use this form to provide a complaint or feedback. Just add it in your subject.</i> ) </h6>
 	</div> <br/><br/>
-	<div style="width:100%;overflow:hidden;padding:5px;height:520px !important;" >
-	<iframe border="no" scrolling="no" height="1000px" width="500px" style="transform: scale(0.75);position:relative;left: -15px; top: -360px" src="https://thedebonairayush.wordpress.com/contact/" >
-	</iframe>    
-	</div>
-	
+	<form method="POST" class="form" action="https://formspree.io/kingwarrior880@gmail.com">
+		<input type="email" class="inpt" name="email" placeholder="Your Email"><br/>
+		<input type="text" class="inpt" name="name" placeholder="Your Name"><br/>
+		<input type="text" name="subject" class="inpt" placeholder="Subject"><br/>
+		<textarea name="message" class="inpt" placeholder="Test Message"></textarea><br/>
+		<button type="submit" class="btn">SUBMIT</button><br/><br/>
+	</form>
 </div>
 </div>
 
