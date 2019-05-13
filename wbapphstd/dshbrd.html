@@ -184,10 +184,16 @@
 	cursor:pointer !important;	
 	}
 	.menuLinks{
-	text-decoration:underline;
+	text-decoration:none;
 	padding-left:20px;
 	pointer:cursor;
 	font-size:20px;
+	}
+	.menuLinks span{
+		padding-bottom: 4px;
+		margin-bottom: 15px !important;
+		margin-top: 15px !important;
+		border-bottom: 2px solid black !important;
 	}
 	.finish-img{
 	position:absolute;
@@ -229,7 +235,7 @@
 		
 		<div class='menuLinks'>
 			<span class='toMoney' onclick="javscript:window.location.href='money.html'"> Money </span> <br/>
-			<span class='toWhatstru-ai' onclick="javscript:window.location.href='whatstru-ai/index.html'">  Alec AI Bot </span> <br/>	
+			<span class='toWhatstru-ai' onclick="javscript:window.location.href='whatstru-ai/index.html'">  Alec AI Assist </span> <br/>	
 		</div>
 	<br/>	<input type="button" class="btn-sgnout" id="btn-sgn" value="Logout"> <br/><br/>
 		<input type="button" class="delete-usr-btn" value="Delete Account"> <br/><br/>
@@ -393,4 +399,3 @@
 	</script>
 </body>
 </html>
-		
