@@ -65,6 +65,7 @@ ul{
 	font-size:16pt;
 }
 li{
+	list-style-type: none;
 	margin:0 !important;
 	font-size:16px;
 	width:100%;
@@ -182,4 +183,22 @@ li{
 	padding:10px;
 	padding-top:20px !important;
 	margin-top:10px !important;
+}
+@media screen and (min-width:750px){
+	.content {
+		width: 60%;
+		margin-left: 20% !important;
+	}
+}
+@media screen and (min-width:1020px){
+	.content {
+		width: 60%;
+		margin-left: 25% !important;
+	}
+}
+@media screen and (min-width:1200px){
+	.content {
+		width: 60%;
+		margin-left: 36% !important;
+	}
 }
