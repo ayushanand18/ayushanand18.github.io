@@ -9,6 +9,7 @@ Disallow: /wbapphstd/Scripts
 Disallow: /wbapphstd/Images
 Disallow: /wbapphstd/Icons
 Allow: /
+Allow: /contact.html
 Allow: /wbaphstd/index.html
 Allow: /wbapphstd/login.html
 Allow: /wbapphstd/money.html
