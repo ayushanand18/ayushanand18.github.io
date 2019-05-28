@@ -33,11 +33,11 @@
     "@type": "AggregateRating",
     "bestRating": "100",
     "ratingCount": "24",
-    "ratingValue": "90"
+    "ratingValue": "95"
   }
 }
 	</script>
-		<title> Ayush Anand | About </title>
+		<title> Contact Us | InTru Innovation </title>
 		<meta charset="utf-8" name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,">
 		<meta property="og:description" content="Ayush Anand the developer of InTru Innovation" />
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
@@ -103,55 +103,7 @@
 	-ms-shadow:0 0 2px 2px #888;
 	}
 	
-	.footer{
-	padding:15px;
-	color: white;
-	text-align: justify;
-	background: rgb(255,51,102);
-	width: 100%;
-	}
-@media screen and (min-width:380px){
-	.lgn-div{
-	margin-left:5px;
-	}
-	}
-		@media screen and (min-width:750px){
-		.cntnt-div{
-			width:80%;
-			padding-left:20%;
-		}
-
-	}
-	@media screen and (min-width:1020px){
-		.cntnt-div{
-			width:80%;
-			padding-left: 20%;
-		}
-		.top-div a{
-			margin-right: 1.8%;
-			font-size: 18px !important;
-		}
-		.footer{
-			padding-left: 20%;
-			padding-right: 20%;
-		}
-	}
-	@media screen and (min-width:1430px){
-		.cntnt-div{
-			width:80%;
-			padding-left:20%;
-		}
-		.top-div a{
-			margin-right: 2% !important;
-			font-size: 20px !important;
-		}
-		.footer{
-			padding-left: 20%;
-			padding-right: 20%;
-		}
-	}
-
-	.btn-sgnin{
+.btn-sgnin{
 	cursor:pointer;
 	padding:15px !important;
 	border:2px solid;
@@ -168,7 +120,13 @@
 	font-weight:600;
 	transition:all 0.2s ease;
 	}
-
+	.footer{
+	padding:15px;
+	text-align: justify;
+	color: white;
+	background: rgb(255,51,102);
+	width: 100%;
+	}
 	.shw-ftr{
 	position:fixed;
 	bottom:5px;
@@ -222,12 +180,44 @@
 		border-radius: 2px;
 		cursor: pointer;
 	}
-	.phn-img{
-		width: 17%;
-		min-width:100px;
-		float: left;
-		overflow:hidden !important;
-		max-width: 180px;
+	.lptp-img{
+		width: 60%;
+	}
+
+	@media screen and (min-width:750px){
+		.cntnt-div{
+			width:80%;
+			padding-left:20%;
+		}
+
+	}
+	@media screen and (min-width:1020px){
+		.cntnt-div{
+			width:80%;
+			padding-left: 20%;
+		}
+		.top-div a{
+			margin-right: 1.8%;
+			font-size: 18px !important;
+		}
+		.footer{
+			padding-left: 20%;
+			padding-right: 20%;
+		}
+	}
+	@media screen and (min-width:1430px){
+		.cntnt-div{
+			width:80%;
+			padding-left:20%;
+		}
+		.top-div a{
+			margin-right: 2% !important;
+			font-size: 20px !important;
+		}
+		.footer{
+			padding-left: 20%;
+			padding-right: 20%;
+		}
 	}
 	.top-div a{
 		padding:5px;
@@ -277,6 +267,7 @@
 		line-height: 10px;
 		border-radius: 25px/25px;
 		border: 1px solid white;
+		cursor: pointer;
 	}
 	.first-cvr input[type=button]:hover {
 		background-color: rgb(255,51,102);
@@ -284,15 +275,12 @@
 		border-color:white;
 		transition: all 0.3s ease;
 	}
-	.lptp-img{
-		width: 68%;
-		min-width:100px;
-		max-width:600px;
-		float: right;
-		padding-right:0px;
-		overflow: hidden !important;
-		position: relative;
-	}
+    .form .inpt{
+        width: 70%;
+        height: 50px;
+        border:none;
+        border-bottom: 2px solid black;
+    }
 	.pnl-div{
 		float: right;
 		overflow: hidden;
@@ -336,8 +324,8 @@
 	.second-cvr{
 		margin-left:10px !important;
 		padding-left: 10px !important;
-		padding-right: 10px !important;
 		text-align: justify;
+		padding-right: 12px !important;
 	}
 	.third-cvr p{
 		padding:10px;
@@ -375,28 +363,6 @@
 		cursor: pointer;
 		transition : all 0.3s ease;
 	}
-	.form .btn{
-		overflow:hidden;
-		color:rgb(255,51,102);
-		padding: 10px;
-		background-color:white;
-		border: 1px solid rgb(255,51,102);
-		padding-left:35px;
-		margin-top: 6px;
-		width: 70%;
-		padding-right: 35px;
-	}
-	.form .btn:hover{
-		background-color: rgb(255,51,102);
-		color: white;
-	}
-	.form .inpt{
-		padding: 14px;
-		border: 1px solid grey;
-		border-bottom : 2px solid black;
-		width: 70%;
-		overflow: hidden;
-	}
 	</style>
 </head>
 
@@ -404,82 +370,96 @@
 
 <!--The Navigation Bar --->
 <div class ='top-div'>
-	<img src="wbapphstd/Images/app-logo-box.png" onclick=" window.location.href='https://ayushanand18.github.io' " alt="intru.io" width=40px> <img src="wbapphstd/Images/app-intru-expnd.png" onclick=" window.location.href='https://ayushanand18.github.io' " height="25px" alt="intru.io">
+	<img src="wbapphstd/Images/app-logo-box.png" onclick=" window.location.href='https://ayushanand18.github.io' " width=40px> <img src="wbapphstd/Images/app-intru-expnd.png" onclick=" window.location.href='https://ayushanand18.github.io' " height="25px" alt="intru.io">
 	<span class="btn-grp">
 		<input type="button" onclick="window.location.href='wbapphstd/login.html'" value ="SIGN UP" />
 		<a href="https://github.com/ayushanand18" > <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github" width="30px"> </a>
 		<a href="https://thedebonairayush.wordpress.com" > Blog</a>
 		<a href="prvcy.html" > Privacy </a>
-		<a href="contact.html" > Contact </a>
-		<a href="#l" class="active"> About </a>
-		<a href="index.html" > Home </a>
+		<a href="contact.html" class="active" > Contact </a>
+		<a href="about.html" > About </a>
+		<a href="index.html" > Home</a>
 	</span>
-		<input type="button" value="&equiv; &nbsp; &nbsp; MENU" class="menu-btn">
+		<input type="button" value="&equiv; &nbsp;&nbsp;&nbsp; MENU" class="menu-btn">
 </div>
 
 <!-- Panel is shown when on Mobile Device --->
 <div class="pnl-div">
 	<span class="cls-btn"> &times; </span> <br/>
-	<a href="index.html" > Home </a> <br/>
-	<a href="about.html" class="active"> About </a> <br/>
+	<a href="index.html"  > Home</a> <br/>
+	<a href="about.html" > About </a> <br/>
 	<a href="prvcy.html" > Privacy </a>	<br/>
-	<a href="contact.html" > Contact </a>	<br/>
+	<a href="contact.html" class="active" > Contact </a>	<br/>
 	<a href="https://thedebonairayush.wordpress.com" > Blog</a> <br/>
 	<a href="https://github.com/ayushanand18" > <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github" width="30px"> </a> <br/>
 	<input type="button" onclick="window.location.href='wbapphstd/login.html'"  value ="SIGN UP" />
 </div>
 
+
+	
 <div class="first-cvr">
-	<br/> <br/>
-	<h2> Fly And Soar <br/>
-		High In The Sky !
+	<br/>
+	<h2> Have Questions? <br/>
+		or Left with some Queries?
 	</h2>
 	<div class="msg"> 
-	Welcome to the All New InTru Web App. Delivering new Innovations to your doorstep just a click away! 
+	Don't shy to open up yourself... We are always here to help you out. Stay Relaxed and just scroll below to know more! <br/>
 	</div>
-	<br/> <br/>
+	<br/> 
+	<br/>
 	<input type="button" value="GET STARTED" onclick="window.location.href='wbapphstd/index.html'">
 	<br/> <br/> <br/>
 </div>
 
-
 <div class="cntnt-div">
-	
+
 <div class="second-cvr"	>
 <br/> <br/>
-	<h5> Meet me </h5><br/> <h2> WHO AM I ? </h2>
+	<h5> Let us </h5><br/> <h2> &nbsp;&nbsp; GET IN A TALK </h2>
 	<p>
-		Well this is AYUSH ANAND. FIrst, to let you know I wrote my first line of code at the age of 10! And now before I can pass out my School I am already a full-stack Developer.  <br/><br/>
-		You may haven't heard this name but I am a student (still in School) to empower all Netizens with the Ideas I possess. My AIM is to develop a World Wide Web that is more safer and is more User-Friendly and not Data Leak Friendly.
-		In the Recent span of time there were various scandals that came to light be it Facebook level or Wannacry Ransomware! We would have forgotten many of them but we shall not...
-		Let's keep our cyber data more safer than even our physical one... Because Digital is here to stay.
-		<br/> <br/>
-
-		You can follow me on my Wordpress blog to catch up on the latest news and my experince on developing my first WebApp.    <a href="https://thedebonairayush.wordpress.com"> Here</a>.
+		A Converstaion is on the top of our Priority List because WE ARE HERE ONLY IF YOU ARE HERE. <br/><br/>
+		Just fill in the form below and let us get in touch...<br/><br/>
 	</p>
-
 	
 </div>
 
 <br/><br/>
 
 <div class="third-cvr">
-	<center>
-	<h3> Happy to help you any time! 
-	</h3>
-	</center>
-	<div style="overflow:visible !important; width:100% !important;float:left;padding:8px;padding-right:5px !important;">
-        <h6> To Contact me, VISIT THE CONTACT PAGE and fill the form. (<i> You can also use this form to provide a complaint or feedback. Just add it in your subject.</i> ) </h6>
-	</div> <br/><br/> <br/> <br/>
+	<h4> Select your resposes as per your choice </h4>
+	<p >
+        <form method="POST" class="form" action="https://formspree.io/kingwarrior880@gmail.com">
+		<select name="category-of-contact" class="inpt">
+		    <option name="  " value="  "> --Select Category of Request--</option>
+		    <option name="cat-feedback" value="Feedback">Feedback</option>
+		    <option name="cat-grevience" value="Grevience">Grevience</option>
+		</select><br/><br/>
+		<input type="email" class=" inpt" name="email" > <br/>
+		<span style="position:relative; top:-60px;background:white;left:4px;overflow:hidden;">Email (e.g. you@example.com)</span> <br/>
+		<input type="text" class="inpt" name="name" > <br/>
+		<span style="position:relative; top:-60px;background:white;left:4px;overflow:hidden;">Name (e.g. John Doe)</span> <br/>
+		<input type="text" name="subject" class="inpt" > <br/>
+		<span style="position:relative; top:-62px;background:white;left:4px;overflow:hidden;">Subject (Don't Leave it blank)</span> <br/>
+		<textarea name="message" class="inpt" row="20"  ></textarea><br/>
+		<button type="submit" class="btn btn-primary">SUBMIT</button><br/>
+		<span style="position:relative;top:-110px;background:white;left:4px;overflow:hidden;">Text Message (Be clear and short)</span>
+		
+    	</form>
+		
+		
+	</p>
 
+	<p>
+		Yes you caught it very right !! Just a tap away and you are in it...
+	</p>
 </div>
 </div>
-
 <div class="footer">
-	<br/> <br/>
-	INTRU.IO by Ayush Anand
-	&copy; 2019
-	<br/><br/>
+	<br/> 
+	<h6>
+	INTRU.IO by Ayush Anand	&copy; 2019
+	</h6>
+	<br/>
 	<a href="https://github.com/ayushanand18" style="color:white;text-decoration:none;"> Github </a>
 	<br/>
 	<a href="prvcy.html" style="color:white;text-decoration:none;"> Privacy Notice </a>
@@ -489,8 +469,8 @@
 	<a href="https://www.quora.com/profile/Ayush-Anand-417" style="color:white;text-decoration:none;"> Quora </a>
 	<br/> <br/>
 	<p>
-		Note: Images subjected to here are properties of their various sources. We so not claim their authenticity. This project is in Beta, therefore 100% gaurantee of its security is not granted. For more information or to contact please visit https://thedebonairayush.wordpress.com .
-		<br/><i> This is a Beta Project therefore, Safe Cyber Practices are encouraged. </i> <br/>
+		Note: Images subjected to here are properties of their various sources. We so not claim their authenticity. This project is in Beta, therefore 100% gaurantee of its security is not granted. For more information or to contact please visit https://thedebonairayush.wordpress.com . <br/>
+		<i> This is a Beta Project therefore, Safe Cyber Practices are encouraged. </i> <br/>
 		<br/>
 		By Continueing to our site and using Services, you agree to our Terms and Conditions and Privacy Policy.
 	</p> 
