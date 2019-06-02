@@ -5,6 +5,7 @@ Sitemap: https://ayushanand18.github.io/sitemap.xml
 
 User-agent: *
 Disallow: /wbapphstd/Images
+Disallow: /wbapphstd/money.html
 Disallow: /wbapphstd/Scripts
 Disallow: /wbapphstd/Images
 Disallow: /wbapphstd/Icons
@@ -19,5 +20,3 @@ Allow: /about.html
 Allow: /prvcy.html
 Disallow: /README.md
 Disallow: /google9ef1d6c7d25de0d1.html
-
-# This file was generated on Mon, 15 Apr 2019 11:06:07 +0000
