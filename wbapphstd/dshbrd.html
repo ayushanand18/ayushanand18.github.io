@@ -46,16 +46,24 @@
 	.panelDiv{
 	position:fixed ;
 	top: 0px;
-	background-color:white;
+	background-color: rgb(38,47,61);
 	height:100% !important;
 	margin-top:0px !important;
 	left: -1700px;
 	width:80%;
 	bottom:0px;
 	max-width:300px;
+	color: lightgrey;
 	z-index:1;
-	border-right:2px lightgrey solid;
 	transition: all 0.3s ease;
+	}
+	.panelDiv .logo-txt{
+		font-size: 26px;
+		font-weight: 500;
+		color: white;
+		letter-spacing: 2px;
+		padding-left: 15px !important;
+		margin-top: 10px !important;
 	}
 	.rght-pnl{
 		right: -1700px;
@@ -127,11 +135,17 @@
 	}
 
 	.pnl-cls-btn{
-	right:5px;
+	right:-35px;
+	color: white !important;
 	position:absolute;
 	font-size:50px;
-	margin-top:15px !important;
-	line-height:10px !important;
+	height: 45px;
+	width: 35px;
+	padding-top:4px !important;
+	margin-top:0px !important;
+	background: rgb(37,48,61);
+	top: 0px !important;
+	line-height:35px !important;
 	}
 	.icn-txt{
 	float:left;
@@ -188,25 +202,41 @@
 	position:absolute;
 	z-index:0;
 	padding: 5px;
+	background: rgb(255,51,102);
+	color: white;
 	padding-left:20px;
 	padding-right: 20px;
 	border: 1px solid grey;
 	border-radius: 25px/25px;
 	}
-	.toWhatstru-ai , .toMoney{
-	cursor:pointer !important;	
-	padding-bottom: 20px !important;
-	margin-bottom: 20px !important
-	line-height: 30px !important;
-	}
 	.menuLinks{
 	text-decoration:none;
-	padding-left:40px;
+	padding-left:10px;
 	pointer:cursor;
-	font-size:20px;
+	font-size:18px;
 	}
-	.menuLinks span{
+	.menuLinks .active{
+		color: white;
+		border-right: 4px solid white !important;
+		width:100% !important;
+		font-weight: 700 !important;
+		padding-right: 0px;
+		margin-right: 0px;
+	}
+	.menuLinks ul{
 	line-height: 30px !important;
+	}
+	.menuLinks .ul-hdng{
+		color: white !important;
+		padding-bottom: 14px !important;
+	}
+	.menuLinks li{
+		cursor: pointer;
+		list-style-type: none !important;
+		padding-bottom: 10px !important;
+	}
+	.menuLinks .lnk{
+		padding-left:10px;
 	}
 	.lgn-div{
 		background-color: #f4f4f5 !important;
@@ -230,16 +260,27 @@
 
 </center>
 
+
 <div class="rest-div">
-	<div class="panelDiv">
+
+		
+		
+
+	<div class="panelDiv"> <br/>
+		<span class="logo-txt"> INTRU.IO</span>
 		<br/><br/>
-		<img src="Images/app-intru-expnd.png" height=40px style="margin-left:20px">
+		
 		<span class="pnl-cls-btn"> &times; </span> 
-		<br/><br/><br/><br/>
+		<br/>
 		<div class='menuLinks'>
-		<span class='toMoney' onclick="javscript:window.location.href='money.html'"> Money </span> <br/>
-		<span class='toWhatstru-ai' onclick="javscript:window.location.href='whatstru-ai/index.html'">  Alec AI Assist </span> <br/>
-		<span class="delete-usr-btn" > Delete Account </span> <br/><br/>
+			<ul>
+				<li class="ul-hdng"> Services </li>
+				<li class="lnk active"> Dashboard </li>
+				<li class="lnk" onclick="javscript:window.location.href='money.html'"> Money </li>
+				<li class="lnk" onclick="javscript:window.location.href='whatstru-ai/index.html'"> Alec AI </li>
+				<li class="lnk" onclick="javscript:window.location.href='dshbrd.html'"> Settings </li>
+				<li class="lnk delete-usr-btn"> Delete Account </li>
+			</ul>
 		</div>
 	</div>
 	
@@ -263,8 +304,8 @@
 	<div class="topdiv">
 		<span class="pnl-btn"> &equiv; </span> <br/>
 			<br/> <br/>
-			<span class='heading'> Dashboard </span><br/>
 			<span class="emlfld"></span>
+			<span class='heading'> Dashboard </span><br/>
 			<span class='extraSpace'></span>
 	</div>
 <center>

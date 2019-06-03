@@ -58,6 +58,7 @@ function getUserDetails(user){
 		uid = user.uid;
 		$(document).ready(function(){
 			$(".usrsfld").val(uid);
+			$(".emlfld").html(email);
 		})
 
 	allCommands();
@@ -94,32 +95,59 @@ function checkCookie() {
 
 <div class="rest-div">
 	
-<img src="Images/app-background-div-style.png" class="tp-img" style="display:none !important;">
 
 <div class="tp-mnu">
+	<span class="emlfld"></span>
 <span class="opnnav" >&equiv;</span> <br/> <br/>
 <span class="txt heading">Expense</span>
-</div>
 &nbsp;&nbsp;&nbsp;
 <span class="sum_exp"> 0.00 </span> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+</div>
+
+
 
 <br/><br/><br/>
-	
+	<div class="rght-pnl">
+		<span class="rght-pnl-cls-btn"> &times;	</span>
+		<div class="rght-cvr"></div>
+		<center>
+			<button class="btn-sgnout" id="btn-sgn" > Logout </button> <br/>
+		</center>
+			
+		<div class="rght-menu-lnk">
+			<span> Hey We are Updating the UI Very Sooner</span>
+		</div>
+	</div>
 <div class="pnl-div">
-	<span class='clsnav'> &times; </span>
-	<br/> <br/>
-	<a href="dshbrd.html"> Go to Dashboard</a> <br/> <br/>
-<center>
+	<span class="logo-txt"> INTRU.IO</span>
+			<span class="pnl-cls-btn"> &times; </span>
+			<div class='menuLinks'>
+			<ol>
+				<span class="ul-hdng"> Services </span> <br/>
+				<span class="lnk" onclick=" javascript: window.location.href='dshbrd.html' "> &nbsp;Dashboard </caption> <br/>
+				<span class="lnk active" onclick="javscript:window.location.href='money.html'"> Money </span> <br/>
+				<span class="lnk" onclick="javscript:window.location.href='whatstru-ai/index.html'"> Alec AI </span> <br/>
+				<span class="lnk" onclick="javscript:window.location.href='dshbrd.html'"> Settings </span> <br/>
+				<span class="lnk delete-usr-btn"> Delete Account </span> <br/>
+			</ol>	
+			
+		
+		<br/>
+
+			<br/> 
+	<span class="ul-hdn"> Select Time Period </span> <br/>
+	<center>
+		 <br/>
 	
 	<select name="mnth_slct" class="mnth_slct" id="mnth_slct">
 	<option value="January"> January </option>
 	<option value="February"> February </option>
 	<option value="March" > March </option>
 	<option value="April" >April</option>
-	<option value="May" selected> May </option>
-	<option value="June"> June </option>
+	<option value="May" > May </option>
+	<option value="June" selected> June </option>
 	<option value="July"> July </option>
 	<option value="August"> August </option>
 	<option value="September"> September </option>
@@ -134,7 +162,7 @@ function checkCookie() {
 <br/><br/>
 <button class='mnth'> Show </button>
 </center>
-
+</div>
 </div>
 
 
@@ -165,15 +193,23 @@ Expense
 $("document").ready( function(){
 	
 	$(".opnnav").click( function(){
-		$(".pnl-div").css("top","0px")
+		$(".pnl-div").css("left","0px")
 	})
+				$('.emlfld').click( function() {
+				$('.rght-pnl').css('right','0px');
+			})
+			$('.rght-pnl-cls-btn').click( function() {
+				$('.rght-pnl').css('right','-1700px');
+			})
+			
 	$(".ldng").show().delay(1500).fadeOut(500);
 	$(".rest-div").delay(2000).fadeIn();
 	$(".content").delay(2000).fadeIn();
+	$(".menuLinks").delay(2000).fadeIn();
 	
 	$(".tp-img").delay(2000).fadeIn();
-	$(".clsnav").click( function(){
-		$(".pnl-div").css("top","-2000px")
+	$(".pnl-cls-btn").click( function(){
+		$(".pnl-div").css("left","-1780px")
 	})
 
 });
