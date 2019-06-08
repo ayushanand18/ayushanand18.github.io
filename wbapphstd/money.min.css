@@ -29,7 +29,7 @@
 		color: white !important;
 		letter-spacing: 2px !important;
 		padding-left: 15px !important;
-		margin-top: 20px !important;
+		margin-top: 28px !important;
 }
 .menuLinks{
 		z-index: 2 !important;
@@ -45,30 +45,24 @@
 		width:100% !important;
 		font-weight: 700 !important;
 		padding-right: 0px;
-		height: 500px;
 		margin-right: 0px;
 	}
-	.menuLinks ol{
-	line-height: 30px !important;
-	height: 30% !important;
+	.menuLinks ul{
+		line-height: 18px !important;
 	}
 	.menuLinks .ul-hdng{
 		color: white !important;
-		padding-bottom: 14px !important;
+		padding-bottom: 4px !important;
 	}
 	.ul-hdn{
 		padding-left: 40px !important;
 		color: white;
-		padding-bottom: 20px !important;
+		padding-bottom: 8px !important;
 	}
-	.menuLinks span{
-		width: 222px !important;
-		margin: 0px !important;
-		height: 26px !important;
-		position: absolute;
-		padding-right: 0px !important;
+	.menuLinks li{
 		cursor: pointer;
-		padding-bottom: 10px !important;
+		list-style-type: none !important;
+		padding-bottom: 4px !important;
 	}
 	.menuLinks .lnk{
 		padding-left:10px;
@@ -131,7 +125,7 @@
 	}
 .sum_exp {
 	padding-left:10px !important;
-	color:white !important;
+	color:black !important;
 	font-size:18px !important;
 }
 .tp-mnu{
@@ -188,6 +182,9 @@ body{
 .dates_class::before {
 	  content: "\A";
 	  white-space: pre;
+}
+.sum_exp::before{
+	content:"Total SUM:";
 }
 .tp-img	{
 	top:0px;

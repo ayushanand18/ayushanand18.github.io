@@ -100,8 +100,9 @@ function checkCookie() {
 	<span class="emlfld"></span>
 <span class="opnnav" >&equiv;</span> <br/> <br/>
 <span class="txt heading">Expense</span>
-&nbsp;&nbsp;&nbsp;
-<span class="sum_exp"> 0.00 </span> 
+<br/><br/>
+&nbsp;&nbsp;&nbsp; <span class="sum_exp"> 0.00 </span> 
+<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 </div>
@@ -124,19 +125,16 @@ function checkCookie() {
 	<span class="logo-txt"> INTRU.IO</span>
 			<span class="pnl-cls-btn"> &times; </span>
 			<div class='menuLinks'>
-			<ol>
-				<span class="ul-hdng"> Services </span> <br/>
-				<span class="lnk" onclick=" javascript: window.location.href='dshbrd.html' "> &nbsp;Dashboard </caption> <br/>
-				<span class="lnk active" onclick="javscript:window.location.href='money.html'"> Money </span> <br/>
-				<span class="lnk" onclick="javscript:window.location.href='whatstru-ai/index.html'"> Alec AI </span> <br/>
-				<span class="lnk" onclick="javscript:window.location.href='dshbrd.html'"> Settings </span> <br/>
-				<span class="lnk delete-usr-btn"> Delete Account </span> <br/>
-			</ol>	
+			<ul>
+				<li class="ul-hdng"> Services </li> <br/>
+				<li class="lnk" onclick=" javascript: window.location.href='dshbrd.html' "> Dashboard </li> <br/>
+				<li class="lnk active" onclick="javscript:window.location.href='money.html'"> Money </li> <br/>
+				<li class="lnk" onclick="javscript:window.location.href='whatstru-ai/index.html'"> Alec AI Assist </li> <br/>
+				<li class="lnk" onclick="javscript:window.location.href='dshbrd.html'"> Settings </li> <br/>
+				<li class="lnk delete-usr-btn"> Delete Account </li> <br/>
+			</ul>	
 			
-		
-		<br/>
 
-			<br/> 
 	<span class="ul-hdn"> Select Time Period </span> <br/>
 	<center>
 		 <br/>
@@ -211,6 +209,14 @@ $("document").ready( function(){
 	$(".pnl-cls-btn").click( function(){
 		$(".pnl-div").css("left","-1780px")
 	})
+				$(".btn-sgnout").click(function(){
+				firebase.auth().signOut().then(function() {
+				  // Sign-out successful.
+				window.location.href="index.html";
+				}).catch(function(error) {
+					  alert(error);
+				})
+			})
 
 });
 </script>
