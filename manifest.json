@@ -3,12 +3,12 @@
   "name": "InTru Innovations",
   "icons": [
     {
-      "src": "https://ayushanand18.github.io/wbapphstd/Images/app-logo-box.png",
+      "src": "wbapphstd/Images/app-logo-box.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://ayushanand18.github.io/wbapphstd/Images/app-logo-box.png",
+      "src": "wbapphstd/Images/app-logo-square.png",
       "type": "image/png",
       "sizes": "512x512"
     }
