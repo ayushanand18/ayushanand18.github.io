@@ -241,13 +241,26 @@
 	.menu-btn{
 		border-radius:0px !important;
 		padding:8px;
+		position: relative;
+		color: black !important;
+		width:5px;
+		top: -6px !important;
 		padding-left:20px !important;
-		padding-right: 40px !important;
-	}
-	.menu-btn:hover {
-		background-color: rgb(255,51,102) !important;
-		color:white !important;
 		border-color:white !important;
+		padding-right: 20px !important;
+		font-size: 20px;
+	}
+	 .ff{
+	 	width: 25px;
+  		height: 2px;
+  		background-color: black;
+  		margin: 6px 0;
+  		position: fixed;
+  		top: 6px;
+  		right:6px;
+  		background: white;
+	 } 
+	.menu-btn:hover {
 		transition: all 0.3 ease !important;
 	}
 	.first-cvr h2 {
@@ -375,7 +388,10 @@
 		<a href="about.html" > About </a>
 		<a href="index.html" class="active"> Home</a>
 	</span>
-		<input type="button" value="&equiv; &nbsp;&nbsp;&nbsp; MENU" class="menu-btn">
+		<!--<input type="button" value="&equiv;" class="menu-btn">-->
+		<div class="ff"></div> 
+		<div class="ff"></div>
+		<div class="ff"></div> 
 </div>
 
 <!-- Panel is shown when on Mobile Device --->
