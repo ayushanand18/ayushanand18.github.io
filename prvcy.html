@@ -244,18 +244,23 @@
 		width: 100%;
 		padding: 25px;		
 	}
-	.menu-btn{
-		border-radius:0px !important;
-		padding:8px;
-		padding-left:20px !important;
-		padding-right: 40px !important;
-	}
-	.menu-btn:hover {
-		background-color: rgb(255,51,102) !important;
-		color:white !important;
-		border-color:white !important;
-		transition: all 0.3 ease !important;
-	}
+	 .ff{
+	 	width: 25px;
+  		height: 2px;
+  		background-color: black !important;
+  		margin: 6px 0;
+  		transition: all 0.3 ease !important;
+  		position: fixed;
+  		top: 14px;
+  		right:10px;
+  		z-index:2;
+	 } 
+	 .ff2{
+	 	top:22px;
+	 }
+	 .ff3{
+	 	top:30px;
+	 }
 	.first-cvr h2 {
 		padding-top: 20px;
 		padding-bottom: 20px;
@@ -364,7 +369,9 @@
 		<a href="about.html" > About </a>
 		<a href="index.html" > Home</a>
 	</span>
-		<input type="button" value="&equiv; &nbsp;&nbsp;&nbsp; MENU" class="menu-btn">
+		<div class="ff"></div>
+		<div class="ff ff2"></div>
+		<div class="ff ff3"></div> 
 </div>
 
 <!-- Panel is shown when on Mobile Device --->
@@ -463,12 +470,12 @@
 <script type="text/javascript" src="wbapphstd/Script/jquery.min.js"></script>
 <script>
 	$(document).ready( function() {
-		$(".menu-btn").hide();
+		$(".ff").hide();
 		if($(window).width() <= 600){
-			$(".menu-btn").show();
+			$(".ff").show();
 			$(".btn-grp").hide();
 		}
-		$(".menu-btn").click ( function(){
+		$(".ff").click ( function(){
 			$(".pnl-div").css("right","0px");
 		})
 		$(".cls-btn").click ( function(){
