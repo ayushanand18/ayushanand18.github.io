@@ -1,4 +1,4 @@
-const PRECACHE = 'precache-v2';
+const PRECACHE = 'precache-v3';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
@@ -37,8 +37,8 @@ self.addEventListener('fetch', event => {
   if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
-        if (cachedResponse) {
-          return cachedResponse;
+        //if (cachedResponse) {
+          //return cachedResponse;
         }
 
         return caches.open(RUNTIME).then(cache => {
