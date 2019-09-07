@@ -39,7 +39,7 @@ self.addEventListener('fetch', event => {
       caches.match(event.request).then(cachedResponse => {
         //if (cachedResponse) {
           //return cachedResponse;
-        }
+        //}
 
         return caches.open(RUNTIME).then(cache => {
           return fetch(event.request).then(response => {
