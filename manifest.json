@@ -3,18 +3,18 @@
   "name": "NightLight AI by Ayush Anand",
   "icons": [
     {
-      "src": "/intru/wbapphstd/Images/app-logo-new.png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/intru/wbapphstd/Images/app-logo-square.png",
+      "src": "logo_big.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": "/index.html",
-  "background_color": "#4834d4",
+  "background_color": "white",
   "display": "standalone",
   "scope": "/",
   "theme_color": "#4834d4"
