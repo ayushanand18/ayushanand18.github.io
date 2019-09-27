@@ -3,12 +3,12 @@
   "name": "NightLight AI by Ayush Anand",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "img/logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo_big.png",
+      "src": "img/logo_big.png",
       "type": "image/png",
       "sizes": "512x512"
     }
