@@ -1,9 +1,9 @@
-const PRECACHE = 'precache-v3';
+const PRECACHE = 'precache-v2';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
-  '/wbapphstd/Script/jquery.min.js'
+  'js/jquery.min.js'
 ];
 
 // The install handler takes care of precaching the resources we always need.
