@@ -4,19 +4,14 @@
 Sitemap: https://ayushanand18.github.io/sitemap.xml
 
 User-agent: *
-Disallow: /wbapphstd/Images
-Disallow: /wbapphstd/money.html
-Disallow: /wbapphstd/Scripts
-Disallow: /wbapphstd/Images
-Disallow: /wbapphstd/Icons
+Disallow: intru/wbapphstd/
 Allow: /
+Allow: /intru/
 Allow: /contact.html
-Allow: /wbaphstd/index.html
-Allow: /wbapphstd/login.html
-Allow: /wbapphstd/money.html
-Allow: /wbapphstd/whatstru-ai/index.html
-Disallow: /wbapphstd/whatstru-ai/fake-news-data.csv
-Allow: /about.html
-Allow: /prvcy.html
-Disallow: /README.md
+Allow: /intru/wbaphstd/index.html
+Allow: /intru/wbapphstd/login.html
+Allow: /intru/wbapphstd/money.html
+Allow: /intru/about.html
+Allow: /intru/prvcy.html
+Disallow: /intru/README.md
 Disallow: /google9ef1d6c7d25de0d1.html
