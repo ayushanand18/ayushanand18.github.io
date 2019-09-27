@@ -1,21 +1,21 @@
 {
-  "short_name": "InTru",
-  "name": "InTru Innovations",
+  "short_name": "NightLight AI",
+  "name": "NightLight AI by Ayush Anand",
   "icons": [
     {
-      "src": "wbapphstd/Images/app-logo-new.png",
+      "src": "/intru/wbapphstd/Images/app-logo-new.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "wbapphstd/Images/app-logo-square.png",
+      "src": "/intru/wbapphstd/Images/app-logo-square.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": "/index.html",
-  "background_color": "#ff3366",
+  "background_color": "#4834d4",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#ff3366"
+  "theme_color": "#4834d4"
 }
