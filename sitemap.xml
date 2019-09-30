@@ -17,33 +17,23 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://ayushanand18.github.io/prvcy.html</loc>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://ayushanand18.github.io/about.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://ayushanand18.github.io/wbapphstd/index.html</loc>
+  <loc>https://ayushanand18.github.io/about-me.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ayushanand18.github.io/intru/wbapphstd/index.html</loc>
   <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://ayushanand18.github.io/wbapphstd/login.html</loc>
-  <priority>0.88</priority>
+  <loc>https://ayushanand18.github.io/intru/index.html</loc>
+  <priority>0.74</priority>
 </url>
 <url>
-  <loc>https://ayushanand18.github.io/wbapphstd/money.html</loc>
-  <priority>0.67</priority>
+  <loc>https://ayushanand18.github.io/alec.ai/index.html</loc>
+  <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://ayushanand18.github.io/index.html</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ayushanand18.github.io/wbapphstd/dshbrd.html</loc>
-  <priority>0.94</priority>
-</url>
-
-
 </urlset>
