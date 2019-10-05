@@ -13,7 +13,7 @@ NightLight AI is an umbrella project by Ayush Anand, a Web and AI Developer. Nig
 <p>
 
 Thank You <br/>
-With &hearts; from <b>Ayush Anand</b>
-<i>Founder NightLight AI</i>
+With &hearts; from <b>Ayush Anand</b><br/>
+<i>Founder NightLight AI</i><br/>
 &copy; 2019
 </p>
