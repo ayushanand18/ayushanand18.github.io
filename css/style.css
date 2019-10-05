@@ -1174,6 +1174,15 @@ p.artficial:before{
 
 /* ##### About Us Area ##### */
 
+.right-first {
+    overflow:hidden;
+    float:right;
+    margin-top:-140px !important;
+}
+.left-first {
+    overflow:hidden;
+    float:left;
+}
 .about-us-area {
     position: relative;
     z-index: 1;
