@@ -715,7 +715,15 @@ ol {
 }
 
 /* ##### 3.0 Wellcome Area CSS ##### */
-
+.alltxt{
+    float:left;
+    overflow-x:left;
+    text-align:justify;
+    color:rgba(255, 255, 255, 0.5);
+}
+.alltxt a{
+    color: rgba(255, 255, 255, 0.5);
+}
 .welcome_area {
     position: relative;
     z-index: 1;
