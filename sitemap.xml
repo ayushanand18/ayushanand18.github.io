@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- sitemap created by Ayush Anand -->
-
-
-<url>
-  <loc>https://ayushanand18.github.io/</loc>
-  <priority>1.00</priority>
-</url>
-
-<url>
-  <loc>https://ayushanand18.github.io/contact.html</loc>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://ayushanand18.github.io/about.html</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://ayushanand18.github.io/about-me.html</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://ayushanand18.github.io/intru/wbapphstd/index.html</loc>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://ayushanand18.github.io/intru/index.html</loc>
-  <priority>0.74</priority>
-</url>
-<url>
-  <loc>https://ayushanand18.github.io/alec.ai/index.html</loc>
-  <priority>0.80</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" > 
+  <url>
+    <loc>https://ayushanand18.github.io/</loc>
+    <lastmod>2019-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/contact.html</loc>
+    <lastmod>2019-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/about.html</loc>
+    <lastmod>2019-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/about-me.html</loc>
+    <lastmod>2019-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/privacy.html</loc>
+    <lastmod>2019-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/terms.html</loc>
+    <lastmod>2019-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/intru/</loc>
+    <lastmod>2019-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/alec.ai/</loc>
+    <lastmod>2019-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/alec.ai/docs.html</loc>
+    <lastmod>2019-11-14</lastmod>
+  </url>
 </urlset>
