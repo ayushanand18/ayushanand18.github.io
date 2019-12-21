@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" > 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" >
   <url>
     <loc>https://ayushanand18.github.io/</loc>
-    <lastmod>2019-11-14</lastmod>
+    <lastmod>2019-12-21</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/nephron-ai/</loc>
+    <lastmod>2019-12-21</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/nephron-ai/about</loc>
+    <lastmod>2019-12-21</lastmod>
+  </url>
+  <url>
+    <loc>https://ayushanand18.github.io/nephron-ai/contribute</loc>
+    <lastmod>2019-12-21</lastmod>
   </url>
   <url>
     <loc>https://ayushanand18.github.io/contact.html</loc>
-    <lastmod>2019-11-14</lastmod>
+    <lastmod>2019-12-21</lastmod>
   </url>
   <url>
     <loc>https://ayushanand18.github.io/about.html</loc>
-    <lastmod>2019-11-14</lastmod>
+    <lastmod>2019-12-21</lastmod>
   </url>
   <url>
     <loc>https://ayushanand18.github.io/about-me.html</loc>
-    <lastmod>2019-11-14</lastmod>
+    <lastmod>2019-12-21</lastmod>
   </url>
   <url>
     <loc>https://ayushanand18.github.io/privacy.html</loc>
-    <lastmod>2019-11-14</lastmod>
+    <lastmod>2019-12-21</lastmod>
   </url>
   <url>
     <loc>https://ayushanand18.github.io/terms.html</loc>
-    <lastmod>2019-11-14</lastmod>
+    <lastmod>2019-12-21</lastmod>
   </url>
   <url>
     <loc>https://ayushanand18.github.io/intru/</loc>
-    <lastmod>2019-11-14</lastmod>
+    <lastmod>2019-12-21</lastmod>
   </url>
   <url>
     <loc>https://ayushanand18.github.io/alec.ai/</loc>
-    <lastmod>2019-11-14</lastmod>
+    <lastmod>2019-12-21</lastmod>
   </url>
   <url>
     <loc>https://ayushanand18.github.io/alec.ai/docs.html</loc>
-    <lastmod>2019-11-14</lastmod>
+    <lastmod>2019-12-21</lastmod>
   </url>
 </urlset>

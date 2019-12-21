@@ -1,4 +1,4 @@
-# Hey welcome to the intru project
+# Hey welcome to the NightLight AI
 # You can also surf https://thedebonairayush.wordpress.com/
 
 Sitemap: https://ayushanand18.github.io/sitemap.xml
@@ -7,15 +7,19 @@ User-agent: *
 Disallow: /intru/wbapphstd/
 Allow: /
 Allow: /intru/
-Allow: /contact.html
-Allow: /about.html
-Allow: /about-me.html
-Allow: /index.html
-Allow: /intru/wbaphstd/index.html
-Allow: /intru/wbapphstd/login.html
-Allow: /intru/wbapphstd/money.html
-Allow: /intru/about.html
-Allow: /intru/prvcy.html
+Allow: /contact
+Allow: /about
+Allow: /about-me
+Allow: /index
+Allow: /intru/wbaphstd/index
+Allow: /intru/wbapphstd/login
+Allow: /intru/wbapphstd/money
+Allow: /intru/about
+Allow: /intru/prvcy
+Allow: /nephron-ai
+Allow: /nephron-ai/contribute
+Allow: /nephron-ai/about
+Allow: /nephron-ai/classify
 Disallow: /intru/README.md
-Disallow: /google9ef1d6c7d25de0d1.html
+Disallow: /google9ef1d6c7d25de0d1
 Disallow: /README.md
