@@ -20,6 +20,7 @@ Allow: /nephron-ai
 Allow: /nephron-ai/contribute
 Allow: /nephron-ai/about
 Allow: /nephron-ai/classify
+Allow: /nephron-ai/cause
 Disallow: /intru/README.md
 Disallow: /google9ef1d6c7d25de0d1
 Disallow: /README.md
