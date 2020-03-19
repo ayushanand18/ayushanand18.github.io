@@ -3818,3 +3818,11 @@ body.light-version {
 .preview-demo:hover{
     color: #333
 }
+.menu-on{
+    width:100% !important;
+}
+.dark.classy-nav-container{
+    background-color: #013a88b5;
+    color:white;
+    opacity:0.9;
+}
