@@ -26,11 +26,6 @@
         });
     }
 
-    // :: Wow Active Code
-    if ($window.width() > 767) {
-        new WOW().init();
-    }
-
     // :: Jarallax Active JS
     if ($.fn.jarallax) {
         $('.jarallax').jarallax({
@@ -54,5 +49,21 @@
     if ($.fn.niceScroll) {
         $(".timelineBody").niceScroll();
     }
+    var classynavbartoggler = document.querySelector(".classy-navbar-toggler");
+    var navbarToggler = document.querySelector(".navbarToggler");
+    var classymenu = document.querySelector(".classy-menu");
+    var classycloseIcon = document.querySelector(".classycloseIcon");
+    
+    classynavbartoggler.removeEventListener('click', function(e) {
+            e.preventDefault()
+            $(".navbarToggler").toggleClass("active");
+            $(".classy-menu").toggleClass("menu-on");
+        });
+    classycloseIcon.addEventListener("click", function(e) {
+            e.preventDefault()
+            $(".classy-menu").removeClass("menu-on");
+            $(".navbarToggler").removeClass("active");
+        });
+    $(".nav a").css("background","transparent");
 
 })(jQuery);
