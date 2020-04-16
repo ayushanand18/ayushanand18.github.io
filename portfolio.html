@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en-US">
 
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129803213-2" defer></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129803213-2" defer></script>
     <script defer>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,16 +35,16 @@
     </script>
     <!-- Metas -->
     <link rel="icon" type="image/png" href="img/logo192.png"/>
-    <meta http-equiv="content-type" content="text/html, charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="LionCoders" />
     <!-- Links -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
     <link href="css/plugins.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    
     <!-- Document Title -->
-    <title>Ayush Anand | AI & Web Developer</title>
+    <title>Portfolio | Ayush Anand</title>
 </head>
 
 <body>
@@ -63,11 +63,10 @@
                     <nav>
                         <div class="menu-button menu-open"><i class="open-icon ion-android-menu"></i><i class="close-icon ion-android-close"></i></div>
                         <ul class="flexnav standard" data-breakpoint="800">
-                            <li><a class="active" href="index.html">Home</a>
+                            <li><a href="index.html">Home</a>
                             </li>
-                            <li><a href="portfolio.html">Portfolio</a>
+                            <li><a class="active" href="portfolio.html">Portfolio</a>
                             </li>
-                            
                         <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
@@ -80,19 +79,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="page-title">
-                            <h1>I blend <strong>AI with Web developement</strong><br>to create AI for Social Good.</h1>
+                        <div class="page-title has-description">
+                            <h1>My Amazing Projects</h1>
+                            <p>Check out my projects below and how I am using Artificial Intelligence to create solutions to social challenges.</p>
                         </div>
                         <!-- Portfolio Wrap -->
                         <div class="portfolio-wrap">
                             <!-- Portfolio Filter -->
+                            <div class="filters">
+                                <ul id="filters">
+                                    <li class="active" data-filter="*">All</li>
+                                    <li data-filter=".artwork">Art Work</li>
+                                    <li data-filter=".webdesign">Web Design</li>
+                                    <li data-filter=".graphic">Design</li>
+                                </ul>
+                            </div>
+                            <!-- Portfolio Filter -->
                             <!-- Portfolio Items -->
                             <div id="portfolio-container" class="portfolio-container portfolio-overlay dark text-overlay row isotope">
-                                <div class="portfolio-item col-md-4 webdesign">
-                                    <a href="portfolio-details-image.html">
+                                <div class="portfolio-item col-md-3 web-design">
+                                    <a href="portfolio-details-gallery.html">
                                         <div class="portfolio-content">
                                             <div class="portfolio-img-content">
-                                                <img src="images/portfolio/thumbnails-masonry/book-cover-yellow.jpg" alt="">
+                                                <img src="images/portfolio/mosaic/bottle.jpg" alt="">
                                             </div>
                                             <div class="portfolio-text-content">
                                                 <div class="portfolio-text">
@@ -103,11 +112,11 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item col-md-4 artwork">
-                                    <a href="portfolio-details-gallery.html">
+                                <div class="portfolio-item col-md-3 web-design">
+                                    <a href="portfolio-details-slider.html">
                                         <div class="portfolio-content">
                                             <div class="portfolio-img-content">
-                                                <img src="images/portfolio/thumbnails-masonry/adidas.jpg" alt="">
+                                                <img src="images/portfolio/mosaic/shoe.jpg" alt="">
                                             </div>
                                             <div class="portfolio-text-content">
                                                 <div class="portfolio-text">
@@ -118,30 +127,30 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item col-md-4 artwork">
-                                    <a href="portfolio-details-slider.html">
+                                <div class="portfolio-item col-md-6 artwork">
+                                    <a href="portfolio-details-video.html">
                                         <div class="portfolio-content">
                                             <div class="portfolio-img-content">
-                                                <img src="images/portfolio/thumbnails-masonry/honey-lemon.jpg" alt="">
+                                                <img src="images/portfolio/mosaic/mobile.jpg" alt="">
                                             </div>
                                             <div class="portfolio-text-content">
                                                 <div class="portfolio-text">
-                                                    <h3>Honey & Lemon</h3>
-                                                    <h4>Design</h4>
+                                                    <h3>Mobile</h3>
+                                                    <h4>Identity</h4>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item col-md-4 webdesign">
-                                    <a href="portfolio-details-video.html">
+                                <div class="portfolio-item col-md-6 graphic">
+                                    <a href="portfolio-details-gallery.html">
                                         <div class="portfolio-content">
                                             <div class="portfolio-img-content">
-                                                <img src="images/portfolio/thumbnails-masonry/business-cards.jpg" alt="">
+                                                <img src="images/portfolio/mosaic/books.jpg" alt="">
                                             </div>
                                             <div class="portfolio-text-content">
                                                 <div class="portfolio-text">
-                                                    <h3>Business Cards</h3>
+                                                    <h3>Books</h3>
                                                     <h4>Branding</h4>
                                                 </div>
                                             </div>
@@ -149,7 +158,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <!-- Portfolio Items Ends -->
+                            <!-- Portfolio Items -->
                         </div>
                         <!-- Portfolio Wrap Ends -->
                     </div>
@@ -162,13 +171,13 @@
             <footer id="footer">
                 <div class="row">
                     <div class="col-xs-12 col-md-6 copyrights">
-                            <p>&COPY; 2020 Ayush Anand</p>
+                            <p>&COPY; 2017 Blend</p>
                         </div>
                         <div class="col-xs-12 col-md-6 footer-socials">
                             <a href="#">Facebook</a>
-                            <a href="https://twitter.com/theayushanand">Twitter</a>
+                            <a href="#">Twitter</a>
                             <a href="#">Linkedin</a>
-                            <a href="https://github.com">GitHub</a>
+                            <a href="#">Dribble</a>
                         </div>
                 </div>
             </footer>
@@ -179,20 +188,8 @@
     <!-- Page Wrapper Ends -->
     <!-- Scripts -->
     <script src="js/plugins.js"></script>
+    
     <script src="js/main.js"></script>
-    <script >
-    if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-    navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-    });
-    }
-    </script>
     <!-- Scripts Ends -->
 </body>
 
