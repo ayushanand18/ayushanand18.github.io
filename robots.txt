@@ -8,8 +8,7 @@ Disallow: /intru/wbapphstd/
 Allow: /
 Allow: /intru/
 Allow: /contact
-Allow: /about
-Allow: /about-me
+Allow: /portfolio
 Allow: /index
 Allow: /intru/wbaphstd/index
 Allow: /intru/wbapphstd/login
