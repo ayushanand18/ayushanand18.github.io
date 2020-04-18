@@ -2466,6 +2466,9 @@ textarea {
 .open-icon::before,.ion-android-menu::before{
     content:"\2630" !important;
 }
+i{
+    font-style: normal;
+}
 .close-icon::before,.ion-android-close::before{
     content:"\1f7a9" !important;
 }
