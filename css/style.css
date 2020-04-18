@@ -2470,11 +2470,16 @@ textarea {
     content:"\1f7a9" !important;
 }
 .ion-ios-arrow-thin-up::before{
+    font-style:normal !important;
     content:'\203a' !important;
-    transform:rotate(-90deg);
     font-size:40px !important;
     vertical-align: middle;
 }
 .scrolltotop{
     border:none;
+    transform:rotate(-90deg) !important;
+}
+.col-sm-10{
+    max-width:700px;
+    width:100%;
 }

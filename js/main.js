@@ -3,7 +3,7 @@ $(document).ready(function() {
     "use strict";
 
     HideShowHeader();
-    HeroSection()
+    //HeroSection()
     BackToTop();
 
 });
