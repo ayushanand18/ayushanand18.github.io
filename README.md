@@ -10,4 +10,4 @@ I am a Web and AI Developer at India. I countinue to work globally  in evangeliz
 
 Thank You <br>
 With &hearts; from <b>Ayush Anand</b><br>
-&copy; 2020
+&copy; 2021
