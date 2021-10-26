@@ -1,26 +1,17 @@
-# Hey welcome to the NightLight AI
-# You can also surf https://thedebonairayush.wordpress.com/
-
 Sitemap: https://ayushanand18.github.io/sitemap.xml
 
 User-agent: *
-Disallow: /intru/wbapphstd/
 Allow: /
-Allow: /intru/
 Allow: /contact
 Allow: /portfolio
+Allow: /privacy
+Allow: /terms
 Allow: /index
-Allow: /intru/wbaphstd/index
-Allow: /intru/wbapphstd/login
-Allow: /intru/wbapphstd/money
-Allow: /intru/about
-Allow: /intru/prvcy
 Allow: /nephron-ai
 Allow: /nephron-ai/contribute
 Allow: /nephron-ai/about
 Allow: /nephron-ai/classify
 Allow: /nephron-ai/cause
 Allow: /nephron-ai/laststeps
-Disallow: /intru/README.md
 Disallow: /google9ef1d6c7d25de0d1
 Disallow: /README.md
