@@ -151,20 +151,9 @@
     </div>
     <!-- Page Wrapper Ends -->
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <script >
-    if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-    navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-    });
-    }
-    </script>
+
     <!-- Scripts Ends -->
 </body>
 

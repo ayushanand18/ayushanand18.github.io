@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
     "use strict";
@@ -5,147 +6,29 @@ $(document).ready(function() {
     HideShowHeader();
     //HeroSection()
     BackToTop();
-
 });
-
-
-//Owl Carousel
-$('#hero-slider').owlCarousel({
-    items: 1,
-    loop: true,
-    nav: true,
-    navText: [
-        '<i class="ion-ios-arrow-thin-left"></i>',
-        '<i class="ion-ios-arrow-thin-right"></i>'
-    ],
-    navSpeed: 1000,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-});
-
-$('#portfolio-slider').owlCarousel({
-    center: true,
-    items: 1,
-    loop: true,
-    margin: 30,
-    nav: true,
-    navText: [
-        '<i class="ion-ios-arrow-thin-left"></i>',
-        '<i class="ion-ios-arrow-thin-right"></i>'
-    ],
-    navSpeed: 700,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-    responsive : {
-        // breakpoint from 480 up
-        1024 : {
-            items: 2,
-        },
-    },
-});
-
-$('#portfolio-slider2').owlCarousel({
-    items: 1,
-    loop: true,
-    margin: 30,
-    nav: true,
-    navText: [
-        '<i class="ion-ios-arrow-thin-left"></i>',
-        '<i class="ion-ios-arrow-thin-right"></i>'
-    ],
-    navSpeed: 2000,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-});
-
-$('#portfolio-slider3').owlCarousel({
-    items: 1,
-    loop: true,
-    margin: 30,
-    nav: true,
-    navText: [
-        '<i class="ion-ios-arrow-thin-left"></i>',
-        '<i class="ion-ios-arrow-thin-right"></i>'
-    ],
-    navSpeed: 2000,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-    responsive : {
-        // breakpoint from 480 up
-        768 : {
-            items: 2,
-        },
-        1024 : {
-            items: 3,
-        },
-    },
-});
-
-$('#portfolio-slider4').owlCarousel({
-    items: 1,
-    loop: true,
-    margin: 0,
-    nav: true,
-    navText: [
-        '<i class="ion-ios-arrow-thin-left"></i>',
-        '<i class="ion-ios-arrow-thin-right"></i>'
-    ],
-    navSpeed: 2000,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-    responsive : {
-        // breakpoint from 480 up
-        768 : {
-            items: 2,
-        },
-        1024 : {
-            items: 4,
-        },
-    },
-});
-
-$('#liontestimonial').owlCarousel({
-    nav: true,
-    navText: [
-        '<i class="ion-ios-arrow-thin-left"></i>',
-        '<i class="ion-ios-arrow-thin-right"></i>'
-    ],
-    items: 1,
-    navSpeed: 400,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-});
-
-//Flexnav Menu
-$(".flexnav").flexNav({ 'animationSpeed': 0 });
 
 $(window).on('load', function() {
-    //Portfolio masonry
-    var $container = $('#portfolio-container');
-    $container.isotope({
-        masonry: {
-            columnWidth: '.portfolio-item'
-        },
-        itemSelector: '.portfolio-item'
-    });
+    
     $('#filters').on('click', 'li', function() {
         $('#filters li').removeClass('active');
         $(this).addClass('active');
-        var filterValue = $(this).attr('data-filter');
-        $container.isotope({ filter: filterValue });
     });
 });
 
 $('.menu-button').on('click', function() {
     $('.menu-button').toggleClass('menu-open menu-close');
 });
+
+
+$('.menu-open').on('click', function(){
+    $('.flexnav').css('overflow','visible')
+    var menuclose = document.querySelector('.menu-close');
+    menuclose.addEventListener('click', function(){
+    $('.flexnav').css('overflow','hidden')
+})
+})
+
 
 if(screen.width<1024) {
     $('.menubar .flexnav').removeClass('flexnav-show');
@@ -266,4 +149,3 @@ $('.view-map').on('click', function() {
         }
     }
 })
-
