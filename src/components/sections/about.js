@@ -144,30 +144,53 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Ayush Anand and I enjoy creating things that solve social challenges
+              globally. Apart from being a GSoC 2022 student for IOOS, I am a CS Undergrad at NIT
+              Durgapur and a Machine Learning Developer leveraging AI for Social Good.
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
-            </p>
+              <h4>Things I do</h4>
+              <ul>
+                <li>research on how deep learning can help fight the climate crisis.</li>
+                <li>
+                  Hacker's Tribe community member - Delhi NCR's largest open source community at
+                  Noida.
+                </li>
+                <li>
+                  ISTE NIT Durgapur Students' Branch - Content Writer. I write about Tech, STEM
+                </li>
+                <li>
+                  experiment with CNNs, GANs, ANNs and love playing with their hyperparameters. I am
+                  a Udacity deep learning nanodegree graduate.
+                </li>
+                <li>
+                  writing a weekly blog of thoughts into tech, stem, nature and mankind - read me on
+                  Medium.
+                </li>
+              </ul>
 
-            <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              <h4>Projects I'm working on</h4>
+              <ul>
+                <li>working on an open-source python package for Open Ocean data.</li>
+                <li>
+                  working with an NGO to implement a code for good project against child abuse.
+                </li>
+              </ul>
+
+              <h4>Things I did previously</h4>
+              <ul>
+                <li>built a web-based chatbot that can help reduce unreported abuses.</li>
+                <li>
+                  built a blockchain powered to tool to track hospital beds and ventilators in
+                  COVID19 hospitals.
+                </li>
+                <li>
+                  handled shared responsibility for managing Rotary Sponsored Interact Club programs
+                  such as raising awareness against Polio Eradication and Donation drives to local
+                  Orphanages in high school.
+                </li>
+              </ul>
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>

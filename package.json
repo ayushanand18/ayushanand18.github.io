@@ -1,11 +1,11 @@
 {
-  "name": "v4",
-  "description": "Personal Website V4",
-  "version": "1.0.0",
-  "author": "Brittany Chiang <brittany.chiang@gmail.com>",
+  "name": "v1",
+  "description": "Personal Website V1",
+  "version": "1.1.0",
+  "author": "Ayush Anand <ayush.anandsa@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bchiang7/v4"
+    "url": "https://github.com/ayushanand18/ayushanand18.github.io"
   },
   "keywords": [
     "gatsby"
