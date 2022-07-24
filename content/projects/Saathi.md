@@ -2,7 +2,7 @@
 date: '2022-02-24'
 title: 'Saathi — Stopping unreported abuses'
 github: 'https://github.com/ayushanand18/project-saathi'
-external: 'https://https://project-saathi-43be5.web.app/'
+external: 'https://project-saathi-43be5.web.app/'
 tech:
   - NodeJS
   - NLP.JS
