@@ -58,28 +58,30 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
+  const one = (
+    <h1>
+      <br />
+      Hi, my name is
+    </h1>
+  );
   const two = <h2 className="big-heading">Ayush Anand.</h2>;
   const three = <h3 className="big-heading">I am a web and AI developer.</h3>;
   const four = (
     <>
       <p>
         I'm a CS Undergrad specializing in building (and occasionally designing) exceptional digital
-        experiences. Currently, I'm focused on building accessible, human-centered products at{' '}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
-        </a>
-        .
+        experiences. Currently, I'm focused on building accessible products that address pressing
+        global issues
       </p>
     </>
   );
   const five = (
     <a
       className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
+      href="https://linkedin.com/in/theayushanand"
       target="_blank"
       rel="noreferrer">
-      Check out my course!
+      Connect with me!
     </a>
   );
 

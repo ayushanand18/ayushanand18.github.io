@@ -132,8 +132,12 @@ const About = () => {
     'NodeJS',
     'ReactJS',
     'Firebase',
+    'C',
     'Microsoft Azure',
     'MySQL',
+    'IBM Cloud',
+    'Vercel',
+    'Netify',
   ];
 
   return (
@@ -213,6 +217,27 @@ const About = () => {
             />
           </div>
         </StyledPic>
+
+        <div>
+          <h1>Education</h1>
+          <div>
+            <br />
+            <h3>National Institute of Technology Durgapur, India </h3>
+            Bachelor of Technology in Computer Science and Engineering, <i>Expected 2025</i>
+            <i>
+              <ul>
+                <li>
+                  {' '}
+                  <b>Courses</b>: Linear and Vector Algebra, Calculus, Data Structure and Algorithms
+                </li>
+                <li>
+                  {' '}
+                  <b>Organisations</b>: Indian Society for Technical Education (ISTE)
+                </li>
+              </ul>
+            </i>
+          </div>
+        </div>
       </div>
     </StyledAboutSection>
   );

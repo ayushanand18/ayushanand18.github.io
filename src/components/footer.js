@@ -105,7 +105,7 @@ const Footer = () => {
       </StyledSocialLinks>
 
       <StyledCredit tabindex="-1">
-        <div> With &heart; by Ayush Anand</div>
+        <div> With &hearts; from Ayush Anand</div>
         <a href="https://github.com/bchiang7/v4">
           <div>Design by Brittany Chiang</div>
 
