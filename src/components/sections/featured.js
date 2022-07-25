@@ -84,6 +84,7 @@ const StyledProject = styled.li`
     }
     .project-image {
       grid-column: 1 / 8;
+      z-index: 0;
 
       @media (max-width: 768px) {
         grid-column: 1 / -1;

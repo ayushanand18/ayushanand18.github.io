@@ -219,6 +219,8 @@ const About = () => {
         </StyledPic>
 
         <div>
+          <br />
+          <br />
           <h1>Education</h1>
           <div>
             <br />
