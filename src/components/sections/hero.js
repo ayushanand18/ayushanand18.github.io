@@ -69,8 +69,8 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I'm a CS Undergrad specializing in building (and occasionally designing) exceptional digital
-        experiences. Currently, I'm focused on building accessible products that address pressing
+        I am a CS Undergrad specializing in building (and occasionally designing) exceptional digital
+        experiences. Currently, I am focused on building accessible products that address pressing
         global issues
       </p>
     </>
