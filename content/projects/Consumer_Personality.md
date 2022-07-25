@@ -9,7 +9,7 @@ tech:
   - Matplotlib
   - Seaborn
 company: ''
-showInProjects: true
+showInProjects: false
 ---
 
 Analyzed Customer Personality Analysis based on independent, open dataset;
