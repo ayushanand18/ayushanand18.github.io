@@ -1,0 +1,5 @@
+docs/*
+!docs/index.js
+
+public/*
+!public/index.js

@@ -69,9 +69,9 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I am a CS Undergrad specializing in building (and occasionally designing) exceptional digital
-        experiences. Currently, I am focused on building accessible products that address pressing
-        global issues
+        I am a CS Undergrad and a python geek really passionate about using data to solve world's
+        challenges. I have a substantial experience in developing app for the web and creating
+        machine learning models.
       </p>
     </>
   );
@@ -80,7 +80,8 @@ const Hero = () => {
       className="email-link"
       href="https://linkedin.com/in/theayushanand"
       target="_blank"
-      rel="noreferrer">
+      rel="noreferrer"
+    >
       Connect with me!
     </a>
   );
