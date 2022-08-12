@@ -3,25 +3,25 @@
     "polyfill": {
       "name": "polyfill",
       "assets": [
-        { "name": "webpack-runtime-95c89317e7d5c0520ac5.js", "size": 4202 },
-        { "name": "polyfill-5ecb3900c177a1e71708.js", "size": 93435 }
+        { "name": "webpack-runtime-80a53161df6b810838ba.js", "size": 4202 },
+        { "name": "polyfill-d89e95c7d93c675c6934.js", "size": 98517 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 97637,
+      "assetsSize": 102719,
       "filteredAuxiliaryAssets": 2,
-      "auxiliaryAssetsSize": 273162
+      "auxiliaryAssetsSize": 299737
     },
     "app": {
       "name": "app",
       "assets": [
-        { "name": "webpack-runtime-95c89317e7d5c0520ac5.js", "size": 4202 },
-        { "name": "framework-370276fa752b0eb8e356.js", "size": 129726 },
-        { "name": "app-9464275bfb1b140073ee.js", "size": 72931 }
+        { "name": "webpack-runtime-80a53161df6b810838ba.js", "size": 4202 },
+        { "name": "framework-cfc39a90b11063613693.js", "size": 129735 },
+        { "name": "app-a3089bcf595f00ae5d8d.js", "size": 72905 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 206859,
+      "assetsSize": 206842,
       "filteredAuxiliaryAssets": 3,
-      "auxiliaryAssetsSize": 669718
+      "auxiliaryAssetsSize": 670456
     },
     "component---cache-caches-gatsby-plugin-offline-app-shell-js": {
       "name": "component---cache-caches-gatsby-plugin-offline-app-shell-js",
@@ -40,137 +40,137 @@
       "name": "component---src-pages-404-js",
       "assets": [
         {
-          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
-          "size": 162407
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
+          "size": 162430
         },
         { "name": "component---src-pages-404-js-23fa4337e463649446b3.js", "size": 1548 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 163955,
+      "assetsSize": 163978,
       "filteredAuxiliaryAssets": 22,
-      "auxiliaryAssetsSize": 1270889
+      "auxiliaryAssetsSize": 1270932
     },
     "component---src-pages-archive-js": {
       "name": "component---src-pages-archive-js",
       "assets": [
         {
-          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
-          "size": 162407
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
+          "size": 162430
         },
         { "name": "component---src-pages-archive-js-6ec96c62488755aa9eb2.js", "size": 3795 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 166202,
+      "assetsSize": 166225,
       "filteredAuxiliaryAssets": 22,
-      "auxiliaryAssetsSize": 1276816
+      "auxiliaryAssetsSize": 1276859
     },
     "component---src-pages-index-js": {
       "name": "component---src-pages-index-js",
       "assets": [
         {
-          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
-          "size": 162407
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
+          "size": 162430
         },
         { "name": "component---src-pages-index-js-a3facd467438639df3c7.js", "size": 625 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 163032,
+      "assetsSize": 163055,
       "filteredAuxiliaryAssets": 22,
-      "auxiliaryAssetsSize": 1268744
+      "auxiliaryAssetsSize": 1268787
     },
     "component---src-pages-pensieve-index-js": {
       "name": "component---src-pages-pensieve-index-js",
       "assets": [
         {
-          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
-          "size": 162407
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
+          "size": 162430
         },
         { "name": "component---src-pages-pensieve-index-js-c55d55484b599b7d419f.js", "size": 9193 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 171600,
+      "assetsSize": 171623,
       "filteredAuxiliaryAssets": 22,
-      "auxiliaryAssetsSize": 1303796
+      "auxiliaryAssetsSize": 1303839
     },
     "component---src-pages-pensieve-tags-js": {
       "name": "component---src-pages-pensieve-tags-js",
       "assets": [
         {
-          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
-          "size": 162407
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
+          "size": 162430
         },
         { "name": "component---src-pages-pensieve-tags-js-5f40d18518021486b066.js", "size": 6768 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 169175,
+      "assetsSize": 169198,
       "filteredAuxiliaryAssets": 22,
-      "auxiliaryAssetsSize": 1299464
+      "auxiliaryAssetsSize": 1299507
     },
     "component---src-templates-post-js": {
       "name": "component---src-templates-post-js",
       "assets": [
         {
-          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
-          "size": 162407
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
+          "size": 162430
         },
         { "name": "component---src-templates-post-js-ee71a0d7d8a11e11d696.js", "size": 7357 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 169764,
+      "assetsSize": 169787,
       "filteredAuxiliaryAssets": 22,
-      "auxiliaryAssetsSize": 1300392
+      "auxiliaryAssetsSize": 1300435
     },
     "component---src-templates-tag-js": {
       "name": "component---src-templates-tag-js",
       "assets": [
         {
-          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
-          "size": 162407
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
+          "size": 162430
         },
         { "name": "component---src-templates-tag-js-25578c4ff5056c7062d4.js", "size": 7326 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 169733,
+      "assetsSize": 169756,
       "filteredAuxiliaryAssets": 22,
-      "auxiliaryAssetsSize": 1301430
+      "auxiliaryAssetsSize": 1301473
     }
   },
   "assetsByChunkName": {
-    "polyfill": ["webpack-runtime-95c89317e7d5c0520ac5.js", "polyfill-5ecb3900c177a1e71708.js"],
+    "polyfill": ["webpack-runtime-80a53161df6b810838ba.js", "polyfill-d89e95c7d93c675c6934.js"],
     "app": [
-      "webpack-runtime-95c89317e7d5c0520ac5.js",
-      "framework-370276fa752b0eb8e356.js",
-      "app-9464275bfb1b140073ee.js"
+      "webpack-runtime-80a53161df6b810838ba.js",
+      "framework-cfc39a90b11063613693.js",
+      "app-a3089bcf595f00ae5d8d.js"
     ],
     "component---cache-caches-gatsby-plugin-offline-app-shell-js": [
       "component---cache-caches-gatsby-plugin-offline-app-shell-js-912f088d9163ee345447.js"
     ],
     "component---src-pages-404-js": [
-      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
       "component---src-pages-404-js-23fa4337e463649446b3.js"
     ],
     "component---src-pages-archive-js": [
-      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
       "component---src-pages-archive-js-6ec96c62488755aa9eb2.js"
     ],
     "component---src-pages-index-js": [
-      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
       "component---src-pages-index-js-a3facd467438639df3c7.js"
     ],
     "component---src-pages-pensieve-index-js": [
-      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
       "component---src-pages-pensieve-index-js-c55d55484b599b7d419f.js"
     ],
     "component---src-pages-pensieve-tags-js": [
-      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
       "component---src-pages-pensieve-tags-js-5f40d18518021486b066.js"
     ],
     "component---src-templates-post-js": [
-      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
       "component---src-templates-post-js-ee71a0d7d8a11e11d696.js"
     ],
     "component---src-templates-tag-js": [
-      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-9f78b2bfb602a2ee9eb9.js",
       "component---src-templates-tag-js-25578c4ff5056c7062d4.js"
     ]
   },
