@@ -1,0 +1,178 @@
+{
+  "namedChunkGroups": {
+    "polyfill": {
+      "name": "polyfill",
+      "assets": [
+        { "name": "webpack-runtime-95c89317e7d5c0520ac5.js", "size": 4202 },
+        { "name": "polyfill-5ecb3900c177a1e71708.js", "size": 93435 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 97637,
+      "filteredAuxiliaryAssets": 2,
+      "auxiliaryAssetsSize": 273162
+    },
+    "app": {
+      "name": "app",
+      "assets": [
+        { "name": "webpack-runtime-95c89317e7d5c0520ac5.js", "size": 4202 },
+        { "name": "framework-370276fa752b0eb8e356.js", "size": 129726 },
+        { "name": "app-9464275bfb1b140073ee.js", "size": 72931 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 206859,
+      "filteredAuxiliaryAssets": 3,
+      "auxiliaryAssetsSize": 669718
+    },
+    "component---cache-caches-gatsby-plugin-offline-app-shell-js": {
+      "name": "component---cache-caches-gatsby-plugin-offline-app-shell-js",
+      "assets": [
+        {
+          "name": "component---cache-caches-gatsby-plugin-offline-app-shell-js-912f088d9163ee345447.js",
+          "size": 499
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 499,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": 1655
+    },
+    "component---src-pages-404-js": {
+      "name": "component---src-pages-404-js",
+      "assets": [
+        {
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+          "size": 162407
+        },
+        { "name": "component---src-pages-404-js-23fa4337e463649446b3.js", "size": 1548 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 163955,
+      "filteredAuxiliaryAssets": 22,
+      "auxiliaryAssetsSize": 1270889
+    },
+    "component---src-pages-archive-js": {
+      "name": "component---src-pages-archive-js",
+      "assets": [
+        {
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+          "size": 162407
+        },
+        { "name": "component---src-pages-archive-js-6ec96c62488755aa9eb2.js", "size": 3795 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 166202,
+      "filteredAuxiliaryAssets": 22,
+      "auxiliaryAssetsSize": 1276816
+    },
+    "component---src-pages-index-js": {
+      "name": "component---src-pages-index-js",
+      "assets": [
+        {
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+          "size": 162407
+        },
+        { "name": "component---src-pages-index-js-a3facd467438639df3c7.js", "size": 625 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 163032,
+      "filteredAuxiliaryAssets": 22,
+      "auxiliaryAssetsSize": 1268744
+    },
+    "component---src-pages-pensieve-index-js": {
+      "name": "component---src-pages-pensieve-index-js",
+      "assets": [
+        {
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+          "size": 162407
+        },
+        { "name": "component---src-pages-pensieve-index-js-c55d55484b599b7d419f.js", "size": 9193 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 171600,
+      "filteredAuxiliaryAssets": 22,
+      "auxiliaryAssetsSize": 1303796
+    },
+    "component---src-pages-pensieve-tags-js": {
+      "name": "component---src-pages-pensieve-tags-js",
+      "assets": [
+        {
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+          "size": 162407
+        },
+        { "name": "component---src-pages-pensieve-tags-js-5f40d18518021486b066.js", "size": 6768 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 169175,
+      "filteredAuxiliaryAssets": 22,
+      "auxiliaryAssetsSize": 1299464
+    },
+    "component---src-templates-post-js": {
+      "name": "component---src-templates-post-js",
+      "assets": [
+        {
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+          "size": 162407
+        },
+        { "name": "component---src-templates-post-js-ee71a0d7d8a11e11d696.js", "size": 7357 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 169764,
+      "filteredAuxiliaryAssets": 22,
+      "auxiliaryAssetsSize": 1300392
+    },
+    "component---src-templates-tag-js": {
+      "name": "component---src-templates-tag-js",
+      "assets": [
+        {
+          "name": "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+          "size": 162407
+        },
+        { "name": "component---src-templates-tag-js-25578c4ff5056c7062d4.js", "size": 7326 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 169733,
+      "filteredAuxiliaryAssets": 22,
+      "auxiliaryAssetsSize": 1301430
+    }
+  },
+  "assetsByChunkName": {
+    "polyfill": ["webpack-runtime-95c89317e7d5c0520ac5.js", "polyfill-5ecb3900c177a1e71708.js"],
+    "app": [
+      "webpack-runtime-95c89317e7d5c0520ac5.js",
+      "framework-370276fa752b0eb8e356.js",
+      "app-9464275bfb1b140073ee.js"
+    ],
+    "component---cache-caches-gatsby-plugin-offline-app-shell-js": [
+      "component---cache-caches-gatsby-plugin-offline-app-shell-js-912f088d9163ee345447.js"
+    ],
+    "component---src-pages-404-js": [
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "component---src-pages-404-js-23fa4337e463649446b3.js"
+    ],
+    "component---src-pages-archive-js": [
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "component---src-pages-archive-js-6ec96c62488755aa9eb2.js"
+    ],
+    "component---src-pages-index-js": [
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "component---src-pages-index-js-a3facd467438639df3c7.js"
+    ],
+    "component---src-pages-pensieve-index-js": [
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "component---src-pages-pensieve-index-js-c55d55484b599b7d419f.js"
+    ],
+    "component---src-pages-pensieve-tags-js": [
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "component---src-pages-pensieve-tags-js-5f40d18518021486b066.js"
+    ],
+    "component---src-templates-post-js": [
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "component---src-templates-post-js-ee71a0d7d8a11e11d696.js"
+    ],
+    "component---src-templates-tag-js": [
+      "546641dfde76ed00139ea2c3eae09499c5f2164a-328f05cc55bf4e738223.js",
+      "component---src-templates-tag-js-25578c4ff5056c7062d4.js"
+    ]
+  },
+  "childAssetsByChunkName": {}
+}
