@@ -13,4 +13,4 @@ jobs:
       - name: Copy public to docs
         shell: bash {0}
         run: |
-          cp -a /public . /docs
+          echo "Working"
