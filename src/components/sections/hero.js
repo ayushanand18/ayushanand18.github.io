@@ -76,14 +76,25 @@ const Hero = () => {
     </>
   );
   const five = (
-    <a
-      className="email-link"
-      href="https://linkedin.com/in/theayushanand"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Connect with me!
-    </a>
+    <p>
+      <a
+        className="email-link"
+        href="https://linkedin.com/in/theayushanand"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Connect with me!
+      </a>
+      <span>&emsp;&emsp;</span>
+      <a
+        className="email-link"
+        href="https://medium.com/@theayushanand"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Read Blogs
+      </a>
+    </p>
   );
 
   const items = [one, two, three, four, five];
