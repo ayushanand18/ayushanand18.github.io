@@ -126,11 +126,14 @@ const About = () => {
   }, []);
 
   const skills = [
-    'Python',
+    'Python (pandas, numpy, matplotlib+)',
     'PyTorch',
+    'TensorFlow',
     'JavaScript (ES6+)',
     'NodeJS',
     'ReactJS',
+    'C++',
+    'Gatsby',
     'Firebase',
     'C',
     'Microsoft Azure',
@@ -150,13 +153,14 @@ const About = () => {
             <p>
               Hello! My name is Ayush Anand and I enjoy creating things that solve social challenges
               globally. Apart from being a GSoC 2022 student for IOOS, I am a CS Undergrad at NIT
-              Durgapur and a Machine Learning Developer leveraging AI for Social Good.
+              Durgapur and a full-stack and machine learning developer leveraging AI for Social
+              Good.
             </p>
 
             <p>
               <h4>Things I do</h4>
               <ul>
-                <li>research on how deep learning can help fight the climate crisis.</li>
+                <li>research on how data science can help fight the climate crisis.</li>
                 <li>
                   Hacker's Tribe community member - Delhi NCR's largest open source community at
                   Noida.
@@ -176,14 +180,22 @@ const About = () => {
 
               <h4>Projects I'm working on</h4>
               <ul>
-                <li>working on an open-source python package for Open Ocean data.</li>
                 <li>
-                  working with an NGO to implement a code for good project against child abuse.
+                  helping maintain an open-source python package for
+                  <a href="https://github.com/iobis/pyobis">Open Ocean Data</a>
+                </li>
+                <li>
+                  working on a Drawin Core Data Visualization
+                  <a href="https://github.com/marinebon/py-dwc-viz">python package</a>
                 </li>
               </ul>
 
               <h4>Things I did previously</h4>
               <ul>
+                <li>worked on an open-source python package for Open Ocean data.</li>
+                <li>
+                  worked with an NGO to implement a code for good project against child abuse.
+                </li>
                 <li>built a web-based chatbot that can help reduce unreported abuses.</li>
                 <li>
                   built a blockchain powered to tool to track hospital beds and ventilators in
