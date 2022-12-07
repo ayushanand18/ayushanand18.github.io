@@ -1,5 +1,5 @@
-/*! For license information please see app-da97a9b3065f8c371225.js.LICENSE.txt */
-(self.webpackChunkv1 = self.webpackChunkv1 || []).push([
+/*! For license information please see app-34da1b4ace3fbbef3d14.js.LICENSE.txt */
+(self.webpackChunkAyush_Anand = self.webpackChunkAyush_Anand || []).push([
   [143],
   {
     9826: function (e, t, n) {
@@ -19,7 +19,7 @@
       n.r(t),
         n.d(t, {
           BaseContext: function () {
-            return O;
+            return _;
           },
           Link: function () {
             return ae;
@@ -37,7 +37,7 @@
             return de;
           },
           Redirect: function () {
-            return N;
+            return L;
           },
           Router: function () {
             return ye;
@@ -79,7 +79,7 @@
             return J;
           },
           startsWith: function () {
-            return L;
+            return N;
           },
           useBaseContext: function () {
             return j;
@@ -366,7 +366,7 @@
         k = !('undefined' == typeof window || !window.document || !window.document.createElement),
         S = x(k ? window : E()),
         C = S.navigate;
-      function _(e, t) {
+      function O(e, t) {
         return f.createServerContext
           ? (function (e) {
               var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -379,10 +379,10 @@
             })(e, t)
           : f.createContext(t);
       }
-      var O = _('Base', { baseuri: '/', basepath: '/' }),
-        P = _('Location'),
+      var _ = O('Base', { baseuri: '/', basepath: '/' }),
+        P = O('Location'),
         j = function () {
-          return f.useContext(O);
+          return f.useContext(_);
         },
         M = function () {
           return f.useContext(P);
@@ -412,13 +412,13 @@
         var s = W(t, i);
         return o || A(F(s, e)), null;
       }
-      var N = function (e) {
+      var L = function (e) {
         var t = M(),
           n = j().baseuri;
         return f.createElement(I, y({}, t, { baseuri: n }, e));
       };
-      N.propTypes = { from: h().string, to: h().string.isRequired };
-      var L = function (e, t) {
+      L.propTypes = { from: h().string, to: h().string.isRequired };
+      var N = function (e, t) {
           return e.substr(0, t.length) === t;
         },
         D = function (e, t) {
@@ -449,7 +449,7 @@
                   u = !0;
                   break;
                 }
-                var w = $.exec(y);
+                var w = B.exec(y);
                 if (w && !i) {
                   var x = -1 === Q.indexOf(w[1]);
                   g()(
@@ -477,7 +477,7 @@
           return D([{ path: e }], t);
         },
         W = function (e, t) {
-          if (L(e, '/')) return e;
+          if (N(e, '/')) return e;
           var n = d(e.split('?'), 2),
             r = n[0],
             a = n[1],
@@ -485,7 +485,7 @@
             i = V(r),
             s = V(o);
           if ('' === i[0]) return Y(o, a);
-          if (!L(i[0], '.')) {
+          if (!N(i[0], '.')) {
             var l = s.concat(i).join('/');
             return Y(('/' === o ? '' : '/') + l, a);
           }
@@ -504,7 +504,7 @@
               '/' +
               V(r)
                 .map(function (e) {
-                  var n = $.exec(e);
+                  var n = B.exec(e);
                   return n ? t[n[1]] : e;
                 })
                 .join('/'),
@@ -515,13 +515,13 @@
         },
         H = function (e, t) {
           var n = function (e) {
-            return B(e);
+            return $(e);
           };
           return V(e).filter(n).sort().join('/') === V(t).filter(n).sort().join('/');
         },
-        $ = /^:(.+)/,
-        B = function (e) {
-          return $.test(e);
+        B = /^:(.+)/,
+        $ = function (e) {
+          return B.test(e);
         },
         q = function (e) {
           return e && '*' === e[0];
@@ -538,7 +538,7 @@
                       return '' === e;
                     })(t)
                       ? (e += 1)
-                      : B(t)
+                      : $(t)
                       ? (e += 2)
                       : q(t)
                       ? (e -= 5)
@@ -582,21 +582,21 @@
         X = function (e) {
           return e.replace(/(^\/+|\/+$)/g, '');
         },
-        Z = function e(t) {
+        K = function e(t) {
           return function (n) {
             if (!n) return null;
             if (n.type === f.Fragment && n.props.children)
               return f.Children.map(n.props.children, e(t));
             if (
               (g()(
-                n.props.path || n.props.default || n.type === N,
+                n.props.path || n.props.default || n.type === L,
                 '<Router>: Children of <Router> must have a `path` or `default` prop, or be a `<Redirect>`. None found on element type `'.concat(
                   n.type,
                   '`',
                 ),
               ),
               g()(
-                !!(n.type !== N || (n.props.from && n.props.to)),
+                !!(n.type !== L || (n.props.from && n.props.to)),
                 '<Redirect from="'
                   .concat(n.props.from, '" to="')
                   .concat(
@@ -605,7 +605,7 @@
                   ),
               ),
               g()(
-                !(n.type === N && !H(n.props.from, n.props.to)),
+                !(n.type === L && !H(n.props.from, n.props.to)),
                 '<Redirect from="'
                   .concat(n.props.from, ' to="')
                   .concat(
@@ -616,7 +616,7 @@
               n.props.default)
             )
               return { value: n, default: !0 };
-            var r = n.type === N ? n.props.from : n.props.path,
+            var r = n.type === L ? n.props.from : n.props.path,
               a = '/' === r ? t : ''.concat(X(t), '/').concat(X(r));
             return {
               value: n,
@@ -625,7 +625,7 @@
             };
           };
         },
-        K = ['innerRef'],
+        Z = ['innerRef'],
         ee = ['to', 'state', 'replace', 'getProps'],
         te = ['key'],
         ne = f.forwardRef;
@@ -636,7 +636,7 @@
       var re = function () {},
         ae = ne(function (e, t) {
           var n = e.innerRef,
-            r = b(e, K),
+            r = b(e, Z),
             a = j().baseuri,
             o = M().location,
             i = r.to,
@@ -648,7 +648,7 @@
             p = W(i, a),
             h = encodeURI(p),
             m = o.pathname === h,
-            g = L(o.pathname, h);
+            g = N(o.pathname, h);
           return f.createElement(
             'a',
             y(
@@ -921,7 +921,7 @@
           s = void 0 === i ? 'div' : i,
           l = b(e, ve),
           c = f.Children.toArray(a).reduce(function (e, t) {
-            var n = Z(o)(t);
+            var n = K(o)(t);
             return e.concat(n);
           }, []),
           u = t.pathname,
@@ -943,7 +943,7 @@
             E = r ? he : s,
             k = r ? y({ uri: h, location: t, component: s }, l) : l;
           return f.createElement(
-            O.Provider,
+            _.Provider,
             { value: { baseuri: h, basepath: v } },
             f.createElement(E, k, x),
           );
@@ -1320,12 +1320,12 @@
         for (var r in e) n[r] = t.hasOwnProperty(r) ? t[r] : e[r];
         return n;
       }
-      function _(e, t) {
+      function O(e, t) {
         var n = S(e);
         for (var r in t) n[r] = u.und(e[r]) ? t[r] : e[r];
         return n;
       }
-      function O(e) {
+      function _(e) {
         return u.rgb(e)
           ? (n = /rgb\((\d+,\s*[\d]+,\s*[\d]+)\)/g.exec((t = e)))
             ? 'rgba(' + n[1] + ',1)'
@@ -1436,7 +1436,7 @@
           return a;
         }
       }
-      function N(e, t, n, r) {
+      function L(e, t, n, r) {
         var a = l(t, 'scale')
             ? 1
             : 0 +
@@ -1450,10 +1450,10 @@
           o = I(e).get(t) || a;
         return n && (n.transforms.list.set(t, o), (n.transforms.last = t)), r ? T(e, o, r) : o;
       }
-      function L(e, t, n, r) {
+      function N(e, t, n, r) {
         switch (A(e, t)) {
           case 'transform':
-            return N(e, t, r, n);
+            return L(e, t, r, n);
           case 'css':
             return R(e, t, n);
           case 'attribute':
@@ -1478,7 +1478,7 @@
         }
       }
       function z(e, t) {
-        if (u.col(e)) return O(e);
+        if (u.col(e)) return _(e);
         if (/\s/g.test(e)) return e;
         var n = P(e),
           r = n ? e.substr(0, e.length - n.length) : e;
@@ -1518,7 +1518,7 @@
             })(e);
         }
       }
-      function $(e, t) {
+      function B(e, t) {
         var n = t || {},
           r =
             n.el ||
@@ -1533,13 +1533,13 @@
           l = n.viewBox || (o ? o.split(' ') : [0, 0, i, s]);
         return { el: r, viewBox: l, x: l[0] / 1, y: l[1] / 1, w: i, h: s, vW: l[2], vH: l[3] };
       }
-      function B(e, t, n) {
+      function $(e, t, n) {
         function r(n) {
           void 0 === n && (n = 0);
           var r = t + n >= 1 ? t + n : 0;
           return e.el.getPointAtLength(r);
         }
-        var a = $(e.el, e.svg),
+        var a = B(e.el, e.svg),
           o = r(),
           i = r(-1),
           s = r(1),
@@ -1593,14 +1593,14 @@
             );
           })
           .map(function (e) {
-            return _(e, n);
+            return O(e, n);
           });
       }
       function Y(e, t) {
         var n = [],
           r = t.keyframes;
         for (var a in (r &&
-          (t = _(
+          (t = O(
             (function (e) {
               for (
                 var t = w(
@@ -1657,7 +1657,7 @@
             o = a.value,
             i = u.arr(o) ? o[1] : o,
             s = P(i),
-            l = L(t.target, e.name, s, t),
+            l = N(t.target, e.name, s, t),
             c = n ? n.to.original : l,
             d = u.arr(o) ? o[0] : c,
             f = P(d) || P(l),
@@ -1704,14 +1704,14 @@
             var r = j(t[n], e),
               a = e.target,
               o = P(r),
-              i = L(a, n, o, e),
+              i = N(a, n, o, e),
               s = D(z(r, o || P(i)), i),
               l = A(a, n);
             J[l](a, n, s, e.transforms, !0);
           }
         });
       }
-      function Z(e, t) {
+      function K(e, t) {
         return w(
           x(
             e.map(function (e) {
@@ -1740,7 +1740,7 @@
           },
         );
       }
-      function K(e, t) {
+      function Z(e, t) {
         var n = e.length,
           r = function (e) {
             return e.timelineOffset ? e.timelineOffset : 0;
@@ -1829,12 +1829,12 @@
             n = C(a, e),
             o = Y(n, e),
             i = G(e.targets),
-            s = Z(i, o),
-            l = K(s, n),
+            s = K(i, o),
+            l = Z(s, n),
             c = ee;
           return (
             ee++,
-            _(t, {
+            O(t, {
               id: c,
               children: [],
               animatables: i,
@@ -1890,7 +1890,7 @@
               var b = void 0,
                 x = c.to.numbers[y],
                 E = c.from.numbers[y] || 0;
-              (b = c.isPath ? B(c.value, f * x, c.isPathTargetInsideSVG) : E + f * (x - E)),
+              (b = c.isPath ? $(c.value, f * x, c.isPathTargetInsideSVG) : E + f * (x - E)),
                 h && ((c.isColor && y > 2) || (b = Math.round(b * h) / h)),
                 m.push(b);
             }
@@ -1900,8 +1900,8 @@
               for (var S = 0; S < k; S++) {
                 p[S];
                 var C = p[S + 1],
-                  _ = m[S];
-                isNaN(_) || (v += C ? _ + C : _ + ' ');
+                  O = m[S];
+                isNaN(O) || (v += C ? O + C : O + ' ');
               }
             } else v = m[0];
             J[a.type](o.target, a.property, v, o.transforms), (a.currentValue = v), t++;
@@ -2023,14 +2023,14 @@
             ie(t, te[n]);
           }
         }),
-        (ae.get = L),
+        (ae.get = N),
         (ae.set = X),
         (ae.convertPx = T),
         (ae.path = function (e, t) {
           var n = u.str(e) ? b(e)[0] : e,
             r = t || 100;
           return function (e) {
-            return { property: e, el: n, svg: $(n), totalLength: H(n) * (r / 100) };
+            return { property: e, el: n, svg: B(n), totalLength: H(n) * (r / 100) };
           };
         }),
         (ae.setDashoffset = function (e) {
@@ -2092,7 +2092,7 @@
               }
               o > -1 && te.splice(o, 1);
               for (var l = 0; l < i.length; l++) s(i[l]);
-              var c = _(n, C(a, e));
+              var c = O(n, C(a, e));
               c.targets = c.targets || e.targets;
               var d = t.duration;
               (c.autoplay = !1),
@@ -2102,7 +2102,7 @@
                 t.seek(c.timelineOffset);
               var f = ae(c);
               s(f), i.push(f);
-              var p = K(i, e);
+              var p = Z(i, e);
               return (
                 (t.delay = p.delay),
                 (t.endDelay = p.endDelay),
@@ -2416,8 +2416,8 @@
         k = 'http-equiv',
         S = 'innerHTML',
         C = 'itemprop',
-        _ = 'name',
-        O = 'property',
+        O = 'name',
+        _ = 'property',
         P = 'rel',
         j = 'src',
         M = 'target',
@@ -2434,8 +2434,8 @@
         R = 'defaultTitle',
         A = 'defer',
         I = 'encodeSpecialCharacters',
-        N = 'onChangeClientState',
-        L = 'titleTemplate',
+        L = 'onChangeClientState',
+        N = 'titleTemplate',
         D = Object.keys(T).reduce(function (e, t) {
           return (e[T[t]] = t), e;
         }, {}),
@@ -2457,7 +2457,7 @@
         H = function (e, t) {
           if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function');
         },
-        $ = (function () {
+        B = (function () {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n];
@@ -2471,7 +2471,7 @@
             return n && e(t.prototype, n), r && e(t, r), t;
           };
         })(),
-        B =
+        $ =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -2503,17 +2503,17 @@
                 .replace(/'/g, '&#x27;');
         },
         V = function (e) {
-          var t = Z(e, b.TITLE),
-            n = Z(e, L);
+          var t = K(e, b.TITLE),
+            n = K(e, N);
           if (n && t)
             return n.replace(/%s/g, function () {
               return Array.isArray(t) ? t.join('') : t;
             });
-          var r = Z(e, R);
+          var r = K(e, R);
           return t || r || void 0;
         },
         Y = function (e) {
-          return Z(e, N) || function () {};
+          return K(e, L) || function () {};
         },
         Q = function (e, t) {
           return t
@@ -2524,7 +2524,7 @@
               return t[e];
             })
             .reduce(function (e, t) {
-              return B({}, e, t);
+              return $({}, e, t);
             }, {});
         },
         J = function (e, t) {
@@ -2595,21 +2595,21 @@
             }, [])
             .reverse();
         },
-        Z = function (e, t) {
+        K = function (e, t) {
           for (var n = e.length - 1; n >= 0; n--) {
             var r = e[n];
             if (r.hasOwnProperty(t)) return r[t];
           }
           return null;
         },
-        K =
+        Z =
           ((r = Date.now()),
           function (e) {
             var t = Date.now();
             t - r > 16
               ? ((r = t), e(t))
               : setTimeout(function () {
-                  K(e);
+                  Z(e);
                 }, 0);
           }),
         ee = function (e) {
@@ -2620,8 +2620,8 @@
             ? (window.requestAnimationFrame && window.requestAnimationFrame.bind(window)) ||
               window.webkitRequestAnimationFrame ||
               window.mozRequestAnimationFrame ||
-              K
-            : n.g.requestAnimationFrame || K,
+              Z
+            : n.g.requestAnimationFrame || Z,
         ne =
           'undefined' != typeof window
             ? window.cancelAnimationFrame ||
@@ -2856,11 +2856,11 @@
             return {
               baseTag: J([E, M], e),
               bodyAttributes: Q(g, e),
-              defer: Z(e, A),
-              encode: Z(e, I),
+              defer: K(e, A),
+              encode: K(e, I),
               htmlAttributes: Q(v, e),
               linkTags: X(b.LINK, [P, E], e),
-              metaTags: X(b.META, [_, w, k, O, C], e),
+              metaTags: X(b.META, [O, w, k, _, C], e),
               noscriptTags: X(b.NOSCRIPT, [S], e),
               onChangeClientState: Y(e),
               scriptTags: X(b.SCRIPT, [j, S], e),
@@ -2925,11 +2925,11 @@
                     r = e.arrayTypeChildren,
                     a = e.newChildProps,
                     o = e.nestedChildren;
-                  return B(
+                  return $(
                     {},
                     r,
                     (((t = {})[n.type] = [].concat(r[n.type] || [], [
-                      B({}, a, this.mapNestedChildrenToProps(n, o)),
+                      $({}, a, this.mapNestedChildrenToProps(n, o)),
                     ])),
                     t),
                   );
@@ -2943,20 +2943,20 @@
                     i = e.nestedChildren;
                   switch (r.type) {
                     case b.TITLE:
-                      return B({}, a, (((t = {})[r.type] = i), (t.titleAttributes = B({}, o)), t));
+                      return $({}, a, (((t = {})[r.type] = i), (t.titleAttributes = $({}, o)), t));
                     case b.BODY:
-                      return B({}, a, { bodyAttributes: B({}, o) });
+                      return $({}, a, { bodyAttributes: $({}, o) });
                     case b.HTML:
-                      return B({}, a, { htmlAttributes: B({}, o) });
+                      return $({}, a, { htmlAttributes: $({}, o) });
                   }
-                  return B({}, a, (((n = {})[r.type] = B({}, o)), n));
+                  return $({}, a, (((n = {})[r.type] = $({}, o)), n));
                 }),
                 (t.prototype.mapArrayTypeChildrenToProps = function (e, t) {
-                  var n = B({}, t);
+                  var n = $({}, t);
                   return (
                     Object.keys(e).forEach(function (t) {
                       var r;
-                      n = B({}, n, (((r = {})[t] = e[t]), r));
+                      n = $({}, n, (((r = {})[t] = e[t]), r));
                     }),
                     n
                   );
@@ -3009,10 +3009,10 @@
                   var e = this.props,
                     t = e.children,
                     n = q(e, ['children']),
-                    r = B({}, n);
+                    r = $({}, n);
                   return t && (r = this.mapChildrenToProps(t, r)), p.createElement(a, r);
                 }),
-                $(t, null, [
+                B(t, null, [
                   {
                     key: 'canUseDOM',
                     set: function (e) {
@@ -3958,7 +3958,7 @@
       function C(e, t, n) {
         return null != n[t] ? n[t] : e.props[t];
       }
-      function _(e, t, n) {
+      function O(e, t, n) {
         var r = S(e.children),
           a = (function (e, t) {
             function n(n) {
@@ -4012,7 +4012,7 @@
           a
         );
       }
-      var O =
+      var _ =
           Object.values ||
           function (e) {
             return Object.keys(e).map(function (t) {
@@ -4049,7 +4049,7 @@
                       return (0,
                       l.cloneElement)(e, { onExited: r.bind(null, e), in: !0, appear: C(e, 'appear', n), enter: C(e, 'enter', n), exit: C(e, 'exit', n) });
                     }))
-                  : _(e, a, o),
+                  : O(e, a, o),
                 firstRender: !1,
               };
             }),
@@ -4069,7 +4069,7 @@
                 n = e.childFactory,
                 r = a(e, ['component', 'childFactory']),
                 o = this.state.contextValue,
-                i = O(this.state.children).map(n);
+                i = _(this.state.children).map(n);
               return (
                 delete r.appear,
                 delete r.enter,
@@ -4180,8 +4180,8 @@
         })(l.Component),
         A = R;
       var I = 'out-in',
-        N = 'in-out',
-        L = function (e, t, n) {
+        L = 'in-out',
+        N = function (e, t, n) {
           return function () {
             var r;
             e.props[t] && (r = e.props)[t].apply(r, arguments), n();
@@ -4193,12 +4193,12 @@
               n = e.changeState;
             return l.cloneElement(t, {
               in: !1,
-              onExited: L(t, 'onExited', function () {
+              onExited: N(t, 'onExited', function () {
                 n(h, null);
               }),
             });
           }),
-          (j[N] = function (e) {
+          (j[L] = function (e) {
             var t = e.current,
               n = e.changeState,
               r = e.children;
@@ -4206,7 +4206,7 @@
               t,
               l.cloneElement(r, {
                 in: !0,
-                onEntered: L(r, 'onEntered', function () {
+                onEntered: N(r, 'onEntered', function () {
                   n(h);
                 }),
               }),
@@ -4219,19 +4219,19 @@
               n = e.changeState;
             return l.cloneElement(t, {
               in: !0,
-              onEntered: L(t, 'onEntered', function () {
+              onEntered: N(t, 'onEntered', function () {
                 n(m, l.cloneElement(t, { in: !0 }));
               }),
             });
           }),
-          (M[N] = function (e) {
+          (M[L] = function (e) {
             var t = e.current,
               n = e.children,
               r = e.changeState;
             return [
               l.cloneElement(t, {
                 in: !1,
-                onExited: L(t, 'onExited', function () {
+                onExited: N(t, 'onExited', function () {
                   r(m, l.cloneElement(n, { in: !0 }));
                 }),
               }),
@@ -4264,7 +4264,7 @@
             (t.getDerivedStateFromProps = function (e, t) {
               return null == e.children
                 ? { current: null }
-                : t.status === h && e.mode === N
+                : t.status === h && e.mode === L
                 ? { status: h }
                 : !t.current ||
                   ((n = t.current),
@@ -4644,18 +4644,18 @@
         var C = {};
         if (g.generated || k.generated.initial) {
           (C.property = x('transition')), (C.computed = t[C.property]), (C.fragments = []);
-          var _ = r.delay,
-            O = r.duration,
+          var O = r.delay,
+            _ = r.duration,
             P = r.easing;
           g.generated &&
             C.fragments.push({
-              delayed: 'opacity ' + O / 1e3 + 's ' + P + ' ' + _ / 1e3 + 's',
-              instant: 'opacity ' + O / 1e3 + 's ' + P + ' 0s',
+              delayed: 'opacity ' + _ / 1e3 + 's ' + P + ' ' + O / 1e3 + 's',
+              instant: 'opacity ' + _ / 1e3 + 's ' + P + ' 0s',
             }),
             k.generated.initial &&
               C.fragments.push({
-                delayed: k.property + ' ' + O / 1e3 + 's ' + P + ' ' + _ / 1e3 + 's',
-                instant: k.property + ' ' + O / 1e3 + 's ' + P + ' 0s',
+                delayed: k.property + ' ' + _ / 1e3 + 's ' + P + ' ' + O / 1e3 + 's',
+                instant: k.property + ' ' + _ / 1e3 + 's ' + P + ' 0s',
               }),
             C.computed &&
               !C.computed.match(/all 0s|none 0s/) &&
@@ -4722,20 +4722,20 @@
           }),
           (this.store = { containers: {}, elements: {}, history: [], sequences: {} });
       }
-      function _(e) {
+      function O(e) {
         for (var t = [], n = arguments.length - 1; n-- > 0; ) t[n] = arguments[n + 1];
         if (v(e))
           return (
             y(t, function (t) {
               y(t, function (t, n) {
-                v(t) ? ((e[n] && v(e[n])) || (e[n] = {}), _(e[n], t)) : (e[n] = t);
+                v(t) ? ((e[n] && v(e[n])) || (e[n] = {}), O(e[n], t)) : (e[n] = t);
               });
             }),
             e
           );
         throw new TypeError('Target must be an object literal.');
       }
-      function O(e) {
+      function _(e) {
         return void 0 === e && (e = navigator.userAgent), /Android|iPhone|iPad|iPod/i.test(e);
       }
       var P,
@@ -4839,7 +4839,7 @@
             }, r - i),
           });
       }
-      function N(e, t) {
+      function L(e, t) {
         if ((void 0 === t && (t = this.pristine), !e.visible && e.revealed && e.config.reset))
           return T.call(this, e, { reset: !0 });
         var n = this.store.sequences[e.sequence.id],
@@ -4863,7 +4863,7 @@
             return z.call(this, n, r, 1, t), T.call(this, e, { reveal: !0, pristine: t });
         }
       }
-      function L(e) {
+      function N(e) {
         var t = Math.abs(e);
         if (isNaN(t)) throw new RangeError('Invalid sequence interval.');
         (this.id = j()),
@@ -4894,7 +4894,7 @@
           s = this.store.elements[i];
         (e.blocked[o] = !0),
           setTimeout(function () {
-            (e.blocked[o] = !1), s && N.call(a, s, r);
+            (e.blocked[o] = !1), s && L.call(a, s, r);
           }, e.interval);
       }
       function W(e, t, n) {
@@ -4904,17 +4904,17 @@
           i = [],
           s = t.interval || m.interval;
         try {
-          s && (a = new L(s));
+          s && (a = new N(s));
           var l = o(e);
           if (!l.length) throw new Error('Invalid reveal target.');
           var c = l.reduce(function (e, n) {
             var s = {},
               l = n.getAttribute('data-sr-id');
             l
-              ? (_(s, r.store.elements[l]), k(s.node, s.styles.inline.computed))
+              ? (O(s, r.store.elements[l]), k(s.node, s.styles.inline.computed))
               : ((s.id = j()), (s.node = n), (s.seen = !1), (s.revealed = !1), (s.visible = !1));
-            var c = _({}, s.config || r.defaults, t);
-            if ((!c.mobile && O()) || (!c.desktop && !O())) return l && S.call(r, s), e;
+            var c = O({}, s.config || r.defaults, t);
+            if ((!c.mobile && _()) || (!c.desktop && !_())) return l && S.call(r, s), e;
             var u,
               d = o(c.container)[0];
             if (!d) throw new Error('Invalid container.');
@@ -4969,7 +4969,7 @@
         function (e) {
           return (e > 0) - (e < 0) || +e;
         };
-      function $(e, t) {
+      function B(e, t) {
         var n = t ? e.node.clientHeight : e.node.offsetHeight,
           r = t ? e.node.clientWidth : e.node.offsetWidth,
           a = 0,
@@ -4982,7 +4982,7 @@
         } while (i);
         return { bounds: { top: a, right: o + r, bottom: a + n, left: o }, height: n, width: r };
       }
-      function B(e) {
+      function $(e) {
         var t, n;
         return (
           e.node === document.documentElement
@@ -5015,23 +5015,23 @@
           h(function () {
             var r = 'init' === e.type || 'resize' === e.type;
             y(n.store.containers, function (e) {
-              r && (e.geometry = $.call(n, e, !0));
-              var t = B.call(n, e);
+              r && (e.geometry = B.call(n, e, !0));
+              var t = $.call(n, e);
               e.scroll &&
                 (e.direction = { x: H(t.left - e.scroll.left), y: H(t.top - e.scroll.top) }),
                 (e.scroll = t);
             }),
               y(t, function (e) {
-                (r || void 0 === e.geometry) && (e.geometry = $.call(n, e)),
+                (r || void 0 === e.geometry) && (e.geometry = B.call(n, e)),
                   (e.visible = q.call(n, e));
               }),
               y(t, function (e) {
-                e.sequence ? N.call(n, e) : T.call(n, e);
+                e.sequence ? L.call(n, e) : T.call(n, e);
               }),
               (n.pristine = !1);
           });
       }
-      var G, V, Y, Q, J, X, Z, K;
+      var G, V, Y, Q, J, X, K, Z;
       function ee(e) {
         var t;
         if (
@@ -5044,7 +5044,7 @@
             b.call(this, 'Instantiation failed.', 'This browser is not supported.'), g.failure()
           );
         try {
-          t = _({}, X || m, e);
+          t = O({}, X || m, e);
         } catch (n) {
           return b.call(this, 'Invalid configuration.', n.message), g.failure();
         }
@@ -5053,7 +5053,7 @@
         } catch (n) {
           return b.call(this, n.message), g.failure();
         }
-        return (!(X = t).mobile && O()) || (!X.desktop && !O())
+        return (!(X = t).mobile && _()) || (!X.desktop && !_())
           ? (b.call(
               this,
               'This device is disabled.',
@@ -5109,7 +5109,7 @@
                 return !1;
               },
             }),
-            K || (K = this));
+            Z || (Z = this));
       }
       (ee.isSupported = function () {
         return (
@@ -5125,10 +5125,10 @@
       }),
         Object.defineProperty(ee, 'debug', {
           get: function () {
-            return Z || !1;
+            return K || !1;
           },
           set: function (e) {
-            return (Z = 'boolean' == typeof e ? e : Z);
+            return (K = 'boolean' == typeof e ? e : K);
           },
         }),
         ee();
@@ -5179,7 +5179,7 @@
             return Re;
           },
           __PRIVATE__: function () {
-            return $e;
+            return Be;
           },
           createGlobalStyle: function () {
             return De;
@@ -5188,7 +5188,7 @@
             return be;
           },
           default: function () {
-            return Be;
+            return $e;
           },
           isStyledComponent: function () {
             return w;
@@ -5222,30 +5222,30 @@
                 k = 0,
                 S = 0,
                 C = 0,
-                _ = 0,
+                O = 0,
                 R = 0,
                 I = (m = p = 0),
-                L = 0,
+                N = 0,
                 D = 0,
                 z = 0,
                 W = 0,
                 F = l.length,
                 H = F - 1,
-                $ = '',
                 B = '',
+                $ = '',
                 q = '',
                 U = '';
-              L < F;
+              N < F;
 
             ) {
               if (
-                ((h = l.charCodeAt(L)),
-                L === H &&
+                ((h = l.charCodeAt(N)),
+                N === H &&
                   0 !== k + C + S + E &&
                   (0 !== k && (h = 47 === k ? 10 : 47), (C = S = E = 0), F++, H++),
                 0 === k + C + S + E)
               ) {
-                if (L === H && (0 < D && ($ = $.replace(d, '')), 0 < $.trim().length)) {
+                if (N === H && (0 < D && (B = B.replace(d, '')), 0 < B.trim().length)) {
                   switch (h) {
                     case 32:
                     case 9:
@@ -5254,14 +5254,14 @@
                     case 10:
                       break;
                     default:
-                      $ += l.charAt(L);
+                      B += l.charAt(N);
                   }
                   h = 59;
                 }
                 switch (h) {
                   case 123:
-                    for (p = ($ = $.trim()).charCodeAt(0), m = 1, W = ++L; L < F; ) {
-                      switch ((h = l.charCodeAt(L))) {
+                    for (p = (B = B.trim()).charCodeAt(0), m = 1, W = ++N; N < F; ) {
+                      switch ((h = l.charCodeAt(N))) {
                         case 123:
                           m++;
                           break;
@@ -5269,25 +5269,25 @@
                           m--;
                           break;
                         case 47:
-                          switch ((h = l.charCodeAt(L + 1))) {
+                          switch ((h = l.charCodeAt(N + 1))) {
                             case 42:
                             case 47:
                               e: {
-                                for (I = L + 1; I < H; ++I)
+                                for (I = N + 1; I < H; ++I)
                                   switch (l.charCodeAt(I)) {
                                     case 47:
-                                      if (42 === h && 42 === l.charCodeAt(I - 1) && L + 2 !== I) {
-                                        L = I + 1;
+                                      if (42 === h && 42 === l.charCodeAt(I - 1) && N + 2 !== I) {
+                                        N = I + 1;
                                         break e;
                                       }
                                       break;
                                     case 10:
                                       if (47 === h) {
-                                        L = I + 1;
+                                        N = I + 1;
                                         break e;
                                       }
                                   }
-                                L = I;
+                                N = I;
                               }
                           }
                           break;
@@ -5297,17 +5297,17 @@
                           h++;
                         case 34:
                         case 39:
-                          for (; L++ < H && l.charCodeAt(L) !== h; );
+                          for (; N++ < H && l.charCodeAt(N) !== h; );
                       }
                       if (0 === m) break;
-                      L++;
+                      N++;
                     }
                     if (
-                      ((m = l.substring(W, L)),
-                      0 === p && (p = ($ = $.replace(u, '').trim()).charCodeAt(0)),
+                      ((m = l.substring(W, N)),
+                      0 === p && (p = (B = B.replace(u, '').trim()).charCodeAt(0)),
                       64 === p)
                     ) {
-                      switch ((0 < D && ($ = $.replace(d, '')), (h = $.charCodeAt(1)))) {
+                      switch ((0 < D && (B = B.replace(d, '')), (h = B.charCodeAt(1)))) {
                         case 100:
                         case 109:
                         case 115:
@@ -5320,59 +5320,59 @@
                       if (
                         ((W = (m = t(r, D, m, h, f + 1)).length),
                         0 < A &&
-                          ((w = s(3, m, (D = n(T, $, z)), r, P, O, W, h, f, c)),
-                          ($ = D.join('')),
+                          ((w = s(3, m, (D = n(T, B, z)), r, P, _, W, h, f, c)),
+                          (B = D.join('')),
                           void 0 !== w && 0 === (W = (m = w.trim()).length) && ((h = 0), (m = ''))),
                         0 < W)
                       )
                         switch (h) {
                           case 115:
-                            $ = $.replace(x, i);
+                            B = B.replace(x, i);
                           case 100:
                           case 109:
                           case 45:
-                            m = $ + '{' + m + '}';
+                            m = B + '{' + m + '}';
                             break;
                           case 107:
-                            (m = ($ = $.replace(v, '$1 $2')) + '{' + m + '}'),
+                            (m = (B = B.replace(v, '$1 $2')) + '{' + m + '}'),
                               (m =
                                 1 === M || (2 === M && o('@' + m, 3))
                                   ? '@-webkit-' + m + '@' + m
                                   : '@' + m);
                             break;
                           default:
-                            (m = $ + m), 112 === c && ((B += m), (m = ''));
+                            (m = B + m), 112 === c && (($ += m), (m = ''));
                         }
                       else m = '';
-                    } else m = t(r, n(r, $, z), m, c, f + 1);
-                    (q += m), (m = z = D = I = p = 0), ($ = ''), (h = l.charCodeAt(++L));
+                    } else m = t(r, n(r, B, z), m, c, f + 1);
+                    (q += m), (m = z = D = I = p = 0), (B = ''), (h = l.charCodeAt(++N));
                     break;
                   case 125:
                   case 59:
-                    if (1 < (W = ($ = (0 < D ? $.replace(d, '') : $).trim()).length))
+                    if (1 < (W = (B = (0 < D ? B.replace(d, '') : B).trim()).length))
                       switch (
                         (0 === I &&
-                          ((p = $.charCodeAt(0)), 45 === p || (96 < p && 123 > p)) &&
-                          (W = ($ = $.replace(' ', ':')).length),
+                          ((p = B.charCodeAt(0)), 45 === p || (96 < p && 123 > p)) &&
+                          (W = (B = B.replace(' ', ':')).length),
                         0 < A &&
-                          void 0 !== (w = s(1, $, r, e, P, O, B.length, c, f, c)) &&
-                          0 === (W = ($ = w.trim()).length) &&
-                          ($ = '\0\0'),
-                        (p = $.charCodeAt(0)),
-                        (h = $.charCodeAt(1)),
+                          void 0 !== (w = s(1, B, r, e, P, _, $.length, c, f, c)) &&
+                          0 === (W = (B = w.trim()).length) &&
+                          (B = '\0\0'),
+                        (p = B.charCodeAt(0)),
+                        (h = B.charCodeAt(1)),
                         p)
                       ) {
                         case 0:
                           break;
                         case 64:
                           if (105 === h || 99 === h) {
-                            U += $ + l.charAt(L);
+                            U += B + l.charAt(N);
                             break;
                           }
                         default:
-                          58 !== $.charCodeAt(W - 1) && (B += a($, p, h, $.charCodeAt(2)));
+                          58 !== B.charCodeAt(W - 1) && ($ += a(B, p, h, B.charCodeAt(2)));
                       }
-                    (z = D = I = p = 0), ($ = ''), (h = l.charCodeAt(++L));
+                    (z = D = I = p = 0), (B = ''), (h = l.charCodeAt(++N));
                 }
               }
               switch (h) {
@@ -5380,23 +5380,23 @@
                 case 10:
                   47 === k
                     ? (k = 0)
-                    : 0 === 1 + p && 107 !== c && 0 < $.length && ((D = 1), ($ += '\0')),
-                    0 < A * N && s(0, $, r, e, P, O, B.length, c, f, c),
-                    (O = 1),
+                    : 0 === 1 + p && 107 !== c && 0 < B.length && ((D = 1), (B += '\0')),
+                    0 < A * L && s(0, B, r, e, P, _, $.length, c, f, c),
+                    (_ = 1),
                     P++;
                   break;
                 case 59:
                 case 125:
                   if (0 === k + C + S + E) {
-                    O++;
+                    _++;
                     break;
                   }
                 default:
-                  switch ((O++, (g = l.charAt(L)), h)) {
+                  switch ((_++, (g = l.charAt(N)), h)) {
                     case 9:
                     case 32:
                       if (0 === C + E + k)
-                        switch (_) {
+                        switch (O) {
                           case 44:
                           case 58:
                           case 9:
@@ -5421,15 +5421,15 @@
                       break;
                     case 108:
                       if (0 === C + k + E + j && 0 < I)
-                        switch (L - I) {
+                        switch (N - I) {
                           case 2:
-                            112 === _ && 58 === l.charCodeAt(L - 3) && (j = _);
+                            112 === O && 58 === l.charCodeAt(N - 3) && (j = O);
                           case 8:
                             111 === R && (j = R);
                         }
                       break;
                     case 58:
-                      0 === C + k + E && (I = L);
+                      0 === C + k + E && (I = N);
                       break;
                     case 44:
                       0 === k + S + C + E && ((D = 1), (g += '\r'));
@@ -5450,7 +5450,7 @@
                     case 40:
                       if (0 === C + k + E) {
                         if (0 === p)
-                          if (2 * _ + 3 * R == 533);
+                          if (2 * O + 3 * R == 533);
                           else p = 1;
                         S++;
                       }
@@ -5463,49 +5463,49 @@
                       if (!(0 < C + E + S))
                         switch (k) {
                           case 0:
-                            switch (2 * h + 3 * l.charCodeAt(L + 1)) {
+                            switch (2 * h + 3 * l.charCodeAt(N + 1)) {
                               case 235:
                                 k = 47;
                                 break;
                               case 220:
-                                (W = L), (k = 42);
+                                (W = N), (k = 42);
                             }
                             break;
                           case 42:
                             47 === h &&
-                              42 === _ &&
-                              W + 2 !== L &&
-                              (33 === l.charCodeAt(W + 2) && (B += l.substring(W, L + 1)),
+                              42 === O &&
+                              W + 2 !== N &&
+                              (33 === l.charCodeAt(W + 2) && ($ += l.substring(W, N + 1)),
                               (g = ''),
                               (k = 0));
                         }
                   }
-                  0 === k && ($ += g);
+                  0 === k && (B += g);
               }
-              (R = _), (_ = h), L++;
+              (R = O), (O = h), N++;
             }
-            if (0 < (W = B.length)) {
+            if (0 < (W = $.length)) {
               if (
                 ((D = r),
-                0 < A && void 0 !== (w = s(2, B, D, e, P, O, W, c, f, c)) && 0 === (B = w).length)
+                0 < A && void 0 !== (w = s(2, $, D, e, P, _, W, c, f, c)) && 0 === ($ = w).length)
               )
-                return U + B + q;
-              if (((B = D.join(',') + '{' + B + '}'), 0 != M * j)) {
-                switch ((2 !== M || o(B, 2) || (j = 0), j)) {
+                return U + $ + q;
+              if ((($ = D.join(',') + '{' + $ + '}'), 0 != M * j)) {
+                switch ((2 !== M || o($, 2) || (j = 0), j)) {
                   case 111:
-                    B = B.replace(b, ':-moz-$1') + B;
+                    $ = $.replace(b, ':-moz-$1') + $;
                     break;
                   case 112:
-                    B =
-                      B.replace(y, '::-webkit-input-$1') +
-                      B.replace(y, '::-moz-$1') +
-                      B.replace(y, ':-ms-input-$1') +
-                      B;
+                    $ =
+                      $.replace(y, '::-webkit-input-$1') +
+                      $.replace(y, '::-moz-$1') +
+                      $.replace(y, ':-ms-input-$1') +
+                      $;
                 }
                 j = 0;
               }
             }
-            return U + B + q;
+            return U + $ + q;
           }
           function n(e, t, n) {
             var a = t.trim().split(m);
@@ -5569,7 +5569,7 @@
                 return '-webkit-' + i + '-moz-' + i + '-ms-' + i + i;
               case 883:
                 if (45 === i.charCodeAt(8)) return '-webkit-' + i + i;
-                if (0 < i.indexOf('image-set(', 11)) return i.replace(_, '$1-webkit-$2') + i;
+                if (0 < i.indexOf('image-set(', 11)) return i.replace(O, '$1-webkit-$2') + i;
                 break;
               case 932:
                 if (45 === i.charCodeAt(4))
@@ -5732,15 +5732,15 @@
           function c(e, n) {
             var r = e;
             if ((33 > r.charCodeAt(0) && (r = r.trim()), (r = [r]), 0 < A)) {
-              var a = s(-1, n, r, r, P, O, 0, 0, 0, 0);
+              var a = s(-1, n, r, r, P, _, 0, 0, 0, 0);
               void 0 !== a && 'string' == typeof a && (n = a);
             }
             var o = t(T, r, n, 0, 0);
             return (
-              0 < A && void 0 !== (a = s(-2, o, r, r, P, O, o.length, 0, 0, 0)) && (o = a),
+              0 < A && void 0 !== (a = s(-2, o, r, r, P, _, o.length, 0, 0, 0)) && (o = a),
               '',
               (j = 0),
-              (O = P = 1),
+              (_ = P = 1),
               o
             );
           }
@@ -5760,8 +5760,8 @@
             k = /-self|flex-/g,
             S = /[^]*?(:[rp][el]a[\w-]+)[^]*/,
             C = /stretch|:\s*\w+\-(?:conte|avail)/,
-            _ = /([^-])(image-set\()/,
-            O = 1,
+            O = /([^-])(image-set\()/,
+            _ = 1,
             P = 1,
             j = 0,
             M = 1,
@@ -5769,7 +5769,7 @@
             R = [],
             A = 0,
             I = null,
-            N = 0;
+            L = 0;
           return (
             (c.use = function e(t) {
               switch (t) {
@@ -5780,7 +5780,7 @@
                 default:
                   if ('function' == typeof t) R[A++] = t;
                   else if ('object' == typeof t) for (var n = 0, r = t.length; n < r; ++n) e(t[n]);
-                  else N = 0 | !!t;
+                  else L = 0 | !!t;
               }
               return e;
             }),
@@ -5903,7 +5903,7 @@
               {}.SC_DISABLE_SPEEDY,
         ),
         C = {};
-      function _(e) {
+      function O(e) {
         for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++)
           n[r - 1] = arguments[r];
         throw new Error(
@@ -5913,7 +5913,7 @@
             (n.length > 0 ? ' Args: ' + n.join(', ') : ''),
         );
       }
-      var O = (function () {
+      var _ = (function () {
           function e(e) {
             (this.groupSizes = new Uint32Array(512)), (this.length = 512), (this.tag = e);
           }
@@ -5926,7 +5926,7 @@
             (t.insertRules = function (e, t) {
               if (e >= this.groupSizes.length) {
                 for (var n = this.groupSizes, r = n.length, a = r; e >= a; )
-                  (a <<= 1) < 0 && _(16, '' + e);
+                  (a <<= 1) < 0 && O(16, '' + e);
                 (this.groupSizes = new Uint32Array(a)), this.groupSizes.set(n), (this.length = a);
                 for (var o = r; o < a; o++) this.groupSizes[o] = 0;
               }
@@ -5972,8 +5972,8 @@
           P.set(e, t), j.set(t, e);
         },
         I = 'style[' + x + '][data-styled-version="5.3.0"]',
-        N = new RegExp('^' + x + '\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)'),
-        L = function (e, t, n) {
+        L = new RegExp('^' + x + '\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)'),
+        N = function (e, t, n) {
           for (var r, a = n.split(','), o = 0, i = a.length; o < i; o++)
             (r = a[o]) && e.registerName(t, r);
         },
@@ -5981,11 +5981,11 @@
           for (var n = t.innerHTML.split('/*!sc*/\n'), r = [], a = 0, o = n.length; a < o; a++) {
             var i = n[a].trim();
             if (i) {
-              var s = i.match(N);
+              var s = i.match(L);
               if (s) {
                 var l = 0 | parseInt(s[1], 10),
                   c = s[2];
-                0 !== l && (A(c, l), L(e, c, s[3]), e.getTag().insertRules(l, r)), (r.length = 0);
+                0 !== l && (A(c, l), N(e, c, s[3]), e.getTag().insertRules(l, r)), (r.length = 0);
               } else r.push(i);
             }
           }
@@ -6020,7 +6020,7 @@
                   var a = t[n];
                   if (a.ownerNode === e) return a;
                 }
-                _(17);
+                O(17);
               })(t)),
               (this.length = 0);
           }
@@ -6067,7 +6067,7 @@
             e
           );
         })(),
-        $ = (function () {
+        B = (function () {
           function e(e) {
             (this.rules = []), (this.length = 0);
           }
@@ -6085,7 +6085,7 @@
             e
           );
         })(),
-        B = k,
+        $ = k,
         q = { isServer: !k, useCSSOMInjection: !S },
         U = (function () {
           function e(e, t, n) {
@@ -6096,8 +6096,8 @@
               (this.names = new Map(n)),
               !this.options.isServer &&
                 k &&
-                B &&
-                ((B = !1),
+                $ &&
+                (($ = !1),
                 (function (e) {
                   for (var t = document.querySelectorAll(I), n = 0, r = t.length; n < r; n++) {
                     var a = t[n];
@@ -6128,8 +6128,8 @@
                   ((n = (t = this.options).isServer),
                   (r = t.useCSSOMInjection),
                   (a = t.target),
-                  (e = n ? new $(a) : r ? new F(a) : new H(a)),
-                  new O(e)))
+                  (e = n ? new B(a) : r ? new F(a) : new H(a)),
+                  new _(e)))
               );
               var e, t, n, r, a;
             }),
@@ -6203,14 +6203,14 @@
         }
         return !0;
       }
-      var Z = J('5.3.0'),
-        K = (function () {
+      var K = J('5.3.0'),
+        Z = (function () {
           function e(e, t, n) {
             (this.rules = e),
               (this.staticRulesId = ''),
               (this.isStatic = (void 0 === n || n.isStatic) && X(e)),
               (this.componentId = t),
-              (this.baseHash = Q(Z, t)),
+              (this.baseHash = Q(K, t)),
               (this.baseStyle = n),
               U.registerId(t);
           }
@@ -6338,7 +6338,7 @@
           (m.hash = u.length
             ? u
                 .reduce(function (e, t) {
-                  return t.name || _(15), Q(e, t.name);
+                  return t.name || O(15), Q(e, t.name);
                 }, 5381)
                 .toString()
             : ''),
@@ -6404,7 +6404,7 @@
               e.hasNameForId(n.id, r) || e.insertRules(n.id, r, t(n.rules, r, '@keyframes'));
             }),
               (this.toString = function () {
-                return _(12, String(n.name));
+                return O(12, String(n.name));
               }),
               (this.name = e),
               (this.id = 'sc-keyframes-' + e),
@@ -6498,24 +6498,24 @@
       function Ce(e) {
         return 'string' == typeof e && !0;
       }
-      var _e = function (e) {
+      var Oe = function (e) {
           return (
             'function' == typeof e || ('object' == typeof e && null !== e && !Array.isArray(e))
           );
         },
-        Oe = function (e) {
+        _e = function (e) {
           return '__proto__' !== e && 'constructor' !== e && 'prototype' !== e;
         };
       function Pe(e, t, n) {
         var r = e[n];
-        _e(t) && _e(r) ? je(r, t) : (e[n] = t);
+        Oe(t) && Oe(r) ? je(r, t) : (e[n] = t);
       }
       function je(e) {
         for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++)
           n[r - 1] = arguments[r];
         for (var a = 0, o = n; a < o.length; a++) {
           var i = o[a];
-          if (_e(i)) for (var s in i) Oe(s) && Pe(e, i[s], s);
+          if (Oe(i)) for (var s in i) _e(s) && Pe(e, i[s], s);
         }
         return e;
       }
@@ -6530,11 +6530,11 @@
                   ? y(e)
                     ? e(t)
                     : Array.isArray(e) || 'object' != typeof e
-                    ? _(8)
+                    ? O(8)
                     : t
                     ? p({}, t, {}, e)
                     : e
-                  : _(14);
+                  : O(14);
               })(e.theme, t);
             },
             [e.theme, t],
@@ -6578,9 +6578,9 @@
               }
             : e.shouldForwardProp);
         var k,
-          S = new K(n, m, r ? e.componentStyle : void 0),
+          S = new Z(n, m, r ? e.componentStyle : void 0),
           C = S.isStatic && 0 === s.length,
-          _ = function (e, t) {
+          O = function (e, t) {
             return (function (e, t, n, r) {
               var o = e.attrs,
                 i = e.componentStyle,
@@ -6640,8 +6640,8 @@
             })(k, e, t, C);
           };
         return (
-          (_.displayName = h),
-          ((k = a.forwardRef(_)).attrs = x),
+          (O.displayName = h),
+          ((k = a.forwardRef(O)).attrs = x),
           (k.componentStyle = S),
           (k.displayName = h),
           (k.shouldForwardProp = E),
@@ -6689,9 +6689,9 @@
           k
         );
       }
-      var Ne = function (e) {
+      var Le = function (e) {
         return (function e(t, n, a) {
-          if ((void 0 === a && (a = v), !(0, r.isValidElementType)(n))) return _(1, String(n));
+          if ((void 0 === a && (a = v), !(0, r.isValidElementType)(n))) return O(1, String(n));
           var o = function () {
             return t(n, a, be.apply(void 0, arguments));
           };
@@ -6848,9 +6848,9 @@
         'textPath',
         'tspan',
       ].forEach(function (e) {
-        Ne[e] = Ne(e);
+        Le[e] = Le(e);
       });
-      var Le = (function () {
+      var Ne = (function () {
         function e(e, t) {
           (this.rules = e),
             (this.componentId = t),
@@ -6880,7 +6880,7 @@
           n[r - 1] = arguments[r];
         var o = be.apply(void 0, [e].concat(n)),
           i = 'sc-global-' + Se(JSON.stringify(o)),
-          s = new Le(o, i);
+          s = new Ne(o, i);
         function l(e) {
           var t = le(),
             n = ce(),
@@ -6934,11 +6934,11 @@
               );
             }),
               (this.getStyleTags = function () {
-                return e.sealed ? _(2) : e._emitSheetCSS();
+                return e.sealed ? O(2) : e._emitSheetCSS();
               }),
               (this.getStyleElement = function () {
                 var t;
-                if (e.sealed) return _(2);
+                if (e.sealed) return O(2);
                 var n =
                     (((t = {})[x] = ''),
                     (t['data-styled-version'] = '5.3.0'),
@@ -6956,10 +6956,10 @@
           var t = e.prototype;
           return (
             (t.collectStyles = function (e) {
-              return this.sealed ? _(2) : a.createElement(ue, { sheet: this.instance }, e);
+              return this.sealed ? O(2) : a.createElement(ue, { sheet: this.instance }, e);
             }),
             (t.interleaveWithNodeStream = function (e) {
-              return _(3);
+              return O(3);
             }),
             e
           );
@@ -6976,8 +6976,8 @@
         He = function () {
           return (0, a.useContext)(Me);
         },
-        $e = { StyleSheet: U, masterSheet: ie },
-        Be = Ne;
+        Be = { StyleSheet: U, masterSheet: ie },
+        $e = Le;
     },
     9662: function (e, t, n) {
       var r = n(614),
@@ -8292,10 +8292,6 @@
         'component---src-pages-404-js': () => Promise.resolve().then(() => a(n(429))),
         'component---src-pages-archive-js': () => Promise.resolve().then(() => a(n(5790))),
         'component---src-pages-index-js': () => Promise.resolve().then(() => a(n(6558))),
-        'component---src-pages-pensieve-index-js': () => Promise.resolve().then(() => a(n(3657))),
-        'component---src-pages-pensieve-tags-js': () => Promise.resolve().then(() => a(n(4466))),
-        'component---src-templates-post-js': () => Promise.resolve().then(() => a(n(2396))),
-        'component---src-templates-tag-js': () => Promise.resolve().then(() => a(n(3450))),
       };
     },
     4741: function (e, t, n) {
@@ -10277,7 +10273,7 @@
           return x;
         },
         w: function () {
-          return N;
+          return L;
         },
       });
       var r = n(907);
@@ -10428,18 +10424,18 @@
               height: u,
               format: (null == (t = a) ? void 0 : t.format) || b(f) || 'auto',
             });
-        var _ = new Set(e.formats);
-        (0 === _.size || _.has('auto') || _.has('')) &&
-          (_.delete('auto'), _.delete(''), _.add(a.format)),
-          _.has('jpg') &&
-            _.has('png') &&
+        var O = new Set(e.formats);
+        (0 === O.size || O.has('auto') || O.has('')) &&
+          (O.delete('auto'), O.delete(''), O.add(a.format)),
+          O.has('jpg') &&
+            O.has('png') &&
             (v.warn(
               '[' +
                 r +
                 "] Specifying both 'jpg' and 'png' formats is not supported. Using 'auto' instead",
             ),
-            _.delete('jpg' === a.format ? 'png' : 'jpg'));
-        var O = (function (e) {
+            O.delete('jpg' === a.format ? 'png' : 'jpg'));
+        var _ = (function (e) {
             var t = e.width,
               n = e.height,
               r = e.filename,
@@ -10552,11 +10548,11 @@
               default:
                 return;
             }
-          })(O.presentationWidth, i)),
-          _.forEach(function (e) {
-            var t = O.sizes
+          })(_.presentationWidth, i)),
+          O.forEach(function (e) {
+            var t = _.sizes
               .map(function (t) {
-                var n = o(f, t, Math.round(t / O.aspectRatio), e, s, l);
+                var n = o(f, t, Math.round(t / _.aspectRatio), e, s, l);
                 if (null != n && n.width && n.height && n.src && n.format) return n;
                 v.warn('[' + r + '] The resolver for image ' + f + ' returned an invalid value.');
               })
@@ -10564,7 +10560,7 @@
             if ('jpg' === e || 'png' === e || 'auto' === e) {
               var n =
                 t.find(function (e) {
-                  return e.width === O.unscaledWidth;
+                  return e.width === _.unscaledWidth;
                 }) || t[0];
               n && (P.fallback = { src: n.src, srcSet: y(t), sizes: j });
             } else {
@@ -10575,14 +10571,14 @@
         var M = { images: P, layout: i, backgroundColor: x };
         switch ((E && (M.placeholder = { fallback: E }), i)) {
           case 'fixed':
-            (M.width = O.presentationWidth), (M.height = O.presentationHeight);
+            (M.width = _.presentationWidth), (M.height = _.presentationHeight);
             break;
           case 'fullWidth':
-            (M.width = 1), (M.height = 1 / O.aspectRatio);
+            (M.width = 1), (M.height = 1 / _.aspectRatio);
             break;
           case 'constrained':
-            (M.width = e.width || O.presentationWidth || 1),
-              (M.height = (M.width || 1) / O.aspectRatio);
+            (M.width = e.width || _.presentationWidth || 1),
+              (M.height = (M.width || 1) / _.aspectRatio);
         }
         return M;
       }
@@ -10659,7 +10655,7 @@
         }
         return { width: r, height: a, aspectRatio: r / a };
       }
-      var _ = [
+      var O = [
           'baseUrl',
           'urlBuilder',
           'sourceWidth',
@@ -10669,7 +10665,7 @@
           'breakpoints',
           'options',
         ],
-        O = ['images', 'placeholder'],
+        _ = ['images', 'placeholder'],
         P = function () {
           return 'undefined' != typeof HTMLImageElement && 'loading' in HTMLImageElement.prototype;
         };
@@ -10718,7 +10714,7 @@
           c = void 0 === l ? ['auto'] : l,
           u = e.breakpoints,
           p = e.options,
-          h = f(e, _);
+          h = f(e, O);
         return (
           (null != (t = u) && t.length) ||
             ('fullWidth' !== h.layout && 'FULL_WIDTH' !== h.layout) ||
@@ -10774,13 +10770,13 @@
         });
         return c;
       }
-      function N(e, t) {
+      function L(e, t) {
         var n,
           r,
           a,
           i = e.images,
           s = e.placeholder,
-          l = d({}, f(e, O), {
+          l = d({}, f(e, _), {
             images: d({}, i, { sources: [] }),
             placeholder: s && d({}, s, { sources: [] }),
           });
@@ -10810,7 +10806,7 @@
           l
         );
       }
-      var L,
+      var N,
         D = ['children'],
         z = function (e) {
           var t = e.layout,
@@ -10847,7 +10843,7 @@
         },
         F = ['src', 'srcSet', 'loading', 'alt', 'shouldLoad'],
         H = ['fallback', 'sources', 'shouldLoad'],
-        $ = function (e) {
+        B = function (e) {
           var t = e.src,
             n = e.srcSet,
             r = e.loading,
@@ -10868,7 +10864,7 @@
             }),
           );
         },
-        B = function (e) {
+        $ = function (e) {
           var t = e.fallback,
             n = e.sources,
             r = void 0 === n ? [] : n,
@@ -10876,7 +10872,7 @@
             o = void 0 === a || a,
             s = f(e, H),
             l = s.sizes || (null == t ? void 0 : t.sizes),
-            c = i.createElement($, d({}, s, t, { sizes: l, shouldLoad: o }));
+            c = i.createElement(B, d({}, s, t, { sizes: l, shouldLoad: o }));
           return r.length
             ? i.createElement(
                 'picture',
@@ -10898,15 +10894,15 @@
               )
             : c;
         };
-      ($.propTypes = {
+      (B.propTypes = {
         src: c.string.isRequired,
         alt: c.string.isRequired,
         sizes: c.string,
         srcSet: c.string,
         shouldLoad: c.bool,
       }),
-        (B.displayName = 'Picture'),
-        (B.propTypes = {
+        ($.displayName = 'Picture'),
+        ($.propTypes = {
           alt: c.string.isRequired,
           shouldLoad: c.bool,
           fallback: c.exact({ src: c.string.isRequired, srcSet: c.string, sizes: c.string }),
@@ -10932,13 +10928,13 @@
           var t = e.fallback,
             n = f(e, q);
           return t
-            ? i.createElement(B, d({}, n, { fallback: { src: t }, 'aria-hidden': !0, alt: '' }))
+            ? i.createElement($, d({}, n, { fallback: { src: t }, 'aria-hidden': !0, alt: '' }))
             : i.createElement('div', d({}, n));
         };
       (U.displayName = 'Placeholder'),
         (U.propTypes = {
           fallback: c.string,
-          sources: null == (L = B.propTypes) ? void 0 : L.sources,
+          sources: null == (N = $.propTypes) ? void 0 : N.sources,
           alt: function (e, t, n) {
             return e[t]
               ? new Error('Invalid prop `' + t + '` supplied to `' + n + '`. Validation failed.')
@@ -10949,11 +10945,11 @@
         return i.createElement(
           i.Fragment,
           null,
-          i.createElement(B, d({}, e)),
-          i.createElement('noscript', null, i.createElement(B, d({}, e, { shouldLoad: !0 }))),
+          i.createElement($, d({}, e)),
+          i.createElement('noscript', null, i.createElement($, d({}, e, { shouldLoad: !0 }))),
         );
       };
-      (G.displayName = 'MainImage'), (G.propTypes = B.propTypes);
+      (G.displayName = 'MainImage'), (G.propTypes = $.propTypes);
       var V,
         Y,
         Q = function (e, t, n) {
@@ -10979,8 +10975,8 @@
           'onLoad',
           'onError',
         ],
-        Z = ['style', 'className'],
-        K = new Set(),
+        K = ['style', 'className'],
+        Z = new Set(),
         ee = function (e) {
           var t = e.as,
             r = void 0 === t ? 'div' : t,
@@ -11009,7 +11005,7 @@
             })(g, v, y),
             w = b.style,
             x = b.className,
-            E = f(b, Z),
+            E = f(b, K),
             k = (0, i.useRef)(),
             S = (0, i.useMemo)(
               function () {
@@ -11064,19 +11060,19 @@
                               r.removeAttribute('data-gatsby-image-ssr');
                             }, 0);
                         })),
-                    void K.add(S))
-                  : Y && K.has(S)
+                    void Z.add(S))
+                  : Y && Z.has(S)
                   ? void 0
                   : (V.then(function (n) {
                       var r = n.renderImageToString,
                         i = n.swapPlaceholderImage;
                       k.current &&
                         ((k.current.innerHTML = r(
-                          d({ isLoading: !0, isLoaded: K.has(S), image: a }, m),
+                          d({ isLoading: !0, isLoaded: Z.has(S), image: a }, m),
                         )),
-                        K.has(S) ||
+                        Z.has(S) ||
                           (e = requestAnimationFrame(function () {
-                            k.current && (t = i(k.current, S, K, o, u, p, h));
+                            k.current && (t = i(k.current, S, Z, o, u, p, h));
                           })));
                     }),
                     function () {
@@ -11087,10 +11083,10 @@
             ),
             (0, i.useLayoutEffect)(
               function () {
-                K.has(S) &&
+                Z.has(S) &&
                   Y &&
                   ((k.current.innerHTML = Y(
-                    d({ isLoading: K.has(S), isLoaded: K.has(S), image: a }, m),
+                    d({ isLoading: Z.has(S), isLoaded: Z.has(S), image: a }, m),
                   )),
                   null == u || u({ wasCached: !0 }),
                   null == p || p({ wasCached: !0 }));
@@ -12547,11 +12543,11 @@
       }
       const m = l.default.header.withConfig({
           displayName: 'nav__StyledHeader',
-          componentId: 'sc-1wr9n3a-0',
+          componentId: 'sc-49up4l-0',
         })(
           [
             '',
-            ';position:fixed;top:0;z-index:11;padding:0px 50px;width:100%;height:var(--nav-height);background-color:rgba(10,25,47,0.85);filter:none !important;pointer-events:auto !important;user-select:auto !important;backdrop-filter:blur(10px);transition:var(--transition);@media (max-width:1080px){padding:0 40px;}@media (max-width:768px){padding:0 25px;}@media (prefers-reduced-motion:no-preference){',
+            ';position:fixed;top:0;z-index:11;padding:0px 50px;width:100%;height:var(--nav-height);background-color:white;filter:none !important;pointer-events:auto !important;user-select:auto !important;backdrop-filter:blur(10px);transition:var(--transition);@media (max-width:1080px){padding:0 40px;}@media (max-width:768px){padding:0 25px;}@media (prefers-reduced-motion:no-preference){',
             ';',
             ';}',
           ],
@@ -12560,7 +12556,7 @@
             'up' === e.scrollDirection &&
             !e.scrolledToTop &&
             (0, l.css)([
-              'height:var(--nav-scroll-height);transform:translateY(0px);background-color:rgba(10,25,47,0.85);box-shadow:0 10px 30px -10px var(--navy-shadow);',
+              'height:var(--nav-scroll-height);transform:translateY(0px);background-color:white;box-shadow:0 10px 30px -10px var(--navy-shadow);',
             ]),
           e =>
             'down' === e.scrollDirection &&
@@ -12569,10 +12565,7 @@
               'height:var(--nav-scroll-height);transform:translateY(calc(var(--nav-scroll-height) * -1));box-shadow:0 10px 30px -10px var(--navy-shadow);',
             ]),
         ),
-        g = l.default.nav.withConfig({
-          displayName: 'nav__StyledNav',
-          componentId: 'sc-1wr9n3a-1',
-        })(
+        g = l.default.nav.withConfig({ displayName: 'nav__StyledNav', componentId: 'sc-49up4l-1' })(
           [
             '',
             ';position:relative;width:100%;color:var(--lightest-slate);font-family:var(--font-mono);counter-reset:item 0;z-index:12;.logo{',
@@ -12583,7 +12576,7 @@
         ),
         v = l.default.div.withConfig({
           displayName: 'nav__StyledLinks',
-          componentId: 'sc-1wr9n3a-2',
+          componentId: 'sc-49up4l-2',
         })(
           [
             'display:flex;align-items:center;@media (max-width:768px){display:none;}ol{',
@@ -12771,19 +12764,19 @@
       }
       const d = i.default.section.withConfig({
           displayName: 'about__StyledAboutSection',
-          componentId: 'sc-74mrz9-0',
+          componentId: 'sc-lgofuc-0',
         })([
           'max-width:900px;.inner{display:grid;grid-template-columns:3fr 2fr;grid-gap:50px;@media (max-width:768px){display:block;}}',
         ]),
         f = i.default.div.withConfig({
           displayName: 'about__StyledText',
-          componentId: 'sc-74mrz9-1',
+          componentId: 'sc-lgofuc-1',
         })([
           "ul.skills-list{display:grid;grid-template-columns:repeat(2,minmax(140px,200px));grid-gap:0 10px;padding:0;margin:20px 0 0 0;overflow:hidden;list-style:none;li{position:relative;margin-bottom:10px;padding-left:20px;font-family:var(--font-mono);font-size:var(--fz-xs);&:before{content:'▹';position:absolute;left:0;color:var(--green);font-size:var(--fz-sm);line-height:12px;}}}",
         ]),
         p = i.default.div.withConfig({
           displayName: 'about__StyledPic',
-          componentId: 'sc-74mrz9-2',
+          componentId: 'sc-lgofuc-2',
         })(
           [
             'position:relative;max-width:300px;@media (max-width:768px){margin:50px auto 0;width:70%;}.wrapper{',
@@ -12798,11 +12791,14 @@
           t || l.default.reveal(e.current, (0, s.srConfig)());
         }, []);
         const r = [
-          'Python',
+          'Python (pandas, numpy, matplotlib+)',
           'PyTorch',
+          'TensorFlow',
           'JavaScript (ES6+)',
           'NodeJS',
           'ReactJS',
+          'C++',
+          'Gatsby',
           'Firebase',
           'C',
           'Microsoft Azure',
@@ -12827,7 +12823,7 @@
                 a.default.createElement(
                   'p',
                   null,
-                  'Hello! My name is Ayush Anand and I enjoy creating things that solve social challenges globally. Apart from being a GSoC 2022 student for IOOS, I am a CS Undergrad at NIT Durgapur and a Machine Learning Developer leveraging AI for Social Good.',
+                  'Hello! My name is Ayush Anand and I enjoy creating things that solve social challenges globally. Apart from being a GSoC 2022 student for IOOS, I am a CS Undergrad at NIT Durgapur and a full-stack and machine learning developer leveraging AI for Social Good.',
                 ),
                 a.default.createElement(
                   'p',
@@ -12839,7 +12835,7 @@
                     a.default.createElement(
                       'li',
                       null,
-                      'research on how deep learning can help fight the climate crisis.',
+                      'research on how data science can help fight the climate crisis.',
                     ),
                     a.default.createElement(
                       'li',
@@ -12869,18 +12865,38 @@
                     a.default.createElement(
                       'li',
                       null,
-                      'working on an open-source python package for Open Ocean data.',
+                      'helping maintain an open-source python package for',
+                      a.default.createElement(
+                        'a',
+                        { href: 'https://github.com/iobis/pyobis' },
+                        'Open Ocean Data',
+                      ),
                     ),
                     a.default.createElement(
                       'li',
                       null,
-                      'working with an NGO to implement a code for good project against child abuse.',
+                      'working on a Drawin Core Data Visualization',
+                      a.default.createElement(
+                        'a',
+                        { href: 'https://github.com/marinebon/py-dwc-viz' },
+                        'python package',
+                      ),
                     ),
                   ),
                   a.default.createElement('h4', null, 'Things I did previously'),
                   a.default.createElement(
                     'ul',
                     null,
+                    a.default.createElement(
+                      'li',
+                      null,
+                      'worked on an open-source python package for Open Ocean data.',
+                    ),
+                    a.default.createElement(
+                      'li',
+                      null,
+                      'worked with an NGO to implement a code for good project against child abuse.',
+                    ),
                     a.default.createElement(
                       'li',
                       null,
@@ -13081,20 +13097,20 @@
       }
       const p = s.default.ul.withConfig({
           displayName: 'featured__StyledProjectsGrid',
-          componentId: 'sc-m38bt7-0',
+          componentId: 'sc-ahcw2k-0',
         })(['', ';a{position:relative;z-index:1;}'], ({ theme: e }) => e.mixins.resetList),
         h = s.default.li.withConfig({
           displayName: 'featured__StyledProject',
-          componentId: 'sc-m38bt7-1',
+          componentId: 'sc-ahcw2k-1',
         })(
           [
             'position:relative;display:grid;grid-gap:10px;grid-template-columns:repeat(12,1fr);align-items:center;@media (max-width:768px){',
-            ";}&:not(:last-of-type){margin-bottom:100px;@media (max-width:768px){margin-bottom:70px;}@media (max-width:480px){margin-bottom:30px;}}&:nth-of-type(odd){.project-content{grid-column:7 / -1;text-align:right;@media (max-width:1080px){grid-column:5 / -1;}@media (max-width:768px){grid-column:1 / -1;padding:40px 40px 30px;text-align:left;}@media (max-width:480px){padding:25px 25px 20px;}}.project-tech-list{justify-content:flex-end;@media (max-width:768px){justify-content:flex-start;}li{margin:0 0 5px 20px;@media (max-width:768px){margin:0 10px 5px 0;}}}.project-links{justify-content:flex-end;margin-left:0;margin-right:-10px;@media (max-width:768px){justify-content:flex-start;margin-left:-10px;margin-right:0;}}.project-image{grid-column:1 / 8;z-index:0;@media (max-width:768px){grid-column:1 / -1;}}}.project-content{position:relative;grid-column:1 / 7;grid-row:1 / -1;@media (max-width:1080px){grid-column:1 / 9;}@media (max-width:768px){display:flex;flex-direction:column;justify-content:center;height:100%;grid-column:1 / -1;padding:40px 40px 30px;z-index:5;}@media (max-width:480px){padding:30px 25px 20px;}}.project-overline{margin:10px 0;color:var(--green);font-family:var(--font-mono);font-size:var(--fz-xs);font-weight:400;}.project-title{color:var(--lightest-slate);font-size:clamp(24px,5vw,28px);@media (min-width:768px){margin:0 0 20px;}@media (max-width:768px){color:var(--white);a{position:static;&:before{content:'';display:block;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;}}}}.project-description{",
+            ";}&:not(:last-of-type){margin-bottom:100px;@media (max-width:768px){margin-bottom:70px;}@media (max-width:480px){margin-bottom:30px;}}&:nth-of-type(odd){.project-content{grid-column:7 / -1;text-align:right;@media (max-width:1080px){grid-column:5 / -1;}@media (max-width:768px){grid-column:1 / -1;padding:40px 40px 30px;text-align:left;}@media (max-width:480px){padding:25px 25px 20px;}}.project-tech-list{justify-content:flex-end;@media (max-width:768px){justify-content:flex-start;}li{margin:0 0 5px 20px;@media (max-width:768px){margin:0 10px 5px 0;}}}.project-links{justify-content:flex-end;margin-left:0;margin-right:-10px;@media (max-width:768px){justify-content:flex-start;margin-left:-10px;margin-right:0;}}.project-image{grid-column:1 / 8;z-index:0;@media (max-width:768px){grid-column:1 / -1;}}}.project-content{position:relative;grid-column:1 / 7;grid-row:1 / -1;@media (max-width:1080px){grid-column:1 / 9;}@media (max-width:768px){display:flex;flex-direction:column;justify-content:center;height:100%;grid-column:1 / -1;padding:40px 40px 30px;z-index:5;}@media (max-width:480px){padding:30px 25px 20px;}}.project-overline{margin:10px 0;color:var(--green);font-family:var(--font-mono);font-size:var(--fz-xs);font-weight:400;}.project-title{color:var(--lightest-slate);font-size:clamp(24px,5vw,28px);background-color:white !important;@media (min-width:768px){margin:0 0 20px;}@media (max-width:768px){color:var(--white);a{position:static;background-color:white !important;&:before{content:'';display:block;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;background-color:white !important;}}}}.project-description{",
             ';position:relative;z-index:2;padding:25px;border-radius:var(--border-radius);background-color:var(--light-navy);color:var(--light-slate);font-size:var(--fz-lg);@media (max-width:768px){padding:20px 0;background-color:transparent;box-shadow:none;&:hover{box-shadow:none;}}a{',
             ';}strong{color:var(--white);font-weight:normal;}}.project-tech-list{display:flex;flex-wrap:wrap;position:relative;z-index:2;margin:25px 0 10px;padding:0;list-style:none;li{margin:0 20px 5px 0;color:var(--light-slate);font-family:var(--font-mono);font-size:var(--fz-xs);white-space:nowrap;}@media (max-width:768px){margin:10px 0;li{margin:0 10px 5px 0;color:var(--lightest-slate);}}}.project-links{display:flex;align-items:center;position:relative;margin-top:10px;margin-left:-10px;color:var(--lightest-slate);a{',
             ';padding:10px;&.external{svg{width:22px;height:22px;margin-top:-4px;}}svg{width:20px;height:20px;}}.cta{',
             ';margin:10px;}}.project-image{',
-            ";grid-column:6 / -1;grid-row:1 / -1;position:relative;z-index:0;@media (max-width:768px){grid-column:1 / -1;height:100%;opacity:0.25;}a{width:100%;height:100%;background-color:var(--green);border-radius:var(--border-radius);vertical-align:middle;&:hover,&:focus{background:transparent;outline:0;&:before,.img{background:transparent;filter:none;}}&:before{content:'';position:absolute;width:100%;height:100%;top:0;left:0;right:0;bottom:0;z-index:3;transition:var(--transition);background-color:var(--navy);mix-blend-mode:screen;}}.img{border-radius:var(--border-radius);mix-blend-mode:multiply;filter:grayscale(100%) contrast(1) brightness(90%);@media (max-width:768px){object-fit:cover;width:auto;height:100%;filter:grayscale(100%) contrast(1) brightness(50%);}}}",
+            ";grid-column:6 / -1;grid-row:1 / -1;position:relative;z-index:0;@media (max-width:768px){grid-column:1 / -1;height:100%;opacity:0.25;}a{width:100%;height:100%;background-color:white;border-radius:var(--border-radius);vertical-align:middle;&:hover,&:focus{background:transparent;outline:0;&:before,.img{background:var(--lightest-slate);filter:none;}}&:before{content:'';position:absolute;width:100%;height:100%;top:0;left:0;right:0;bottom:0;z-index:3;transition:var(--transition);background-color:var(--lightest-slate);mix-blend-mode:screen;}}.img{border-radius:var(--border-radius);mix-blend-mode:multiply;filter:grayscale(100%) contrast(1) brightness(90%);@media (max-width:768px){object-fit:cover;width:auto;height:100%;filter:grayscale(100%) contrast(1) brightness(50%);}}}",
           ],
           ({ theme: e }) => e.mixins.boxShadow,
           ({ theme: e }) => e.mixins.boxShadow,
@@ -13104,7 +13120,7 @@
           ({ theme: e }) => e.mixins.boxShadow,
         );
       var m = () => {
-        const e = (0, o.useStaticQuery)('4162897811').featured.edges.filter(({ node: e }) => e),
+        const e = (0, o.useStaticQuery)('3102512809').featured.edges.filter(({ node: e }) => e),
           t = (0, a.useRef)(null),
           n = (0, a.useRef)([]),
           r = (0, d.usePrefersReducedMotion)();
@@ -13120,7 +13136,7 @@
             a.default.createElement(
               'h2',
               { className: 'numbered-heading', ref: t },
-              'Some Things I’ve Built',
+              "Some Things I've Built",
             ),
             a.default.createElement(
               p,
@@ -13279,14 +13295,29 @@
             ),
           ),
           a.default.createElement(
-            'a',
-            {
-              className: 'email-link',
-              href: 'https://linkedin.com/in/theayushanand',
-              target: '_blank',
-              rel: 'noreferrer',
-            },
-            'Connect with me!',
+            'p',
+            null,
+            a.default.createElement(
+              'a',
+              {
+                className: 'email-link',
+                href: 'https://linkedin.com/in/theayushanand',
+                target: '_blank',
+                rel: 'noreferrer',
+              },
+              'Connect with me!',
+            ),
+            a.default.createElement('span', null, '  '),
+            a.default.createElement(
+              'a',
+              {
+                className: 'email-link',
+                href: 'https://medium.com/@theayushanand',
+                target: '_blank',
+                rel: 'noreferrer',
+              },
+              'Read Blogs',
+            ),
           ),
         ];
         return a.default.createElement(
@@ -13354,19 +13385,19 @@
       }
       const p = s.default.section.withConfig({
           displayName: 'jobs__StyledJobsSection',
-          componentId: 'sc-1yvr741-0',
+          componentId: 'sc-hk9muh-0',
         })([
           'max-width:700px;.inner{display:flex;@media (max-width:600px){display:block;}@media (min-width:700px){min-height:340px;}}',
         ]),
         h = s.default.div.withConfig({
           displayName: 'jobs__StyledTabList',
-          componentId: 'sc-1yvr741-1',
+          componentId: 'sc-hk9muh-1',
         })([
           'position:relative;z-index:3;width:max-content;padding:0;margin:0;list-style:none;@media (max-width:600px){display:flex;overflow-x:auto;width:calc(100% + 100px);padding-left:50px;margin-left:-50px;margin-bottom:30px;}@media (max-width:480px){width:calc(100% + 50px);padding-left:25px;margin-left:-25px;}li{&:first-of-type{@media (max-width:600px){margin-left:50px;}@media (max-width:480px){margin-left:25px;}}&:last-of-type{@media (max-width:600px){padding-right:50px;}@media (max-width:480px){padding-right:25px;}}}',
         ]),
         m = s.default.button.withConfig({
           displayName: 'jobs__StyledTabButton',
-          componentId: 'sc-1yvr741-2',
+          componentId: 'sc-hk9muh-2',
         })(
           [
             '',
@@ -13380,7 +13411,7 @@
         ),
         g = s.default.div.withConfig({
           displayName: 'jobs__StyledHighlight',
-          componentId: 'sc-1yvr741-3',
+          componentId: 'sc-hk9muh-3',
         })(
           [
             'position:absolute;top:0;left:0;z-index:10;width:2px;height:var(--tab-height);border-radius:var(--border-radius);background:var(--green);transform:translateY(calc(',
@@ -13392,13 +13423,13 @@
         ),
         v = s.default.div.withConfig({
           displayName: 'jobs__StyledTabPanels',
-          componentId: 'sc-1yvr741-4',
+          componentId: 'sc-hk9muh-4',
         })([
           'position:relative;width:100%;margin-left:20px;@media (max-width:600px){margin-left:0;}',
         ]),
         y = s.default.div.withConfig({
           displayName: 'jobs__StyledTabPanel',
-          componentId: 'sc-1yvr741-5',
+          componentId: 'sc-hk9muh-5',
         })(
           [
             'width:100%;height:auto;padding:10px 5px;ul{',
@@ -13407,7 +13438,7 @@
           ({ theme: e }) => e.mixins.fancyList,
         );
       var b = () => {
-        const e = (0, o.useStaticQuery)('2009693873').jobs.edges,
+        const e = (0, o.useStaticQuery)('3728885707').jobs.edges,
           { 0: t, 1: n } = (0, a.useState)(0),
           { 0: r, 1: s } = (0, a.useState)(null),
           f = (0, a.useRef)([]),
@@ -13543,7 +13574,7 @@
       }
       const p = s.default.section.withConfig({
           displayName: 'projects__StyledProjectsSection',
-          componentId: 'sc-5zhx92-0',
+          componentId: 'sc-1pu9ba8-0',
         })(
           [
             'display:flex;flex-direction:column;align-items:center;h2{font-size:clamp(24px,5vw,var(--fz-heading));}.archive-link{font-family:var(--font-mono);font-size:var(--fz-sm);&:after{bottom:0.1em;}}.projects-grid{',
@@ -13555,7 +13586,7 @@
         ),
         h = s.default.li.withConfig({
           displayName: 'projects__StyledProject',
-          componentId: 'sc-5zhx92-1',
+          componentId: 'sc-1pu9ba8-1',
         })(
           [
             'position:relative;cursor:default;transition:var(--transition);@media (prefers-reduced-motion:no-preference){&:hover,&:focus-within{.project-inner{transform:translateY(-7px);}}}a{position:relative;z-index:1;}.project-inner{',
@@ -13572,7 +13603,7 @@
           ({ theme: e }) => e.mixins.inlineLink,
         );
       var m = () => {
-        const e = (0, o.useStaticQuery)('3825832676'),
+        const e = (0, o.useStaticQuery)('359631046'),
           { 0: t, 1: n } = (0, a.useState)(!1),
           r = (0, a.useRef)(null),
           s = (0, a.useRef)(null),
@@ -14079,7 +14110,7 @@
       }
       const h = s.default.div.withConfig({
           displayName: 'archive__StyledTableContainer',
-          componentId: 'sc-m3t4e8-0',
+          componentId: 'sc-18ks60y-0',
         })(
           [
             'margin:100px -20px;@media (max-width:768px){margin:50px -10px;}table{width:100%;border-collapse:collapse;.hide-on-mobile{@media (max-width:768px){display:none;}}tbody tr{&:hover,&:focus{background-color:var(--light-navy);}}th,td{padding:10px;text-align:left;&:first-child{padding-left:20px;@media (max-width:768px){padding-left:10px;}}&:last-child{padding-right:20px;@media (max-width:768px){padding-right:10px;}}svg{width:20px;height:20px;}}tr{cursor:default;td:first-child{border-top-left-radius:var(--border-radius);border-bottom-left-radius:var(--border-radius);}td:last-child{border-top-right-radius:var(--border-radius);border-bottom-right-radius:var(--border-radius);}}td{&.year{padding-right:20px;@media (max-width:768px){padding-right:10px;font-size:var(--fz-sm);}}&.title{padding-top:15px;padding-right:20px;color:var(--lightest-slate);font-size:var(--fz-xl);font-weight:600;line-height:1.25;}&.company{font-size:var(--fz-lg);white-space:nowrap;}&.tech{font-size:var(--fz-xxs);font-family:var(--font-mono);line-height:1.5;.separator{margin:0 5px;}span{display:inline-block;}}&.links{min-width:100px;div{display:flex;align-items:center;a{',
@@ -14266,223 +14297,6 @@
       var u = c;
       t.default = u;
     },
-    3657: function (e, t, n) {
-      'use strict';
-      var r = n(4836);
-      (t.__esModule = !0), (t.default = void 0);
-      var a = r(n(7294)),
-        o = n(1597),
-        i = r(n(1804)),
-        s = r(n(5697)),
-        l = n(5186),
-        c = r(n(9925)),
-        u = n(5349),
-        d = n(5948);
-      const f = c.default.main.withConfig({
-          displayName: 'pensieve__StyledMainContainer',
-          componentId: 'sc-d5gdo0-0',
-        })(
-          [
-            "& > header{margin-bottom:100px;text-align:center;a{&:hover,&:focus{cursor:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>⚡</text></svg>\") 20 0,auto;}}}footer{",
-            ';width:100%;margin-top:20px;}',
-          ],
-          ({ theme: e }) => e.mixins.flexBetween,
-        ),
-        p = c.default.ul.withConfig({
-          displayName: 'pensieve__StyledGrid',
-          componentId: 'sc-d5gdo0-1',
-        })(
-          [
-            '',
-            ';display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-gap:15px;margin-top:50px;position:relative;@media (max-width:1080px){grid-template-columns:repeat(auto-fill,minmax(250px,1fr));}',
-          ],
-          ({ theme: e }) => e.mixins.resetList,
-        ),
-        h = c.default.li.withConfig({
-          displayName: 'pensieve__StyledPost',
-          componentId: 'sc-d5gdo0-2',
-        })(
-          [
-            'transition:var(--transition);cursor:default;@media (prefers-reduced-motion:no-preference){&:hover,&:focus-within{.post__inner{transform:translateY(-7px);}}}a{position:relative;z-index:1;}.post__inner{',
-            ';',
-            ';flex-direction:column;align-items:flex-start;position:relative;height:100%;padding:2rem 1.75rem;border-radius:var(--border-radius);transition:var(--transition);background-color:var(--light-navy);header,a{width:100%;}}.post__icon{',
-            ";color:var(--green);margin-bottom:30px;margin-left:-5px;svg{width:40px;height:40px;}}.post__title{margin:0 0 10px;color:var(--lightest-slate);font-size:var(--fz-xxl);a{position:static;&:before{content:'';display:block;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;}}}.post__desc{color:var(--light-slate);font-size:17px;}.post__date{color:var(--light-slate);font-family:var(--font-mono);font-size:var(--fz-xxs);text-transform:uppercase;}ul.post__tags{display:flex;align-items:flex-end;flex-wrap:wrap;padding:0;margin:0;list-style:none;li{color:var(--green);font-family:var(--font-mono);font-size:var(--fz-xxs);line-height:1.75;&:not(:last-of-type){margin-right:15px;}}}",
-          ],
-          ({ theme: e }) => e.mixins.boxShadow,
-          ({ theme: e }) => e.mixins.flexBetween,
-          ({ theme: e }) => e.mixins.flexBetween,
-        ),
-        m = ({ location: e, data: t }) => {
-          const n = t.allMarkdownRemark.edges;
-          return a.default.createElement(
-            u.Layout,
-            { location: e },
-            a.default.createElement(l.Helmet, { title: 'Pensieve' }),
-            a.default.createElement(
-              f,
-              null,
-              a.default.createElement(
-                'header',
-                null,
-                a.default.createElement('h1', { className: 'big-heading' }, 'Pensieve'),
-                a.default.createElement(
-                  'p',
-                  { className: 'subtitle' },
-                  a.default.createElement(
-                    'a',
-                    { href: 'https://www.wizardingworld.com/writing-by-jk-rowling/pensieve' },
-                    'a collection of memories',
-                  ),
-                ),
-              ),
-              a.default.createElement(
-                p,
-                null,
-                n.length > 0 &&
-                  n.map(({ node: e }, t) => {
-                    const { frontmatter: n } = e,
-                      { title: r, description: s, slug: l, date: c, tags: u } = n,
-                      f = new Date(c).toLocaleDateString();
-                    return a.default.createElement(
-                      h,
-                      { key: t },
-                      a.default.createElement(
-                        'div',
-                        { className: 'post__inner' },
-                        a.default.createElement(
-                          'header',
-                          null,
-                          a.default.createElement(
-                            'div',
-                            { className: 'post__icon' },
-                            a.default.createElement(d.IconBookmark, null),
-                          ),
-                          a.default.createElement(
-                            'h5',
-                            { className: 'post__title' },
-                            a.default.createElement(o.Link, { to: l }, r),
-                          ),
-                          a.default.createElement('p', { className: 'post__desc' }, s),
-                        ),
-                        a.default.createElement(
-                          'footer',
-                          null,
-                          a.default.createElement('span', { className: 'post__date' }, f),
-                          a.default.createElement(
-                            'ul',
-                            { className: 'post__tags' },
-                            u.map((e, t) =>
-                              a.default.createElement(
-                                'li',
-                                { key: t },
-                                a.default.createElement(
-                                  o.Link,
-                                  {
-                                    to: `/pensieve/tags/${(0, i.default)(e)}/`,
-                                    className: 'inline-link',
-                                  },
-                                  '#',
-                                  e,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    );
-                  }),
-              ),
-            ),
-          );
-        };
-      m.propTypes = { location: s.default.object.isRequired, data: s.default.object.isRequired };
-      var g = m;
-      t.default = g;
-    },
-    4466: function (e, t, n) {
-      'use strict';
-      var r = n(4836);
-      (t.__esModule = !0), (t.default = void 0);
-      var a = r(n(7294)),
-        o = n(1597),
-        i = r(n(1804)),
-        s = r(n(5697)),
-        l = n(5186),
-        c = r(n(9925)),
-        u = n(5349);
-      const d = c.default.main.withConfig({
-          displayName: 'tags__StyledTagsContainer',
-          componentId: 'sc-tp2xx-0',
-        })([
-          'max-width:1000px;h1{margin-bottom:50px;}ul{color:var(--light-slate);li{font-size:var(--fz-xxl);a{color:var(--light-slate);.count{color:var(--slate);font-family:var(--font-mono);font-size:var(--fz-md);}}}}',
-        ]),
-        f = ({
-          data: {
-            allMarkdownRemark: { group: e },
-          },
-          location: t,
-        }) =>
-          a.default.createElement(
-            u.Layout,
-            { location: t },
-            a.default.createElement(l.Helmet, { title: 'Tags' }),
-            a.default.createElement(
-              d,
-              null,
-              a.default.createElement(
-                'span',
-                { className: 'breadcrumb' },
-                a.default.createElement('span', { className: 'arrow' }, '←'),
-                a.default.createElement(o.Link, { to: '/pensieve' }, 'All memories'),
-              ),
-              a.default.createElement('h1', null, 'Tags'),
-              a.default.createElement(
-                'ul',
-                { className: 'fancy-list' },
-                e.map(e =>
-                  a.default.createElement(
-                    'li',
-                    { key: e.fieldValue },
-                    a.default.createElement(
-                      o.Link,
-                      {
-                        to: `/pensieve/tags/${(0, i.default)(e.fieldValue)}/`,
-                        className: 'inline-link',
-                      },
-                      e.fieldValue,
-                      ' ',
-                      a.default.createElement(
-                        'span',
-                        { className: 'count' },
-                        '(',
-                        e.totalCount,
-                        ')',
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          );
-      f.propTypes = {
-        data: s.default.shape({
-          allMarkdownRemark: s.default.shape({
-            group: s.default.arrayOf(
-              s.default.shape({
-                fieldValue: s.default.string.isRequired,
-                totalCount: s.default.number.isRequired,
-              }).isRequired,
-            ),
-          }),
-          site: s.default.shape({
-            siteMetadata: s.default.shape({ title: s.default.string.isRequired }),
-          }),
-        }),
-        location: s.default.object,
-      };
-      var p = f;
-      t.default = p;
-    },
     9153: function (e, t, n) {
       'use strict';
       var r = n(4836);
@@ -14521,7 +14335,7 @@
       'use strict';
       (t.__esModule = !0), (t.default = void 0);
       const r = {
-        bg: '#112340',
+        bg: '#e6f1ff',
         lineHighlight: '#1d2d50',
         blue: '#5ccfe6',
         purple: '#c3a6ff',
@@ -14613,12 +14427,12 @@
             600: [m.default, g.default],
           },
         },
-        _ = {
+        O = {
           name: 'SF Mono',
           normal: { 400: [v.default, y.default], 600: [b.default, w.default] },
           italic: { 400: [x.default, E.default], 600: [k.default, S.default] },
         },
-        O = (e, t = 'normal') => {
+        _ = (e, t = 'normal') => {
           let n = '';
           for (const [r, a] of Object.entries(e[t])) {
             const o = a[0],
@@ -14627,10 +14441,10 @@
           }
           return n;
         },
-        P = O(C),
-        j = O(C, 'italic'),
-        M = O(_),
-        T = O(_, 'italic');
+        P = _(C),
+        j = _(C, 'italic'),
+        M = _(O),
+        T = _(O, 'italic');
       var R = (0, a.css)(['', ''], P + j + M + T);
       t.default = R;
     },
@@ -14702,205 +14516,9 @@
       'use strict';
       (t.__esModule = !0), (t.default = void 0);
       var r = (0, n(9925).css)([
-        ":root{--dark-navy:#020c1b;--navy:#0a192f;--light-navy:#112240;--lightest-navy:#233554;--navy-shadow:rgba(2,12,27,0.7);--dark-slate:#495670;--slate:#8892b0;--light-slate:#a8b2d1;--lightest-slate:#ccd6f6;--white:#e6f1ff;--green:#64ffda;--green-tint:rgba(100,255,218,0.1);--pink:#f57dff;--blue:#57cbff;--font-sans:'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;--font-mono:'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;--fz-xxs:12px;--fz-xs:13px;--fz-sm:14px;--fz-md:16px;--fz-lg:18px;--fz-xl:20px;--fz-xxl:22px;--fz-heading:32px;--border-radius:4px;--nav-height:100px;--nav-scroll-height:70px;--tab-height:42px;--tab-width:120px;--easing:cubic-bezier(0.645,0.045,0.355,1);--transition:all 0.25s cubic-bezier(0.645,0.045,0.355,1);--hamburger-width:30px;--ham-before:top 0.1s ease-in 0.25s,opacity 0.1s ease-in;--ham-before-active:top 0.1s ease-out,opacity 0.1s ease-out 0.12s;--ham-after:bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);--ham-after-active:bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;}",
+        ":root{--dark-navy:white;--navy:white;--light-navy:white;--lightest-navy:#233554;--navy-shadow:rgba(2,12,27,0.7);--dark-slate:#495670;--slate:black;--light-slate:black;--lightest-slate:#423c3c;--white:black;--green:#0938ff;--green-tint:rgba(9,56,255,0.2);--pink:#f57dff;--blue:#57cbff;--font-sans:'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;--font-mono:'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;--fz-xxs:12px;--fz-xs:13px;--fz-sm:14px;--fz-md:16px;--fz-lg:18px;--fz-xl:20px;--fz-xxl:22px;--fz-heading:32px;--border-radius:4px;--nav-height:80px;--nav-scroll-height:60px;--tab-height:42px;--tab-width:120px;--easing:cubic-bezier(0.645,0.045,0.355,1);--transition:all 0.25s cubic-bezier(0.645,0.045,0.355,1);--hamburger-width:30px;--ham-before:top 0.1s ease-in 0.25s,opacity 0.1s ease-in;--ham-before-active:top 0.1s ease-out,opacity 0.1s ease-out 0.12s;--ham-after:bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);--ham-after-active:bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;}",
       ]);
       t.default = r;
-    },
-    2396: function (e, t, n) {
-      'use strict';
-      var r = n(4836);
-      (t.__esModule = !0), (t.default = void 0);
-      var a = r(n(7294)),
-        o = n(1597),
-        i = r(n(1804)),
-        s = r(n(5697)),
-        l = n(5186),
-        c = r(n(9925)),
-        u = n(5349);
-      const d = c.default.main.withConfig({
-          displayName: 'post__StyledPostContainer',
-          componentId: 'sc-5e6lut-0',
-        })(['max-width:1000px;']),
-        f = c.default.header.withConfig({
-          displayName: 'post__StyledPostHeader',
-          componentId: 'sc-5e6lut-1',
-        })(['margin-bottom:50px;.tag{margin-right:10px;}']),
-        p = c.default.div.withConfig({
-          displayName: 'post__StyledPostContent',
-          componentId: 'sc-5e6lut-2',
-        })(
-          [
-            'margin-bottom:100px;h1,h2,h3,h4,h5,h6{margin:2em 0 1em;}p{margin:1em 0;line-height:1.5;color:var(--light-slate);}a{',
-            ';}code{background-color:var(--lightest-navy);color:var(--lightest-slate);border-radius:var(--border-radius);font-size:var(--fz-sm);padding:0.2em 0.4em;}pre code{background-color:transparent;padding:0;}',
-          ],
-          ({ theme: e }) => e.mixins.inlineLink,
-        ),
-        h = ({ data: e, location: t }) => {
-          const { frontmatter: n, html: r } = e.markdownRemark,
-            { title: s, date: c, tags: h } = n;
-          return a.default.createElement(
-            u.Layout,
-            { location: t },
-            a.default.createElement(l.Helmet, { title: s }),
-            a.default.createElement(
-              d,
-              null,
-              a.default.createElement(
-                'span',
-                { className: 'breadcrumb' },
-                a.default.createElement('span', { className: 'arrow' }, '←'),
-                a.default.createElement(o.Link, { to: '/pensieve' }, 'All memories'),
-              ),
-              a.default.createElement(
-                f,
-                null,
-                a.default.createElement('h1', { className: 'medium-heading' }, s),
-                a.default.createElement(
-                  'p',
-                  { className: 'subtitle' },
-                  a.default.createElement(
-                    'time',
-                    null,
-                    new Date(c).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    }),
-                  ),
-                  a.default.createElement('span', null, ' — '),
-                  h &&
-                    h.length > 0 &&
-                    h.map((e, t) =>
-                      a.default.createElement(
-                        o.Link,
-                        { key: t, to: `/pensieve/tags/${(0, i.default)(e)}/`, className: 'tag' },
-                        '#',
-                        e,
-                      ),
-                    ),
-                ),
-              ),
-              a.default.createElement(p, { dangerouslySetInnerHTML: { __html: r } }),
-            ),
-          );
-        };
-      var m = h;
-      (t.default = m), (h.propTypes = { data: s.default.object, location: s.default.object });
-    },
-    3450: function (e, t, n) {
-      'use strict';
-      var r = n(4836);
-      (t.__esModule = !0), (t.default = void 0);
-      var a = r(n(7294)),
-        o = n(1597),
-        i = r(n(1804)),
-        s = r(n(5697)),
-        l = n(5186),
-        c = r(n(9925)),
-        u = n(5349);
-      const d = c.default.main.withConfig({
-          displayName: 'tag__StyledTagsContainer',
-          componentId: 'sc-1sz2a46-0',
-        })(
-          [
-            'max-width:1000px;a{',
-            ';}h1{',
-            ';margin-bottom:50px;a{font-size:var(--fz-lg);font-weight:400;}}ul{li{font-size:24px;h2{font-size:inherit;margin:0;a{color:var(--light-slate);}}.subtitle{color:var(--slate);font-size:var(--fz-sm);.tag{margin-right:10px;}}}}',
-          ],
-          ({ theme: e }) => e.mixins.inlineLink,
-          ({ theme: e }) => e.mixins.flexBetween,
-        ),
-        f = ({ pageContext: e, data: t, location: n }) => {
-          const { tag: r } = e,
-            { edges: s } = t.allMarkdownRemark;
-          return a.default.createElement(
-            u.Layout,
-            { location: n },
-            a.default.createElement(l.Helmet, { title: `Tagged: #${r}` }),
-            a.default.createElement(
-              d,
-              null,
-              a.default.createElement(
-                'span',
-                { className: 'breadcrumb' },
-                a.default.createElement('span', { className: 'arrow' }, '←'),
-                a.default.createElement(o.Link, { to: '/pensieve' }, 'All memories'),
-              ),
-              a.default.createElement(
-                'h1',
-                null,
-                a.default.createElement('span', null, '#', r),
-                a.default.createElement(
-                  'span',
-                  null,
-                  a.default.createElement(o.Link, { to: '/pensieve/tags' }, 'View all tags'),
-                ),
-              ),
-              a.default.createElement(
-                'ul',
-                { className: 'fancy-list' },
-                s.map(({ node: e }) => {
-                  const { title: t, slug: n, date: r, tags: s } = e.frontmatter;
-                  return a.default.createElement(
-                    'li',
-                    { key: n },
-                    a.default.createElement(
-                      'h2',
-                      null,
-                      a.default.createElement(o.Link, { to: n }, t),
-                    ),
-                    a.default.createElement(
-                      'p',
-                      { className: 'subtitle' },
-                      a.default.createElement(
-                        'time',
-                        null,
-                        new Date(r).toLocaleDateString('en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric',
-                        }),
-                      ),
-                      a.default.createElement('span', null, ' — '),
-                      s &&
-                        s.length > 0 &&
-                        s.map((e, t) =>
-                          a.default.createElement(
-                            o.Link,
-                            {
-                              key: t,
-                              to: `/pensieve/tags/${(0, i.default)(e)}/`,
-                              className: 'tag',
-                            },
-                            '#',
-                            e,
-                          ),
-                        ),
-                    ),
-                  );
-                }),
-              ),
-            ),
-          );
-        };
-      var p = f;
-      (t.default = p),
-        (f.propTypes = {
-          pageContext: s.default.shape({ tag: s.default.string.isRequired }),
-          data: s.default.shape({
-            allMarkdownRemark: s.default.shape({
-              totalCount: s.default.number.isRequired,
-              edges: s.default.arrayOf(
-                s.default.shape({
-                  node: s.default.shape({
-                    frontmatter: s.default.shape({ title: s.default.string.isRequired }),
-                  }),
-                }).isRequired,
-              ),
-            }),
-          }),
-          location: s.default.object,
-        });
     },
     8439: function (e, t) {
       'use strict';
@@ -14956,400 +14574,6 @@
           }
           throw ((l.framesToPop = 1), l);
         }
-      };
-    },
-    2705: function (e, t, n) {
-      var r = n(5639).Symbol;
-      e.exports = r;
-    },
-    9932: function (e) {
-      e.exports = function (e, t) {
-        for (var n = -1, r = null == e ? 0 : e.length, a = Array(r); ++n < r; )
-          a[n] = t(e[n], n, e);
-        return a;
-      };
-    },
-    2663: function (e) {
-      e.exports = function (e, t, n, r) {
-        var a = -1,
-          o = null == e ? 0 : e.length;
-        for (r && o && (n = e[++a]); ++a < o; ) n = t(n, e[a], a, e);
-        return n;
-      };
-    },
-    9029: function (e) {
-      var t = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;
-      e.exports = function (e) {
-        return e.match(t) || [];
-      };
-    },
-    4239: function (e, t, n) {
-      var r = n(2705),
-        a = n(9607),
-        o = n(2333),
-        i = r ? r.toStringTag : void 0;
-      e.exports = function (e) {
-        return null == e
-          ? void 0 === e
-            ? '[object Undefined]'
-            : '[object Null]'
-          : i && i in Object(e)
-          ? a(e)
-          : o(e);
-      };
-    },
-    8674: function (e) {
-      e.exports = function (e) {
-        return function (t) {
-          return null == e ? void 0 : e[t];
-        };
-      };
-    },
-    531: function (e, t, n) {
-      var r = n(2705),
-        a = n(9932),
-        o = n(1469),
-        i = n(3448),
-        s = r ? r.prototype : void 0,
-        l = s ? s.toString : void 0;
-      e.exports = function e(t) {
-        if ('string' == typeof t) return t;
-        if (o(t)) return a(t, e) + '';
-        if (i(t)) return l ? l.call(t) : '';
-        var n = t + '';
-        return '0' == n && 1 / t == -Infinity ? '-0' : n;
-      };
-    },
-    5393: function (e, t, n) {
-      var r = n(2663),
-        a = n(3816),
-        o = n(8748),
-        i = RegExp("['’]", 'g');
-      e.exports = function (e) {
-        return function (t) {
-          return r(o(a(t).replace(i, '')), e, '');
-        };
-      };
-    },
-    9389: function (e, t, n) {
-      var r = n(8674)({
-        À: 'A',
-        Á: 'A',
-        Â: 'A',
-        Ã: 'A',
-        Ä: 'A',
-        Å: 'A',
-        à: 'a',
-        á: 'a',
-        â: 'a',
-        ã: 'a',
-        ä: 'a',
-        å: 'a',
-        Ç: 'C',
-        ç: 'c',
-        Ð: 'D',
-        ð: 'd',
-        È: 'E',
-        É: 'E',
-        Ê: 'E',
-        Ë: 'E',
-        è: 'e',
-        é: 'e',
-        ê: 'e',
-        ë: 'e',
-        Ì: 'I',
-        Í: 'I',
-        Î: 'I',
-        Ï: 'I',
-        ì: 'i',
-        í: 'i',
-        î: 'i',
-        ï: 'i',
-        Ñ: 'N',
-        ñ: 'n',
-        Ò: 'O',
-        Ó: 'O',
-        Ô: 'O',
-        Õ: 'O',
-        Ö: 'O',
-        Ø: 'O',
-        ò: 'o',
-        ó: 'o',
-        ô: 'o',
-        õ: 'o',
-        ö: 'o',
-        ø: 'o',
-        Ù: 'U',
-        Ú: 'U',
-        Û: 'U',
-        Ü: 'U',
-        ù: 'u',
-        ú: 'u',
-        û: 'u',
-        ü: 'u',
-        Ý: 'Y',
-        ý: 'y',
-        ÿ: 'y',
-        Æ: 'Ae',
-        æ: 'ae',
-        Þ: 'Th',
-        þ: 'th',
-        ß: 'ss',
-        Ā: 'A',
-        Ă: 'A',
-        Ą: 'A',
-        ā: 'a',
-        ă: 'a',
-        ą: 'a',
-        Ć: 'C',
-        Ĉ: 'C',
-        Ċ: 'C',
-        Č: 'C',
-        ć: 'c',
-        ĉ: 'c',
-        ċ: 'c',
-        č: 'c',
-        Ď: 'D',
-        Đ: 'D',
-        ď: 'd',
-        đ: 'd',
-        Ē: 'E',
-        Ĕ: 'E',
-        Ė: 'E',
-        Ę: 'E',
-        Ě: 'E',
-        ē: 'e',
-        ĕ: 'e',
-        ė: 'e',
-        ę: 'e',
-        ě: 'e',
-        Ĝ: 'G',
-        Ğ: 'G',
-        Ġ: 'G',
-        Ģ: 'G',
-        ĝ: 'g',
-        ğ: 'g',
-        ġ: 'g',
-        ģ: 'g',
-        Ĥ: 'H',
-        Ħ: 'H',
-        ĥ: 'h',
-        ħ: 'h',
-        Ĩ: 'I',
-        Ī: 'I',
-        Ĭ: 'I',
-        Į: 'I',
-        İ: 'I',
-        ĩ: 'i',
-        ī: 'i',
-        ĭ: 'i',
-        į: 'i',
-        ı: 'i',
-        Ĵ: 'J',
-        ĵ: 'j',
-        Ķ: 'K',
-        ķ: 'k',
-        ĸ: 'k',
-        Ĺ: 'L',
-        Ļ: 'L',
-        Ľ: 'L',
-        Ŀ: 'L',
-        Ł: 'L',
-        ĺ: 'l',
-        ļ: 'l',
-        ľ: 'l',
-        ŀ: 'l',
-        ł: 'l',
-        Ń: 'N',
-        Ņ: 'N',
-        Ň: 'N',
-        Ŋ: 'N',
-        ń: 'n',
-        ņ: 'n',
-        ň: 'n',
-        ŋ: 'n',
-        Ō: 'O',
-        Ŏ: 'O',
-        Ő: 'O',
-        ō: 'o',
-        ŏ: 'o',
-        ő: 'o',
-        Ŕ: 'R',
-        Ŗ: 'R',
-        Ř: 'R',
-        ŕ: 'r',
-        ŗ: 'r',
-        ř: 'r',
-        Ś: 'S',
-        Ŝ: 'S',
-        Ş: 'S',
-        Š: 'S',
-        ś: 's',
-        ŝ: 's',
-        ş: 's',
-        š: 's',
-        Ţ: 'T',
-        Ť: 'T',
-        Ŧ: 'T',
-        ţ: 't',
-        ť: 't',
-        ŧ: 't',
-        Ũ: 'U',
-        Ū: 'U',
-        Ŭ: 'U',
-        Ů: 'U',
-        Ű: 'U',
-        Ų: 'U',
-        ũ: 'u',
-        ū: 'u',
-        ŭ: 'u',
-        ů: 'u',
-        ű: 'u',
-        ų: 'u',
-        Ŵ: 'W',
-        ŵ: 'w',
-        Ŷ: 'Y',
-        ŷ: 'y',
-        Ÿ: 'Y',
-        Ź: 'Z',
-        Ż: 'Z',
-        Ž: 'Z',
-        ź: 'z',
-        ż: 'z',
-        ž: 'z',
-        Ĳ: 'IJ',
-        ĳ: 'ij',
-        Œ: 'Oe',
-        œ: 'oe',
-        ŉ: "'n",
-        ſ: 's',
-      });
-      e.exports = r;
-    },
-    1957: function (e, t, n) {
-      var r = 'object' == typeof n.g && n.g && n.g.Object === Object && n.g;
-      e.exports = r;
-    },
-    9607: function (e, t, n) {
-      var r = n(2705),
-        a = Object.prototype,
-        o = a.hasOwnProperty,
-        i = a.toString,
-        s = r ? r.toStringTag : void 0;
-      e.exports = function (e) {
-        var t = o.call(e, s),
-          n = e[s];
-        try {
-          e[s] = void 0;
-          var r = !0;
-        } catch (l) {}
-        var a = i.call(e);
-        return r && (t ? (e[s] = n) : delete e[s]), a;
-      };
-    },
-    7215: function (e) {
-      var t = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
-      e.exports = function (e) {
-        return t.test(e);
-      };
-    },
-    2333: function (e) {
-      var t = Object.prototype.toString;
-      e.exports = function (e) {
-        return t.call(e);
-      };
-    },
-    5639: function (e, t, n) {
-      var r = n(1957),
-        a = 'object' == typeof self && self && self.Object === Object && self,
-        o = r || a || Function('return this')();
-      e.exports = o;
-    },
-    2757: function (e) {
-      var t = '\\u2700-\\u27bf',
-        n = 'a-z\\xdf-\\xf6\\xf8-\\xff',
-        r = 'A-Z\\xc0-\\xd6\\xd8-\\xde',
-        a =
-          '\\xac\\xb1\\xd7\\xf7\\x00-\\x2f\\x3a-\\x40\\x5b-\\x60\\x7b-\\xbf\\u2000-\\u206f \\t\\x0b\\f\\xa0\\ufeff\\n\\r\\u2028\\u2029\\u1680\\u180e\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u202f\\u205f\\u3000',
-        o = '[' + a + ']',
-        i = '\\d+',
-        s = '[\\u2700-\\u27bf]',
-        l = '[' + n + ']',
-        c = '[^\\ud800-\\udfff' + a + i + t + n + r + ']',
-        u = '(?:\\ud83c[\\udde6-\\uddff]){2}',
-        d = '[\\ud800-\\udbff][\\udc00-\\udfff]',
-        f = '[' + r + ']',
-        p = '(?:' + l + '|' + c + ')',
-        h = '(?:' + f + '|' + c + ')',
-        m = "(?:['’](?:d|ll|m|re|s|t|ve))?",
-        g = "(?:['’](?:D|LL|M|RE|S|T|VE))?",
-        v = '(?:[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]|\\ud83c[\\udffb-\\udfff])?',
-        y = '[\\ufe0e\\ufe0f]?',
-        b = y + v + ('(?:\\u200d(?:' + ['[^\\ud800-\\udfff]', u, d].join('|') + ')' + y + v + ')*'),
-        w = '(?:' + [s, u, d].join('|') + ')' + b,
-        x = RegExp(
-          [
-            f + '?' + l + '+' + m + '(?=' + [o, f, '$'].join('|') + ')',
-            h + '+' + g + '(?=' + [o, f + p, '$'].join('|') + ')',
-            f + '?' + p + '+' + m,
-            f + '+' + g,
-            '\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])',
-            '\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])',
-            i,
-            w,
-          ].join('|'),
-          'g',
-        );
-      e.exports = function (e) {
-        return e.match(x) || [];
-      };
-    },
-    3816: function (e, t, n) {
-      var r = n(9389),
-        a = n(9833),
-        o = /[\xc0-\xd6\xd8-\xf6\xf8-\xff\u0100-\u017f]/g,
-        i = RegExp('[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]', 'g');
-      e.exports = function (e) {
-        return (e = a(e)) && e.replace(o, r).replace(i, '');
-      };
-    },
-    1469: function (e) {
-      var t = Array.isArray;
-      e.exports = t;
-    },
-    7005: function (e) {
-      e.exports = function (e) {
-        return null != e && 'object' == typeof e;
-      };
-    },
-    3448: function (e, t, n) {
-      var r = n(4239),
-        a = n(7005);
-      e.exports = function (e) {
-        return 'symbol' == typeof e || (a(e) && '[object Symbol]' == r(e));
-      };
-    },
-    1804: function (e, t, n) {
-      var r = n(5393)(function (e, t, n) {
-        return e + (n ? '-' : '') + t.toLowerCase();
-      });
-      e.exports = r;
-    },
-    9833: function (e, t, n) {
-      var r = n(531);
-      e.exports = function (e) {
-        return null == e ? '' : r(e);
-      };
-    },
-    8748: function (e, t, n) {
-      var r = n(9029),
-        a = n(7215),
-        o = n(9833),
-        i = n(2757);
-      e.exports = function (e, t, n) {
-        return (
-          (e = o(e)), void 0 === (t = n ? void 0 : t) ? (a(e) ? i(e) : r(e)) : e.match(t) || []
-        );
       };
     },
     9652: function (e, t, n) {
@@ -16067,4 +15291,4 @@
     e.O();
   },
 ]);
-//# sourceMappingURL=app-da97a9b3065f8c371225.js.map
+//# sourceMappingURL=app-34da1b4ace3fbbef3d14.js.map
