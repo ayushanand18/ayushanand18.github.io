@@ -5,6 +5,30 @@
         {
           "node": {
             "frontmatter": {
+              "title": "AI Developer Intern",
+              "company": "Openfabric",
+              "location": "Romania | Remote",
+              "range": "Jan - Feb 2023",
+              "url": "https://openfabric.ai"
+            },
+            "html": "<ul>\n<li>Write, develop, evaluate and document new and modified software programs running on the Openfabric Testnet chain.</li>\n<li>Developing a 3D Human Rotation AI App using HumanNeRF based architecture.</li>\n<li>Research, design and implement algorithms in deep learning for computer vision ang cutting-edge research.</li>\n</ul>"
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Open Source Developer",
+              "company": "MBON",
+              "location": "Remote",
+              "range": "Sep 2022 - Present",
+              "url": "https://github.com/marinebon/"
+            },
+            "html": "<p>MBON - Marine Biodiversity and Observation Network</p>\n<ul>\n<li>Building and maintaining Darwin Core Visualization python package - PyDwcViz, an open-source python package from scratch, adding 4 modules and 10 functions for providing easy one line analysis functions.</li>\n<li>Brought more than 7 features with a focus on OOP approach, creating 11+ Pull Requests and resolved 3 issues.</li>\n<li>Made it super easy for marine researchers to create diversity indices like Shannon's Index, ES50 (hulbert's index) with one-line functions.</li>\n<li>Plot DwC (Darwin Core) Data on a world map with built-in function, saving time and effort for researcher to focus only on the research and not struggling with writing the code for it.</li>\n</ul>"
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
               "title": "Google Summer of Code 2022 contributor",
               "company": "IOOS",
               "location": "Virginia, US | Remote",

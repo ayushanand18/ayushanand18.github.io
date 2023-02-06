@@ -17,12 +17,12 @@
       "assets": [
         { "name": "webpack-runtime-7e523ca3ba23931d5810.js", "size": 3674 },
         { "name": "framework-692038fe80e68dc3e016.js", "size": 210233 },
-        { "name": "app-34da1b4ace3fbbef3d14.js", "size": 306997 }
+        { "name": "app-531ac6d1cfc06af39b60.js", "size": 284342 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 520904,
+      "assetsSize": 498249,
       "filteredAuxiliaryAssets": 23,
-      "auxiliaryAssetsSize": 2254440
+      "auxiliaryAssetsSize": 2168208
     }
   },
   "assetsByChunkName": {
@@ -30,7 +30,7 @@
     "app": [
       "webpack-runtime-7e523ca3ba23931d5810.js",
       "framework-692038fe80e68dc3e016.js",
-      "app-34da1b4ace3fbbef3d14.js"
+      "app-531ac6d1cfc06af39b60.js"
     ]
   },
   "childAssetsByChunkName": {}
