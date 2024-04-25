@@ -34,7 +34,7 @@
     "animejs": "^3.1.0",
     "babel-plugin-styled-components": "^1.13.3",
     "email-addresses": "^5.0.0",
-    "gatsby": "^5.0.1",
+    "gatsby": "^5.9.1",
     "gatsby-plugin-google-analytics": "^2.2.1",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
