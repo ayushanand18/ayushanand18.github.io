@@ -166,7 +166,7 @@ const About = () => {
                   volunteering software engineering time at MBON (Marine Biodiversity Observation Network), working to save animals
                 </li>
                 <li>
-                  building an http/3 + MCP first server library with some crazy features <a href="github.com/ayushanand18/as-http3lib">written in golang</a>
+                  building an http/3 + MCP first server library with some crazy features <a href="github.com/ayushanand18/as-http3lib">[written in golang]</a>
                 </li>
               </ul>
 
@@ -177,14 +177,14 @@ const About = () => {
                   <a href="https://github.com/iobis/pyobis">Open Ocean Data</a>
                 </li>
                 <li>
-                  working on a Drawin Core Data Visualization
+                  working on a Drawin Core Data Visualization &nbsp;
                   <a href="https://github.com/marinebon/py-dwc-viz">python package</a>
                 </li>
               </ul>
 
               <h4>Things I did previously</h4>
               <ul>
-                <li>working at JP Morgan Chase as a Software Engineer, building tools that solve critical business issues.</li>
+                <li>worked at JP Morgan Chase as a Software Engineer, building tools that solve critical business issues.</li>
                 <li>worked as a software developer for Crypto News Feed Streaming Platform</li>
                 <li>created a custom branded ChatGPT alternative for a South American EdTech Company.</li>
                 <li>worked at a Web3 AI "deep-tech" startup, developing cutting-edge AI Apps.</li>
@@ -193,8 +193,8 @@ const About = () => {
                 <li>built a med-tech app to detect heart disease using eye images.</li>
                 <li>worked on an open-source python package for Open Ocean data.</li>
                 <li>built an open-source
-                  <a href="https://pypi.org/project/PyEarthData"> python package for fetching Earth and Atmospheric data</a> 
-                  as easily as calling a function.
+                  <a href="https://pypi.org/project/PyEarthData"> python package </a> for fetching Earth and Atmospheric data  
+                   as easily as calling a function.
                 </li>
                 <li>
                   worked with an NGO to implement a code for good project against child abuse.
