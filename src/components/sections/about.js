@@ -126,6 +126,12 @@ const About = () => {
   }, []);
 
   const skills = [
+    'Golang',
+    'MySQL',
+    'AWS',
+    'Kafka',
+    'TypeScript',
+    'Next.js',
     'Python (pandas, numpy, matplotlib+)',
     'PyTorch',
     'TensorFlow',
@@ -136,11 +142,7 @@ const About = () => {
     'Gatsby',
     'Firebase',
     'C',
-    'Microsoft Azure',
-    'MySQL',
-    'IBM Cloud',
     'Vercel',
-    'Netify',
   ];
 
   return (
@@ -152,29 +154,19 @@ const About = () => {
           <div>
             <p>
               Hello! My name is Ayush Anand and I enjoy creating things that solve social challenges
-              globally. Apart from being a GSoC 2022 student for IOOS, I am a CS Undergrad at NIT
-              Durgapur and a full-stack and machine learning developer leveraging AI for Social
-              Good.
+              globally. Apart from being a software engineer at Zomato, I love doing cool things and 
+              build stuff with Golang.
             </p>
 
             <p>
               <h4>Things I do</h4>
               <ul>
-                <li>research on how data science can help fight the climate crisis.</li>
+                <li>experiment with algorithms and sofwtare systems, love playing with their internals at Zomato.</li>
                 <li>
-                  Hacker's Tribe community member - Delhi NCR's largest open source community at
-                  Noida.
+                  volunteering software engineering time at MBON (Marine Biodiversity Observation Network), working to save animals
                 </li>
                 <li>
-                  ISTE NIT Durgapur Students' Branch - Content Writer. I write about Tech, STEM
-                </li>
-                <li>
-                  experiment with CNNs, GANs, ANNs and love playing with their hyperparameters. I am
-                  a Udacity deep learning nanodegree graduate.
-                </li>
-                <li>
-                  writing a weekly blog of thoughts into tech, stem, nature and mankind - read me on
-                  Medium.
+                  building an http/3 + MCP first server library with some crazy features <a href="github.com/ayushanand18/as-http3lib">written in golang</a>
                 </li>
               </ul>
 
@@ -192,7 +184,18 @@ const About = () => {
 
               <h4>Things I did previously</h4>
               <ul>
+                <li>working at JP Morgan Chase as a Software Engineer, building tools that solve critical business issues.</li>
+                <li>worked as a software developer for Crypto News Feed Streaming Platform</li>
+                <li>created a custom branded ChatGPT alternative for a South American EdTech Company.</li>
+                <li>worked at a Web3 AI "deep-tech" startup, developing cutting-edge AI Apps.</li>
+                <li>worked on mapping animal diversity through diversity indices.</li>
+                <li>created a AI based conversation booking ecommerce site with an American Fitness Brand.</li>
+                <li>built a med-tech app to detect heart disease using eye images.</li>
                 <li>worked on an open-source python package for Open Ocean data.</li>
+                <li>built an open-source
+                  <a href="https://pypi.org/project/PyEarthData"> python package for fetching Earth and Atmospheric data</a> 
+                  as easily as calling a function.
+                </li>
                 <li>
                   worked with an NGO to implement a code for good project against child abuse.
                 </li>
@@ -202,14 +205,13 @@ const About = () => {
                   COVID19 hospitals.
                 </li>
                 <li>
-                  handled shared responsibility for managing Rotary Sponsored Interact Club programs
-                  such as raising awareness against Polio Eradication and Donation drives to local
-                  Orphanages in high school.
+                  ran a Rotary Sponsored Interact Club with programs such as raising 
+                  awareness against Polio Eradication and Donation drives to local Orphanages in high school.
                 </li>
               </ul>
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Here are a few technologies I've been working with recently:</p>
           </div>
 
           <ul className="skills-list">
@@ -237,7 +239,7 @@ const About = () => {
           <div>
             <br />
             <h3>National Institute of Technology Durgapur, India </h3>
-            Bachelor of Technology in Computer Science and Engineering, <i>Expected 2025</i>
+            Bachelor of Technology in Computer Science and Engineering
             <i>
               <ul>
                 <li>

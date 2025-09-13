@@ -64,13 +64,14 @@ const Hero = () => {
     </h1>
   );
   const two = <h2 className="big-heading">Ayush Anand.</h2>;
-  const three = <h3 className="big-heading">I am a web and AI developer.</h3>;
+  const three = <h3 className="big-heading">I am a Software Engineer.</h3>;
   const four = (
     <>
       <p>
-        I am a CS Undergrad and a python geek really passionate about using data to solve world's
-        challenges. I have a substantial experience in developing app for the web and creating
-        machine learning models.
+        I love playing with networks and databases. <br/>
+        tech @zomato, prev @jpmorganchase, google soc, @openfabric ai • 
+        software developer • golang, aws, databases, networks ❤ open source
+        
       </p>
     </>
   );
