@@ -7,7 +7,7 @@ tech:
   - PyTorch
   - Python
 company: 'Udacity'
-showInProjects: true
+showInProjects: false
 ---
 
 This projects involves generating TV scripts by defining and training a recurrent neural network (deep learning).

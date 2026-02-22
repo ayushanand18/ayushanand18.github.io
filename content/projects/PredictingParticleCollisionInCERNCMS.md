@@ -9,7 +9,7 @@ tech:
   - NumPy
   - Pandas
 company: ''
-showInProjects: true
+showInProjects: false
 ---
 
 Created a Linear Sequential Model to detect particle collision using CERN CMS Collision Detection data, achieving over 98.88% accuracy
