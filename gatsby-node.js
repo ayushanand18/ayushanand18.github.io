@@ -5,7 +5,71 @@
  */
 
 const path = require('path');
-// const _ = require('lodash');
+const _ = require('lodash');
+
+// Create blog pages
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions;
+
+  const blogPostTemplate = path.resolve('./src/templates/blog-post.js');
+
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/content/blogs/" } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) {
+    throw result.errors;
+  }
+
+  const posts = result.data.allMarkdownRemark.edges;
+
+  posts.forEach((post, index) => {
+    const slug = post.node.fields?.slug || post.node.frontmatter.slug;
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+    const next = index === 0 ? null : posts[index - 1].node;
+
+    createPage({
+      path: `/blogs/${slug}`,
+      component: blogPostTemplate,
+      context: {
+        slug: slug,
+        previous,
+        next,
+      },
+    });
+  });
+};
+
+// Create slugs for blog posts
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === 'MarkdownRemark' && node.fileAbsolutePath.includes('/content/blogs/')) {
+    const slug = node.frontmatter.slug || _.kebabCase(node.frontmatter.title);
+
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slug,
+    });
+  }
+};
 
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
