@@ -128,21 +128,26 @@ const About = () => {
   const skills = [
     'Golang',
     'MySQL',
-    'AWS',
-    'Kafka',
-    'TypeScript',
-    'Next.js',
-    'Python (pandas, numpy, matplotlib+)',
-    'PyTorch',
-    'TensorFlow',
-    'JavaScript (ES6+)',
-    'NodeJS',
-    'ReactJS',
     'C++',
-    'Gatsby',
-    'Firebase',
-    'C',
-    'Vercel',
+    'Python',
+    'JavaScript',
+    'TypeScript',
+    'FastAPI',
+    'Node.js',
+    'Next.js',
+    'React',
+    'Git',
+    'RPC',
+    'Pandas',
+    'CI/CD',
+    'Kafka',
+    'DynamoDB',
+    'Redis',
+    'AWS',
+    'Cloudflare',
+    'Docker',
+    'Google Firebase',
+    'Linux',
   ];
 
   return (
@@ -154,60 +159,55 @@ const About = () => {
           <div>
             <p>
               Hello! My name is Ayush Anand and I enjoy creating things that solve social challenges
-              globally. Apart from being a software engineer at Zomato, I love doing cool things and 
-              build stuff with Golang.
+              globally. I'm a software developer who loves experimenting with algorithms and software systems,
+              currently working at Zomato while contributing to open source projects.
             </p>
 
             <p>
-              <h4>Things I do</h4>
+              <h4>Things I do 💻</h4>
               <ul>
-                <li>experiment with algorithms and sofwtare systems, love playing with their internals at Zomato.</li>
+                <li>experiment with algorithms and software systems, love playing with their internals at <a href="https://zomato.com/">Zomato</a>.</li>
                 <li>
                   volunteering software engineering time at MBON (Marine Biodiversity Observation Network), working to save animals
                 </li>
                 <li>
-                  building an http/3 + MCP first server library with some crazy features <a href="github.com/ayushanand18/as-http3lib">[written in golang]</a>
+                  writing a weekly blog of thoughts into tech, stem, nature and mankind - read me on <a href="https://medium.com/@theayushanand">Medium</a>
+                </li>
+                <li>
+                  Hacker's Tribe community member - Delhi NCR's largest open source community
                 </li>
               </ul>
 
-              <h4>Projects I'm working on</h4>
+              <h4>Projects I'm working on 👨‍💻</h4>
               <ul>
+                <li>
+                  building an http/3 first server library with some crazy features <a href="https://github.com/ayushanand18/crazyhttp">[written in golang]</a>
+                </li>
                 <li>
                   helping maintain an open-source python package for
                   <a href="https://github.com/iobis/pyobis">Open Ocean Data</a>
                 </li>
                 <li>
-                  working on a Drawin Core Data Visualization &nbsp;
+                  helping maintain a Darwin Core Data Visualization
                   <a href="https://github.com/marinebon/py-dwc-viz">python package</a>
                 </li>
               </ul>
 
-              <h4>Things I did previously</h4>
+              <h4>Things I did previously 🔎</h4>
               <ul>
-                <li>worked at JP Morgan Chase as a Software Engineer, building tools that solve critical business issues.</li>
+                <li>working at JP Morgan Chase as a Software Engineer, building tools that solve critical business issues.</li>
                 <li>worked as a software developer for Crypto News Feed Streaming Platform</li>
+                <li>worked as the vice chair of the student society at my campus - ISTE Students' Chapter NIT Durgapur Students Branch.</li>
                 <li>created a custom branded ChatGPT alternative for a South American EdTech Company.</li>
                 <li>worked at a Web3 AI "deep-tech" startup, developing cutting-edge AI Apps.</li>
-                <li>worked on mapping animal diversity through diversity indices.</li>
+                <li>worked on mapping diversity through diversity indices.</li>
                 <li>created a AI based conversation booking ecommerce site with an American Fitness Brand.</li>
                 <li>built a med-tech app to detect heart disease using eye images.</li>
-                <li>worked on an open-source python package for Open Ocean data.</li>
-                <li>built an open-source
-                  <a href="https://pypi.org/project/PyEarthData"> python package </a> for fetching Earth and Atmospheric data  
-                   as easily as calling a function.
-                </li>
-                <li>
-                  worked with an NGO to implement a code for good project against child abuse.
-                </li>
-                <li>built a web-based chatbot that can help reduce unreported abuses.</li>
-                <li>
-                  built a blockchain powered to tool to track hospital beds and ventilators in
-                  COVID19 hospitals.
-                </li>
-                <li>
-                  ran a Rotary Sponsored Interact Club with programs such as raising 
-                  awareness against Polio Eradication and Donation drives to local Orphanages in high school.
-                </li>
+                <li>built an open-source <a href="https://pypi.org/project/PyEarthData">python package for fetching Earth and Atmospheric data</a> as easily as calling a function.</li>
+                <li>worked with a Child Care NGO to implement a code for good project against child abuse, using a web-based chatbot that can help reduce unreported abuses.</li>
+                <li>built a blockchain powered tool to track hospital beds and ventilators in COVID19 hospitals.</li>
+                <li>ran a Rotary Sponsored Interact Club with programs such as raising awareness against Polio Eradication and Donation drives to local Orphanages in high school.</li>
+                <li>built a google assistant chatbot to help detect fake news - got some cool swags from Google for this. I am a Udacity deep learning nanodegree graduate.</li>
               </ul>
             </p>
 

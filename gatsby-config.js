@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Ayush Anand',
     description:
-      'Ayush Anand is a CS Undergrad specializing in building (and occasionally designing) apps that help solve social challenges',
+      'Software Engineer at Zomato, building scalable systems and experimenting with algorithms. Open source contributor with expertise in Golang, AWS, and distributed systems.',
     siteUrl: 'https://ayushanand18.github.io', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@theayushanand',
@@ -47,8 +47,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
-        path: `${__dirname}/content/projects`,
+        name: `blogs`,
+        path: `${__dirname}/content/blogs`,
       },
     },
     {

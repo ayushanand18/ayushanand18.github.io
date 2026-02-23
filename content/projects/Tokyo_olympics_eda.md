@@ -9,7 +9,7 @@ tech:
   - Seaborn
   - Matplotlib
 company: ''
-showInProjects: true
+showInProjects: false
 ---
 
 Analyzed Tokyo Olympics 2020 data and identifying really interesting patterns such as gender, country and ethnicity diversity across disciplines.
