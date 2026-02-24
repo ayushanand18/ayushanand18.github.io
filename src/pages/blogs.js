@@ -25,7 +25,7 @@ const StyledBlogSection = styled.section`
   }
 
   .blog-grid {
-    ${({ theme }) => theme.mixins.resetList};
+    ${({ theme }) => theme.mixins?.resetList};
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 20px;
