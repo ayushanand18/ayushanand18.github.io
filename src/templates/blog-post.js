@@ -6,6 +6,15 @@ import { IconArrowLeft } from '@components/icons';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 
+const formatDate = dateString => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit',
+  });
+};
+
 const StyledBlogPost = styled.article`
   max-width: 1000px;
   margin: 0 auto;
@@ -236,7 +245,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     <Layout>
       <StyledBlogPost>
         <header className="post-header">
-          <div className="post-date">{date}</div>
+          <div className="post-date">{formatDate(date)}</div>
           <h1 className="post-title">{title}</h1>
           <p className="post-description">{description}</p>
           {tags && (
@@ -288,7 +297,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        date(formatString: "MMMM DD, YYYY")
+        date
         tags
         slug
       }

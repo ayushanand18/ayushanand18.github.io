@@ -6,6 +6,15 @@ import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
+const formatDate = dateString => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit',
+  });
+};
+
 const StyledBlogSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -155,7 +164,7 @@ const BlogsPage = () => {
             frontmatter {
               title
               description
-              date(formatString: "MMMM DD, YYYY")
+              date
               slug
               tags
             }
@@ -191,7 +200,7 @@ const BlogsPage = () => {
     return (
       <div className="post-inner">
         <header className="post-header">
-          <div className="post-date">{date}</div>
+          <div className="post-date">{formatDate(date)}</div>
           <h3 className="post-title">
             <Link to={`/blogs/${slug}`}>{title}</Link>
           </h3>
