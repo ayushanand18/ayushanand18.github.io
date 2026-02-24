@@ -58,8 +58,8 @@ const StyledBlogPost = styled.li`
   }
 
   .post-inner {
-    ${({ theme }) => theme.mixins.boxShadow};
-    ${({ theme }) => theme.mixins.flexBetween};
+    ${({ theme }) => theme.mixins?.boxShadow};
+    ${({ theme }) => theme.mixins?.flexBetween};
     flex-direction: column;
     align-items: flex-start;
     position: relative;
