@@ -18,6 +18,15 @@ const formatDate = dateString => {
 const StyledBlogPost = styled.article`
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    padding: 0 25px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 15px;
+  }
 
   .post-header {
     margin-bottom: 50px;
@@ -32,9 +41,10 @@ const StyledBlogPost = styled.article`
 
     .post-title {
       color: var(--lightest-slate);
-      font-size: clamp(26px, 5vw, var(--fz-heading));
+      font-size: clamp(40px, 7vw, 60px);
+      font-weight: 700;
       margin: 0 0 20px 0;
-      line-height: 1.2;
+      line-height: 1.1;
     }
 
     .post-description {
