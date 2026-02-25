@@ -18,14 +18,14 @@ const formatDate = dateString => {
 const StyledBlogPost = styled.article`
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 120px 20px 0;
 
   @media (max-width: 768px) {
-    padding: 0 25px;
+    padding: 100px 25px 0;
   }
 
   @media (max-width: 480px) {
-    padding: 0 15px;
+    padding: 100px 15px 0;
   }
 
   .post-header {
