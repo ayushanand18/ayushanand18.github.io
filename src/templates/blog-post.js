@@ -6,9 +6,27 @@ import { IconArrowLeft } from '@components/icons';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 
+const formatDate = dateString => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit',
+  });
+};
+
 const StyledBlogPost = styled.article`
   max-width: 1000px;
   margin: 0 auto;
+  padding: 120px 20px 0;
+
+  @media (max-width: 768px) {
+    padding: 100px 25px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 100px 15px 0;
+  }
 
   .post-header {
     margin-bottom: 50px;
@@ -23,9 +41,10 @@ const StyledBlogPost = styled.article`
 
     .post-title {
       color: var(--lightest-slate);
-      font-size: clamp(26px, 5vw, var(--fz-heading));
+      font-size: clamp(40px, 7vw, 60px);
+      font-weight: 700;
       margin: 0 0 20px 0;
-      line-height: 1.2;
+      line-height: 1.1;
     }
 
     .post-description {
@@ -236,7 +255,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     <Layout>
       <StyledBlogPost>
         <header className="post-header">
-          <div className="post-date">{date}</div>
+          <div className="post-date">{formatDate(date)}</div>
           <h1 className="post-title">{title}</h1>
           <p className="post-description">{description}</p>
           {tags && (
@@ -288,7 +307,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        date(formatString: "MMMM DD, YYYY")
+        date
         tags
         slug
       }
