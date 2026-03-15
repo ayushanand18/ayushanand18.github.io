@@ -1,6 +1,6 @@
 ---
 date: '2024-01-15'
-title: 'HTTP/3 Server Library'
+title: 'CrazyHTTP - HTTP/3 Server Library'
 github: 'https://github.com/ayushanand18/crazyhttp'
 external: 'https://github.com/ayushanand18/crazyhttp'
 tech:

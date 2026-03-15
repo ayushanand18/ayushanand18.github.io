@@ -7,6 +7,17 @@
 const path = require('path');
 const _ = require('lodash');
 
+// Define custom schema for date fields to support formatString
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type MarkdownRemarkFrontmatter {
+      date: Date @dateformat
+    }
+  `;
+  createTypes(typeDefs);
+};
+
 // Create blog pages
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -17,7 +28,7 @@ exports.createPages = async ({ actions, graphql }) => {
     {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/content/blogs/" } }
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { frontmatter: { date: DESC } }
       ) {
         edges {
           node {
@@ -57,10 +68,13 @@ exports.createPages = async ({ actions, graphql }) => {
 };
 
 // Create slugs for blog posts
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === 'MarkdownRemark' && node.fileAbsolutePath.includes('/content/blogs/')) {
+  if (
+    node.internal.type === 'MarkdownRemark' &&
+    node.fileAbsolutePath.includes('/content/blogs/')
+  ) {
     const slug = node.frontmatter.slug || _.kebabCase(node.frontmatter.title);
 
     createNodeField({
