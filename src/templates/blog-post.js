@@ -1,10 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import { Layout } from '@components';
 import { IconArrowLeft } from '@components/icons';
-import { srConfig } from '@config';
-import sr from '@utils/sr';
 
 const formatDate = dateString => {
   const date = new Date(dateString);
@@ -75,6 +73,14 @@ const StyledBlogPost = styled.article`
 
   .post-content {
     margin-bottom: 100px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     h1,
     h2,
@@ -245,10 +251,14 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   const { title, description, date, tags } = frontmatter;
   const { previous, next } = pageContext;
 
-  const revealContent = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    sr.reveal(revealContent.current, srConfig());
+    // Trigger the fade-in animation immediately after mount
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 50);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -270,8 +280,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         </header>
 
         <div
-          className="post-content"
-          ref={revealContent}
+          className={`post-content${isVisible ? ' visible' : ''}`}
           dangerouslySetInnerHTML={{ __html: html }}
         />
 

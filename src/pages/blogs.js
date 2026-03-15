@@ -1,158 +1,143 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
+import { Layout } from '@components';
 import { usePrefersReducedMotion } from '@hooks';
 
-const formatDate = dateString => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: '2-digit',
-  });
-};
+const StyledTableContainer = styled.div`
+  margin: 100px -20px;
 
-const StyledBlogSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h2 {
-    font-size: clamp(24px, 5vw, var(--fz-heading));
+  @media (max-width: 768px) {
+    margin: 50px -10px;
   }
 
-  .blog-grid {
-    ${({ theme }) => theme.mixins?.resetList};
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-gap: 20px;
-    position: relative;
-    margin-top: 50px;
+  table {
     width: 100%;
+    border-collapse: collapse;
 
-    @media (max-width: 1080px) {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-  }
-`;
-
-const StyledBlogPost = styled.li`
-  position: relative;
-  cursor: default;
-  transition: var(--transition);
-
-  @media (prefers-reduced-motion: no-preference) {
-    &:hover,
-    &:focus-within {
-      .post-inner {
-        transform: translateY(-5px);
+    .hide-on-mobile {
+      @media (max-width: 768px) {
+        display: none;
       }
     }
-  }
 
-  .post-inner {
-    ${({ theme }) => theme.mixins?.boxShadow};
-    ${({ theme }) => theme.mixins?.flexBetween};
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    height: 100%;
-    padding: 2rem 1.75rem;
-    border-radius: var(--border-radius);
-    background-color: var(--light-navy);
-    transition: var(--transition);
-  }
+    tbody tr {
+      &:hover,
+      &:focus {
+        background-color: var(--light-navy);
+      }
+    }
 
-  .post-header {
-    margin-bottom: 20px;
-  }
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
 
-  .post-date {
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: var(--fz-xs);
-    margin-bottom: 10px;
-  }
+      &:first-child {
+        padding-left: 20px;
 
-  .post-title {
-    margin: 0 0 10px;
-    color: var(--lightest-slate);
-    font-size: var(--fz-xl);
+        @media (max-width: 768px) {
+          padding-left: 10px;
+        }
+      }
+      &:last-child {
+        padding-right: 20px;
 
-    a {
-      position: static;
-      color: var(--lightest-slate);
-      transition: var(--transition);
+        @media (max-width: 768px) {
+          padding-right: 10px;
+        }
+      }
+    }
 
-      &:hover {
+    tr {
+      cursor: default;
+
+      td:first-child {
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+      }
+      td:last-child {
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+      }
+    }
+
+    td {
+      &.year {
+        padding-right: 20px;
         color: var(--green);
+        font-family: var(--font-mono);
+        font-size: var(--fz-sm);
+
+        @media (max-width: 768px) {
+          padding-right: 10px;
+          font-size: var(--fz-xs);
+        }
       }
 
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        z-index: 0;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
+      &.title {
+        padding-top: 15px;
+        padding-right: 20px;
+        color: var(--lightest-slate);
+        font-size: var(--fz-xl);
+        font-weight: 600;
+        line-height: 1.25;
+
+        a {
+          color: var(--lightest-slate);
+          transition: var(--transition);
+
+          &:hover {
+            color: var(--green);
+          }
+        }
+
+        .description {
+          display: block;
+          color: var(--slate);
+          font-size: var(--fz-sm);
+          font-weight: 400;
+          margin-top: 5px;
+          line-height: 1.4;
+        }
       }
-    }
-  }
 
-  .post-description {
-    color: var(--light-slate);
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
+      &.tech {
+        font-size: var(--fz-xxs);
+        font-family: var(--font-mono);
+        line-height: 1.5;
+        color: var(--slate);
+        .separator {
+          margin: 0 5px;
+        }
+        span {
+          display: inline-block;
+        }
+      }
 
-  .post-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: auto;
+      &.links {
+        min-width: 70px;
+        text-align: right;
 
-    .tag {
-      background-color: var(--light-navy);
-      color: var(--green);
-      font-family: var(--font-mono);
-      font-size: var(--fz-xxs);
-      padding: 4px 8px;
-      border-radius: 4px;
-      border: 1px solid var(--green);
-    }
-  }
+        a {
+          color: var(--green);
+          font-family: var(--font-mono);
+          font-size: var(--fz-xs);
+          transition: var(--transition);
 
-  .read-more {
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: var(--fz-xs);
-    margin-top: 15px;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    transition: var(--transition);
-
-    &:hover {
-      gap: 8px;
-    }
-
-    &:after {
-      content: '→';
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 `;
 
-const BlogsPage = () => {
+const BlogsPage = ({ location }) => {
   const data = useStaticQuery(graphql`
     query {
       blogs: allMarkdownRemark(
@@ -178,6 +163,7 @@ const BlogsPage = () => {
   `);
 
   const revealTitle = useRef(null);
+  const revealTable = useRef(null);
   const revealBlogs = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -187,81 +173,74 @@ const BlogsPage = () => {
     }
 
     sr.reveal(revealTitle.current, srConfig());
-    revealBlogs.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+    sr.reveal(revealTable.current, srConfig(200, 0));
+    revealBlogs.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 10)));
   }, []);
 
   const blogs = data.blogs.edges.filter(({ node }) => node);
 
-  const postInner = node => {
-    const { frontmatter, fields } = node;
-    const { title, description, date, tags } = frontmatter;
-    const slug = fields?.slug || frontmatter.slug;
+  return (
+    <Layout location={location}>
+      <Helmet title="Blog" />
 
-    return (
-      <div className="post-inner">
-        <header className="post-header">
-          <div className="post-date">{formatDate(date)}</div>
-          <h3 className="post-title">
-            <Link to={`/blogs/${slug}`}>{title}</Link>
-          </h3>
+      <main>
+        <header ref={revealTitle}>
+          <h1 className="big-heading">Blog</h1>
+          <p className="subtitle">Thoughts on tech, systems, and everything in between</p>
         </header>
 
-        <p className="post-description">{description}</p>
+        <StyledTableContainer ref={revealTable}>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Title</th>
+                <th className="hide-on-mobile">Tags</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              {blogs.length > 0 &&
+                blogs.map(({ node }, i) => {
+                  const { frontmatter, fields } = node;
+                  const { title, description, date, tags } = frontmatter;
+                  const slug = fields?.slug || frontmatter.slug;
+                  const formattedDate = new Date(date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                  });
 
-        {tags && (
-          <div className="post-tags">
-            {tags.map((tag, i) => (
-              <span key={i} className="tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
+                  return (
+                    <tr key={i} ref={el => (revealBlogs.current[i] = el)}>
+                      <td className="year">{formattedDate}</td>
 
-        <Link to={`/blogs/${slug}`} className="read-more">
-          Read more
-        </Link>
-      </div>
-    );
-  };
+                      <td className="title">
+                        <Link to={`/blogs/${slug}`}>{title}</Link>
+                        <span className="description hide-on-mobile">{description}</span>
+                      </td>
 
-  return (
-    <StyledBlogSection>
-      <h2 ref={revealTitle}>Blog Posts</h2>
+                      <td className="tech hide-on-mobile">
+                        {tags?.length > 0 &&
+                          tags.map((tag, j) => (
+                            <span key={j}>
+                              {tag}
+                              {j !== tags.length - 1 && <span className="separator">&middot;</span>}
+                            </span>
+                          ))}
+                      </td>
 
-      <ul className="blog-grid">
-        {prefersReducedMotion ? (
-          <>
-            {blogs &&
-              blogs.map(({ node }, i) => (
-                <StyledBlogPost key={i}>{postInner(node)}</StyledBlogPost>
-              ))}
-          </>
-        ) : (
-          <TransitionGroup component={null}>
-            {blogs &&
-              blogs.map(({ node }, i) => (
-                <CSSTransition
-                  key={i}
-                  classNames="fadeup"
-                  timeout={300}
-                  exit={false}
-                >
-                  <StyledBlogPost
-                    key={i}
-                    ref={el => (revealBlogs.current[i] = el)}
-                    style={{
-                      transitionDelay: `${i * 100}ms`,
-                    }}
-                  >
-                    {postInner(node)}
-                  </StyledBlogPost>
-                </CSSTransition>
-              ))}
-          </TransitionGroup>
-        )}
-      </ul>
-    </StyledBlogSection>
+                      <td className="links">
+                        <Link to={`/blogs/${slug}`}>Read →</Link>
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
+        </StyledTableContainer>
+      </main>
+    </Layout>
   );
 };
 
