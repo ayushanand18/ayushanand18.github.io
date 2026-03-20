@@ -2,13 +2,12 @@
 date: '2026-03-08'
 title: 'Rewriting a storage engine for graph database in Golang'
 slug: 'rewriting-a-storage-engine-for-graph-databases-in-golang'
-description: 'Packet analysis using Wireshark to understand how DNS queries work under the hood.'
+description: 'Rewriting a storage engine for graph databases, i build sometime back in C++ to Golang.'
 tags:
-  - Networking
-  - DNS
-  - Wireshark
-  - Packet Analysis
-  - Systems
+  - Storage Engine
+  - Golang
+  - LSM Trees
+  - Graph Databases
 ---
 
 ## introduction
