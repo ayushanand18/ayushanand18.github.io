@@ -1,5 +1,5 @@
 ---
-date: '2024-02-18'
+date: '2026-02-18'
 title: 'PDF Rendering and PostScript - A Weekend Deep Dive'
 slug: 'pdf-rendering-postscript-weekend-deep-dive'
 description: 'Spent a weekend understanding how PDFs work under the hood - PostScript, text rendering, and the Turing-complete nature of PDFs.'
