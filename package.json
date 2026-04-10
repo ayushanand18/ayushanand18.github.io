@@ -49,7 +49,7 @@
     "gatsby-remark-prismjs": "^7.0.0",
     "gatsby-source-filesystem": "^5.0.0",
     "gatsby-transformer-remark": "^6.3.2",
-    "lodash": "^4.17.23",
+    "lodash": "^4.18.1",
     "prismjs": "^1.30.0",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
