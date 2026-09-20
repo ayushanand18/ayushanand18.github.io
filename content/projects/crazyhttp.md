@@ -5,11 +5,12 @@ github: 'https://github.com/ayushanand18/crazyhttp'
 external: 'https://github.com/ayushanand18/crazyhttp'
 tech:
   - Golang
-  - HTTP/3
   - QUIC
+  - HTTP/3
+  - Linux
   - Networking
 company: ''
 showInProjects: true
 ---
 
-Building an HTTP/3 first server library with some crazy features written in Go. This project focuses on implementing the latest HTTP/3 protocol with QUIC transport for improved performance and security.
+An async HTTP/3 (HTTP over QUIC) server library in Go, H/1.1 + H/2 compliant, using event loops and native Linux primitives with Cloudflare's quiche. Achieved ~153x faster startup and ~50% lower p95 RTT compared to FastAPI in local benchmarks.

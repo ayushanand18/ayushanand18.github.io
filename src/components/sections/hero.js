@@ -35,12 +35,37 @@ const StyledHeroSection = styled.section`
 
   p {
     margin: 20px 0 0;
-    max-width: 540px;
+    max-width: 560px;
   }
 
-  .email-link {
-    ${({ theme }) => theme.mixins.bigButton};
+  .hero-meta {
+    margin: 20px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 560px;
+  }
+
+  .hero-meta span {
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: var(--border-radius);
+    padding: 4px 10px;
+  }
+
+  .hero-cta {
     margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .hero-cta .email-link {
+    ${({ theme }) => theme.mixins.bigButton};
+    margin-top: 0;
   }
 `;
 
@@ -57,43 +82,40 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = (
-    <h1>
-      <br />
-      Hi, my name is
-    </h1>
-  );
+  const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Ayush Anand.</h2>;
-  const three = <h3 className="big-heading">I build software systems and experiment with algorithms.</h3>;
+  const three = <h3 className="big-heading">Software Engineer @ Zomato.</h3>;
   const four = (
     <>
       <p>
-        tech @zomato, prev @jpmorganchase, google soc'22, @openfabric ai • 
-        software developer • golang, aws, databases, networks ❤ open source
-        
+        I build high-throughput backend systems with Go, Kafka, and AWS — vendor payouts at 10K+
+        disbursements/day, real-time notification and invoice pipelines, and vision pipelines for
+        warehouse SOP checks. Previously at JPMorgan Chase and DB News, GSoC &apos;22 with IOOS. I
+        maintain open-source Python packages for ocean data (pyobis, py-dwc-viz).
       </p>
+      <div className="hero-meta">
+        <span>Go</span>
+        <span>Kafka</span>
+        <span>AWS</span>
+        <span>Postgres / DynamoDB</span>
+        <span>Redis</span>
+        <span>Docker</span>
+      </div>
     </>
   );
   const five = (
-    <p>
+    <div className="hero-cta">
+      <a className="email-link" href="#projects">
+        View My Work
+      </a>
       <a
         className="email-link"
         href="https://linkedin.com/in/theayushanand"
         target="_blank"
-        rel="noreferrer"
-      >
-        Connect with me!
+        rel="noreferrer">
+        Connect on LinkedIn
       </a>
-      <span>&emsp;&emsp;</span>
-      <a
-        className="email-link"
-        href="https://medium.com/@theayushanand"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Read Blogs
-      </a>
-    </p>
+    </div>
   );
 
   const items = [one, two, three, four, five];

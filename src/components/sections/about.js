@@ -16,6 +16,65 @@ const StyledAboutSection = styled.section`
       display: block;
     }
   }
+
+  .about-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 40px;
+    margin-top: 40px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .about-columns h4,
+  .about-previously h4 {
+    margin: 0 0 12px;
+    font-family: var(--font-mono);
+    font-size: var(--fz-md);
+    font-weight: 400;
+    color: var(--green);
+  }
+
+  ul.about-list {
+    padding: 0;
+    margin: 0 0 24px;
+    overflow: hidden;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 20px;
+
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--green);
+        font-size: var(--fz-sm);
+        line-height: 12px;
+      }
+    }
+  }
+
+  .about-previously {
+    margin-top: 16px;
+  }
+
+  .about-previously ul.about-list {
+    column-count: 2;
+    column-gap: 40px;
+
+    @media (max-width: 768px) {
+      column-count: 1;
+    }
+
+    li {
+      break-inside: avoid;
+    }
+  }
 `;
 const StyledText = styled.div`
   ul.skills-list {
@@ -126,26 +185,22 @@ const About = () => {
 
   const skills = [
     'Golang',
-    'MySQL',
-    'C++',
     'Python',
-    'JavaScript',
+    'C++',
     'TypeScript',
-    'FastAPI',
-    'Node.js',
-    'Next.js',
+    'JavaScript',
+    'Postgres',
+    'MySQL',
     'React',
-    'Git',
-    'RPC',
-    'Pandas',
-    'CI/CD',
-    'Kafka',
-    'DynamoDB',
     'Redis',
+    'gRPC',
+    'Node.js',
+    'Kafka',
     'AWS',
-    'Cloudflare',
     'Docker',
-    'Google Firebase',
+    'REST API',
+    'CI/CD',
+    'Git',
     'Linux',
   ];
 
@@ -157,60 +212,14 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Ayush Anand and I enjoy creating things that solve social challenges
-              globally. I'm a software developer who loves experimenting with algorithms and software systems,
-              currently working at Zomato while contributing to open source projects.
+              Hello! My name is Ayush Anand and I build backend systems that solve real-world
+              problems. I work on databases and networks, currently as a Software Engineer at Zomato
+              in Bengaluru — vendor payouts at 10K+ disbursements/day, invoice and notification
+              pipelines on Go, Kafka, DynamoDB, and Redis, plus vision pipelines for warehouse
+              monitoring.
             </p>
 
-            <p>
-              <h4>Things I do 💻</h4>
-              <ul>
-                <li>experiment with algorithms and software systems, love playing with their internals at <a href="https://zomato.com/">Zomato</a>.</li>
-                <li>
-                  volunteering software engineering time at MBON (Marine Biodiversity Observation Network), working to save animals
-                </li>
-                <li>
-                  writing a weekly blog of thoughts into tech, stem, nature and mankind - read me on <a href="https://medium.com/@theayushanand">Medium</a>
-                </li>
-                <li>
-                  Hacker's Tribe community member - Delhi NCR's largest open source community
-                </li>
-              </ul>
-
-              <h4>Projects I'm working on 👨‍💻</h4>
-              <ul>
-                <li>
-                  building an http/3 first server library with some crazy features <a href="https://github.com/ayushanand18/crazyhttp">[written in golang]</a>
-                </li>
-                <li>
-                  helping maintain an open-source python package for
-                  <a href="https://github.com/iobis/pyobis">Open Ocean Data</a>
-                </li>
-                <li>
-                  helping maintain a Darwin Core Data Visualization
-                  <a href="https://github.com/marinebon/py-dwc-viz">python package</a>
-                </li>
-              </ul>
-
-              <h4>Things I did previously 🔎</h4>
-              <ul>
-                <li>working at JP Morgan Chase as a Software Engineer, building tools that solve critical business issues.</li>
-                <li>worked as a software developer for Crypto News Feed Streaming Platform</li>
-                <li>worked as the vice chair of the student society at my campus - ISTE Students' Chapter NIT Durgapur Students Branch.</li>
-                <li>created a custom branded ChatGPT alternative for a South American EdTech Company.</li>
-                <li>worked at a Web3 AI "deep-tech" startup, developing cutting-edge AI Apps.</li>
-                <li>worked on mapping diversity through diversity indices.</li>
-                <li>created a AI based conversation booking ecommerce site with an American Fitness Brand.</li>
-                <li>built a med-tech app to detect heart disease using eye images.</li>
-                <li>built an open-source <a href="https://pypi.org/project/PyEarthData">python package for fetching Earth and Atmospheric data</a> as easily as calling a function.</li>
-                <li>worked with a Child Care NGO to implement a code for good project against child abuse, using a web-based chatbot that can help reduce unreported abuses.</li>
-                <li>built a blockchain powered tool to track hospital beds and ventilators in COVID19 hospitals.</li>
-                <li>ran a Rotary Sponsored Interact Club with programs such as raising awareness against Polio Eradication and Donation drives to local Orphanages in high school.</li>
-                <li>built a google assistant chatbot to help detect fake news - got some cool swags from Google for this. I am a Udacity deep learning nanodegree graduate.</li>
-              </ul>
-            </p>
-
-            <p>Here are a few technologies I've been working with recently:</p>
+            <p>Here are a few technologies I&apos;ve been working with recently:</p>
           </div>
 
           <ul className="skills-list">
@@ -220,37 +229,101 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <img
-              className="img"
-              src="/me.jpg"
-              width={500}
-              alt="Headshot"
-            />
+            <img className="img" src="/me.jpg" width={500} alt="Headshot" />
           </div>
         </StyledPic>
+      </div>
+
+      <div className="about-columns">
+        <div>
+          <h4>Things I do 💻</h4>
+          <ul className="about-list">
+            <li>
+              experiment with algorithms and software systems, love playing with their internals at{' '}
+              <a href="https://zomato.com/">Zomato</a>.
+            </li>
+            <li>
+              volunteering software engineering time at MBON (Marine Biodiversity Observation
+              Network), working to save animals
+            </li>
+            <li>
+              writing a weekly blog of thoughts into tech, stem, nature and mankind - read me on{' '}
+              <a href="https://medium.com/@theayushanand">Medium</a>
+            </li>
+            <li>
+              Hacker&apos;s Tribe community member - Delhi NCR&apos;s largest open source community
+            </li>
+          </ul>
+        </div>
 
         <div>
-          <br />
-          <br />
-          <h1>Education</h1>
-          <div>
-            <br />
-            <h3>National Institute of Technology Durgapur, India </h3>
-            Bachelor of Technology in Computer Science and Engineering
-            <i>
-              <ul>
-                <li>
-                  {' '}
-                  <b>Courses</b>: Linear and Vector Algebra, Calculus, Data Structure and Algorithms
-                </li>
-                <li>
-                  {' '}
-                  <b>Organisations</b>: Indian Society for Technical Education (ISTE)
-                </li>
-              </ul>
-            </i>
-          </div>
+          <h4>Projects I&apos;m working on 👨‍💻</h4>
+          <ul className="about-list">
+            <li>
+              crazyhttp — async HTTP/3 server library in Go{' '}
+              <a href="https://github.com/ayushanand18/crazyhttp">[on GitHub]</a>
+            </li>
+            <li>
+              crazygraphstore — LSM-tree storage engine for graph databases{' '}
+              <a href="https://github.com/ayushanand18/crazygraphstore">[on GitHub]</a>
+            </li>
+            <li>
+              helping maintain an open-source python package for
+              <a href="https://github.com/iobis/pyobis">Open Ocean Data</a>
+            </li>
+            <li>
+              helping maintain a Darwin Core Data Visualization
+              <a href="https://github.com/marinebon/py-dwc-viz">python package</a>
+            </li>
+          </ul>
         </div>
+      </div>
+
+      <div className="about-previously">
+        <h4>Things I did previously 🔎</h4>
+        <ul className="about-list">
+          <li>
+            working at JP Morgan Chase as a Software Engineer, building tools that solve critical
+            business issues.
+          </li>
+          <li>worked as a software developer for Crypto News Feed Streaming Platform</li>
+          <li>
+            worked as the vice chair of the student society at my campus - ISTE Students&apos;
+            Chapter NIT Durgapur Students Branch.
+          </li>
+          <li>created a custom branded ChatGPT alternative for a South American EdTech Company.</li>
+          <li>
+            worked at a Web3 AI &quot;deep-tech&quot; startup, developing cutting-edge AI Apps.
+          </li>
+          <li>worked on mapping diversity through diversity indices.</li>
+          <li>
+            created a AI based conversation booking ecommerce site with an American Fitness Brand.
+          </li>
+          <li>built a med-tech app to detect heart disease using eye images.</li>
+          <li>
+            built an open-source{' '}
+            <a href="https://pypi.org/project/PyEarthData">
+              python package for fetching Earth and Atmospheric data
+            </a>{' '}
+            as easily as calling a function.
+          </li>
+          <li>
+            worked with a Child Care NGO to implement a code for good project against child abuse,
+            using a web-based chatbot that can help reduce unreported abuses.
+          </li>
+          <li>
+            built a blockchain powered tool to track hospital beds and ventilators in COVID19
+            hospitals.
+          </li>
+          <li>
+            ran a Rotary Sponsored Interact Club with programs such as raising awareness against
+            Polio Eradication and Donation drives to local Orphanages in high school.
+          </li>
+          <li>
+            built a google assistant chatbot to help detect fake news - got some cool swags from
+            Google for this. I am a Udacity deep learning nanodegree graduate.
+          </li>
+        </ul>
       </div>
     </StyledAboutSection>
   );

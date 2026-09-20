@@ -1,15 +1,15 @@
 ---
 date: '2024-01-10'
-title: 'Open Ocean Data Package'
+title: 'pyobis - Open Ocean Data Package'
 github: 'https://github.com/iobis/pyobis'
 external: 'https://github.com/iobis/pyobis'
 tech:
   - Python
-  - Marine Biology
+  - OBIS API
   - Data Science
-  - Biodiversity
-company: ''
+  - Testing
+company: 'GSoC 2022 / IOOS'
 showInProjects: true
 ---
 
-Helping maintain an open-source Python package for Open Ocean Data. This package provides easy access to marine biodiversity data from the OBIS (Ocean Biodiversity Information System) database, enabling researchers and scientists to analyze ocean life patterns and distributions.
+Python client for the OBIS API built during Google Summer of Code 2022 with IOOS. Rebuilt with full endpoint coverage and 100% unit test coverage; 5+ new features, 27+ issues resolved, 30 merged PRs. Reduced data processing time by over 70% for marine researchers.

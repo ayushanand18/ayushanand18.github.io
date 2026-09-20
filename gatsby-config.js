@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Ayush Anand',
     description:
-      'Software Engineer at Zomato, building scalable systems and experimenting with algorithms. Open source contributor with expertise in Golang, AWS, and distributed systems.',
+      'Ayush Anand — Software Engineer at Zomato (Bengaluru). Go, Kafka, AWS, distributed systems. Ex-JPMorgan Chase, GSoC 2022 with IOOS. Maintainer of pyobis and py-dwc-viz.',
     siteUrl: 'https://ayushanand18.github.io', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@theayushanand',

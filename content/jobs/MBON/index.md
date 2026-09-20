@@ -3,7 +3,7 @@ date: '2022-09-12'
 title: 'Open Source Developer'
 company: 'MBON'
 location: 'Remote'
-range: 'Sep 2022 - Present'
+range: 'Sep 2022 - Feb 2024'
 url: 'https://github.com/marinebon/'
 ---
 
