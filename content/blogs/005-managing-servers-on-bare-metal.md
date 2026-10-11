@@ -11,11 +11,13 @@ tags:
 ---
 
 ## introduction
+
 managing one's own servers on cloud or bare metal is actually not an easy job. a lot of times it could feel like
-clueless, and not knowing how to manage costs effectively. here's what i do to manage my deployments, and 
+clueless, and not knowing how to manage costs effectively. here's what i do to manage my deployments, and
 production instances.
 
 ## how i manage my pipeline
+
 1. ci builds are trigerred via github. and executed on github actions.
 2. the build file is then ssh-ed to running instances on ec2.
 3. i have a systemd script to reload and run the processes, i need on every restart.

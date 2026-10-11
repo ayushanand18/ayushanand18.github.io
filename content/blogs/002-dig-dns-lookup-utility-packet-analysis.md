@@ -16,6 +16,7 @@ so like many other weekends, i spent the last 2 days scratching my brain around 
 ## The Setup
 
 i decided to use Wireshark to capture DNS packets while running various `dig` commands. simple setup:
+
 - my laptop
 - wireshark running
 - terminal open for `dig` commands
@@ -140,6 +141,7 @@ sometimes you get NXDOMAIN (Non-Existent Domain), but sometimes you get wildcard
 ## The Real Learning
 
 this exercise taught me:
+
 1. DNS is more complex than it looks
 2. Packet analysis reveals the actual protocol behavior
 3. Caching and load balancing happen at the DNS level
@@ -148,6 +150,7 @@ this exercise taught me:
 ## Next Steps
 
 thinking of:
+
 1. Analyzing DNS over HTTPS (DoH) packets
 2. Looking at DNS over TLS (DoT)
 3. Maybe setting up my own DNS server to see the other side
@@ -160,4 +163,4 @@ sometimes you need to go low-level to really understand what's happening.
 
 ---
 
-*packet captures available if anyone wants to dive deeper into the actual DNS packets.*
+_packet captures available if anyone wants to dive deeper into the actual DNS packets._

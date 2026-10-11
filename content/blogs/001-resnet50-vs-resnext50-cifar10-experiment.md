@@ -20,6 +20,7 @@ for those who don't know, ResNet introduced residual connections that helped tra
 ## The Experiment
 
 i set up a simple experiment:
+
 - same dataset (CIFAR10)
 - same training parameters
 - same number of epochs
@@ -81,6 +82,7 @@ surprised? i was. ResNet50 actually performed slightly better.
 ## Why Though?
 
 i think it comes down to:
+
 1. **Dataset size**: CIFAR10 is relatively small, ResNeXt might be overkill
 2. **Regularization**: ResNet's simpler architecture might generalize better
 3. **Training time**: ResNeXt took about 30% longer to train
@@ -88,6 +90,7 @@ i think it comes down to:
 ## The Real Learning
 
 but here's what i actually learned:
+
 - newer ≠ better always
 - architecture choice depends on your specific use case
 - sometimes simpler models work better on smaller datasets
@@ -95,6 +98,7 @@ but here's what i actually learned:
 ## Next Steps
 
 thinking of trying:
+
 1. Different datasets (ImageNet maybe?)
 2. Different cardinality values for ResNeXt
 3. Maybe some ensemble methods
@@ -107,4 +111,4 @@ sometimes the old ways are the best ways. or at least good enough.
 
 ---
 
-*code available on github if anyone wants to reproduce or extend this experiment.*
+_code available on github if anyone wants to reproduce or extend this experiment._
