@@ -10,9 +10,11 @@ tags:
   - Containerization
 ---
 
+![Isolated Containers for Sandboxing](/blog/017-isolated-containers-sandboxing-hero.jpg)
+
 heya, its sunday 9pm my local time but my Go code running on a kerneld says its 2pm. well the host machine says 5pm, and my brain started to trigger sysrq because all of this started a chaos. (haha, i’m sorry for my bad jokes, but if you don’t know about sysrq do read this linux blog [1]).
 
-so this week I started out solving a problem I had thought off quite a few weeks back - building isolated sandboxed environments. given the current times when we are spawning ai agents here and there, there’s a dire need. 
+so this week I started out solving a problem I had thought off quite a few weeks back - building isolated sandboxed environments. given the current times when we are spawning ai agents here and there, there’s a dire need.
 
 my first guess was containerization via docker. but i quickly realised that they are not security sandboxes; they are processes with a shared kernel, best used for reproducibility and lightweight isolation. most of the security isolation could be solved by running processes in userspace. why not have user-space kernels?
 
@@ -24,6 +26,6 @@ so i started off with building my own isolated containerization tool, thats sort
 
 3. hardware acceleration - this is the trickiest part, since each hardware has its own proprietary kernel driver. the simplistic approach is to package a proxy, that talks to all these devices on host using ioctl(2) [ioctl takes in fd of the device, op code and pointer to the data memory location]. although ABIs are known to be obscure and inconsistently stable across release versions, especially with NVIDIA.
 
-by the end of my search for answers to these questions, all of my brain cells ran into low energy. and ever since these hot summers have started, I have begun to feel that I’m running on 2% lesser energy efficiency. well nevermind, i’ll share the implementation details i started off with in the following posts. 
+by the end of my search for answers to these questions, all of my brain cells ran into low energy. and ever since these hot summers have started, I have begun to feel that I’m running on 2% lesser energy efficiency. well nevermind, i’ll share the implementation details i started off with in the following posts.
 
 but by then enjoy this interesting anecdote behind manpages on linux.

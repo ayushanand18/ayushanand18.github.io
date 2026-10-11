@@ -11,6 +11,8 @@ tags:
   - Graphics
 ---
 
+![PDF Rendering and PostScript](/blog/003-pdf-postscript-hero.jpg)
+
 so like many other weekends, i spent the last 2 days scratching my brain around an interesting problem, reading raw PDF bytes and figuring out how one renders on screen. interestingly, i learnt that PDFs use a "graphical description" language - PostScript (although modern PDF spec is a subset of it), which is turing-complete. one could easily implement anything in the world they can dream of on a PDF! (of course if the renderer of your choice supports the spec).
 
 funnily enough, all this goes back to history of the language - when it was used for telling printers how to literally "draw" vectors/lines/text on a page. so the script tells the print head whether to move left/right/top/down and/or which position (x, y) on page, in the next command.
@@ -29,6 +31,7 @@ showpage
 ```
 
 break this down:
+
 - `/Helvetica findfont` - find the Helvetica font
 - `24 scalefont` - scale it to 24 points
 - `setfont` - set it as current font
@@ -112,6 +115,7 @@ so next weekend i'd be spending time sanitizing pdfs before/during rendering. th
 find postscript interesting? thanks to Adobe. read more on it on wikipedia [1]
 
 but more practically, understanding this helps with:
+
 - PDF text extraction (my original use case)
 - PDF generation
 - Security analysis of PDFs
@@ -120,6 +124,7 @@ but more practically, understanding this helps with:
 ## The Rabbit Hole
 
 what started as a simple text extraction problem led me down this rabbit hole of:
+
 - PostScript language basics
 - PDF internal structure
 - Font rendering systems
@@ -134,8 +139,8 @@ sometimes you need to go deep to understand the surface.
 
 ---
 
-*references:*
-*[1] PostScript on Wikipedia - https://en.wikipedia.org/wiki/PostScript*
-*[2] PDF Security Considerations - upcoming research*
+_references:_
+_[1] PostScript on Wikipedia - https://en.wikipedia.org/wiki/PostScript_
+_[2] PDF Security Considerations - upcoming research_
 
-*code will be open-sourced once i clean it up a bit more.*
+_code will be open-sourced once i clean it up a bit more._
