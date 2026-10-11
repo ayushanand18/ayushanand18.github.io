@@ -72,7 +72,7 @@ importers:
         specifier: ^4.0.5
         version: 4.0.9
       sharp:
-        specifier: ^0.35.4
+        specifier: ^0.35.5
         version: 0.35.5(@types/node@25.3.0)
       styled-components:
         specifier: ^5.3.0
